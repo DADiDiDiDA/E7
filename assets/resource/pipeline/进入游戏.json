@@ -1,0 +1,64 @@
+{
+    "$__mpe_config_进入游戏": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -832,
+                "y": 196,
+                "zoom": 0.99
+            },
+            "filename": "进入游戏",
+            "version": "v1.4.3"
+        }
+    },
+    "进入登陆界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    26,
+                    36,
+                    110,
+                    116
+                ],
+                "template": [
+                    "登陆界面特征.png"
+                ]
+            }
+        },
+        "next": [
+            "登陆游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1246,
+                "y": 46
+            }
+        }
+    },
+    "登陆游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    580,
+                    134,
+                    32
+                ],
+                "expected": [
+                    "轻触画面开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1541,
+                "y": 37
+            }
+        }
+    }
+}

@@ -1,0 +1,263 @@
+{
+    "$__mpe_config_商店购买每日物品": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -2525,
+                "y": 147,
+                "zoom": 0.99
+            },
+            "filename": "商店购买每日物品",
+            "version": "v1.4.3"
+        }
+    },
+    "进入商店界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1182,
+                    505,
+                    61,
+                    29
+                ],
+                "expected": [
+                    "商店"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入下级商店界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1069,
+                "y": 177
+            }
+        }
+    },
+    "进入下级商店界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    59,
+                    143,
+                    121,
+                    435
+                ],
+                "expected": [
+                    "商店"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "竞技场机会购买"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1398,
+                "y": 157
+            }
+        }
+    },
+    "竞技场机会购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    295,
+                    151,
+                    811,
+                    487
+                ],
+                "expected": [
+                    "5面旗帜"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认购买竞技次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1658,
+                "y": 157
+            }
+        }
+    },
+    "确认购买竞技次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    604,
+                    471,
+                    301,
+                    68
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "40点行动力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1918,
+                "y": 157
+            }
+        }
+    },
+    "40点行动力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    306,
+                    151,
+                    794,
+                    489
+                ],
+                "expected": [
+                    "40点行动力"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认购买行动力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2182,
+                "y": 240
+            }
+        }
+    },
+    "免费商品购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    306,
+                    151,
+                    794,
+                    489
+                ],
+                "expected": [
+                    "免费商品"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认购买每日免费商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2696,
+                "y": 25
+            }
+        }
+    },
+    "确认购买行动力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    604,
+                    471,
+                    301,
+                    68
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "免费商品购买"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2431,
+                "y": 71
+            }
+        }
+    },
+    "确认购买每日免费商品": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    604,
+                    471,
+                    301,
+                    68
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "退出商店"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2957,
+                "y": 96
+            }
+        }
+    },
+    "退出商店": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    12,
+                    8,
+                    47,
+                    47
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3217,
+                "y": 96
+            }
+        }
+    }
+}

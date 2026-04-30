@@ -1,0 +1,272 @@
+{
+    "$__mpe_config_刷体力": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -1758,
+                "y": 163,
+                "zoom": 0.75
+            },
+            "filename": "刷体力",
+            "version": "v1.4.3"
+        }
+    },
+    "进入战斗界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1175,
+                    308,
+                    74,
+                    36
+                ],
+                "expected": [
+                    "战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入讨伐界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 898,
+                "y": 6
+            }
+        }
+    },
+    "进入讨伐界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    691,
+                    186,
+                    57,
+                    29
+                ],
+                "expected": [
+                    "讨伐"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "双足飞龙"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1158,
+                "y": 6
+            }
+        }
+    },
+    "双足飞龙": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    771,
+                    379,
+                    121,
+                    34
+                ],
+                "expected": [
+                    "地狱级"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检查快速战斗次数"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1418,
+                "y": 6
+            }
+        }
+    },
+    "检查快速战斗次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1207,
+                    635,
+                    60,
+                    66
+                ],
+                "template": [
+                    "快速战斗购买图标.png"
+                ]
+            }
+        },
+        "on_error": [
+            "开始快速战斗"
+        ],
+        "next": [
+            "战斗结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1692,
+                "y": 45
+            }
+        }
+    },
+    "开始快速战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "快速战斗开始.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测战斗是否开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1960,
+                "y": -134
+            }
+        }
+    },
+    "检测战斗是否开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    609,
+                    143,
+                    311,
+                    29
+                ],
+                "expected": [
+                    "快速战斗"
+                ]
+            }
+        },
+        "on_error": [
+            "没开始体力不足"
+        ],
+        "next": [
+            "快速战斗结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2220,
+                "y": -60
+            }
+        }
+    },
+    "没开始体力不足": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    555,
+                    135,
+                    168,
+                    50
+                ],
+                "expected": [
+                    "行动力不足"
+                ]
+            }
+        },
+        "next": [
+            "取消战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2493,
+                "y": 81
+            }
+        }
+    },
+    "取消战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    492,
+                    531,
+                    84,
+                    37
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "next": [
+            "战斗结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2777,
+                "y": 42
+            }
+        }
+    },
+    "快速战斗结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    771,
+                    537,
+                    168,
+                    42
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "next": [
+            "战斗结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2540,
+                "y": -140
+            }
+        }
+    },
+    "战斗结束": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 3,
+        "repeat_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3387,
+                "y": -100
+            }
+        }
+    }
+}

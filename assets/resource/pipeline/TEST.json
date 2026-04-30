@@ -1,0 +1,78 @@
+{
+    "$__mpe_config_TEST": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -704,
+                "y": 233,
+                "zoom": 0.86
+            },
+            "filename": "TEST",
+            "version": "v1.4.3"
+        }
+    },
+    "战斗结束_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1175,
+                    308,
+                    74,
+                    36
+                ],
+                "expected": [
+                    "战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入讨伐界面_副本3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 999,
+                "y": 56
+            }
+        }
+    },
+    "进入讨伐界面_副本3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    691,
+                    186,
+                    57,
+                    29
+                ],
+                "expected": [
+                    "讨伐"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "主界面特征识别"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1344,
+                "y": 42
+            }
+        }
+    },
+    "$__mpe_external_主界面特征识别_TEST": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1604,
+                "y": 42
+            }
+        }
+    }
+}
