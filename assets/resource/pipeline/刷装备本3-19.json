@@ -1,0 +1,265 @@
+{
+    "$__mpe_config_刷装备本3-19": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 172,
+                "y": 22,
+                "zoom": 0.87
+            },
+            "filename": "刷装备本3-19",
+            "version": "v1.4.3"
+        }
+    },
+    "进入副本选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1159,
+                    450,
+                    99,
+                    139
+                ],
+                "expected": [
+                    "副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入装备本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 322,
+                "y": 198
+            }
+        }
+    },
+    "进入装备本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    99,
+                    245,
+                    193,
+                    91
+                ],
+                "expected": [
+                    "装备本"
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "装备副本三"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 632,
+                "y": 198
+            }
+        }
+    },
+    "装备副本三": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    387,
+                    356,
+                    120,
+                    39
+                ],
+                "expected": [
+                    "装备副本"
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入副本三"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 942,
+                "y": 198
+            }
+        }
+    },
+    "进入副本三": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    970,
+                    406,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "选中关卡19"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1252,
+                "y": 213
+            }
+        }
+    },
+    "选中关卡19": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "关卡19"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入自动战斗配置"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1562,
+                "y": 213
+            }
+        }
+    },
+    "进入自动战斗配置": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    958,
+                    620,
+                    142,
+                    52
+                ],
+                "expected": [
+                    "自动战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "自动战斗次数最大化"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1872,
+                "y": 198
+            }
+        }
+    },
+    "自动战斗次数最大化": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    949,
+                    262,
+                    68,
+                    63
+                ],
+                "expected": [
+                    "MAX"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "开始自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2182,
+                "y": 198
+            }
+        }
+    },
+    "开始自动战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    652,
+                    552,
+                    228,
+                    60
+                ],
+                "expected": [
+                    "开始战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "最小化自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2492,
+                "y": 198
+            }
+        }
+    },
+    "最小化自动战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1049,
+                    557,
+                    141,
+                    47
+                ],
+                "expected": [
+                    "最小化"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "主界面检测"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2802,
+                "y": 198
+            }
+        }
+    },
+    "$__mpe_external_主界面检测_刷装备本3-19": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3062,
+                "y": 198
+            }
+        }
+    }
+}

@@ -1,0 +1,181 @@
+{
+    "$__mpe_config_返回主界面": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 378,
+                "y": -4,
+                "zoom": 0.76
+            },
+            "filename": "返回主界面",
+            "version": "v1.4.3"
+        }
+    },
+    "主界面检测": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "主界面检测.png"
+                ],
+                "threshold": 0.8
+            }
+        },
+        "next": [
+            "启动完成"
+        ],
+        "on_error": [
+            "右上角红叉"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 398
+            }
+        }
+    },
+    "右上角红叉": {
+        "max_hit": 10,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1102,
+                    0,
+                    168,
+                    146
+                ],
+                "template": [
+                    "红色叉号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "主界面检测"
+        ],
+        "on_error": [
+            "点击关闭小字"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 497
+            }
+        }
+    },
+    "点击关闭小字": {
+        "max_hit": 10,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    576,
+                    664,
+                    125,
+                    44
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "主界面检测"
+        ],
+        "on_error": [
+            "左上角通用返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 379
+            }
+        }
+    },
+    "左上角通用返回": {
+        "max_hit": 10,
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "roi": [
+                    4,
+                    1,
+                    76,
+                    53
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 300,
+        "next": [
+            "主界面检测"
+        ],
+        "on_error": [
+            "右上角透明叉号"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 108
+            }
+        }
+    },
+    "右上角透明叉号": {
+        "max_hit": 10,
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "roi": [
+                    1150,
+                    10,
+                    100,
+                    100
+                ],
+                "template": [
+                    "白色透明X号.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "主界面检测"
+        ],
+        "on_error": [
+            "启动完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 12
+            }
+        }
+    },
+    "启动完成": {
+        "recognition": {
+            "type": "Custom"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 91
+            }
+        }
+    }
+}

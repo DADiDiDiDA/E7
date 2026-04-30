@@ -1,0 +1,113 @@
+{
+    "$__mpe_config_进入游戏-有更新": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 400,
+                "y": 125,
+                "zoom": 0.76
+            },
+            "filename": "进入游戏-有更新",
+            "version": "v1.4.3"
+        }
+    },
+    "检测进入游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    538,
+                    571,
+                    194,
+                    65
+                ],
+                "expected": [
+                    "点击前往"
+                ]
+            }
+        },
+        "next": [
+            "点击进入游戏"
+        ],
+        "on_error": [
+            "检测更新弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 33
+            }
+        }
+    },
+    "检测更新弹窗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定更新"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "检测重启弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 322,
+                "y": 294
+            }
+        }
+    },
+    "检测重启弹窗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "更新"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "检测进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 598,
+                "y": -91
+            }
+        }
+    },
+    "点击进入游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    542,
+                    580,
+                    188,
+                    55
+                ],
+                "expected": [
+                    "点击前往"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 322,
+                "y": 78
+            }
+        }
+    }
+}

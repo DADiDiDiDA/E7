@@ -1,0 +1,86 @@
+{
+    "$__mpe_config_刷巨龙遗迹": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -3305,
+                "y": -50,
+                "zoom": 0.87
+            },
+            "filename": "刷巨龙遗迹",
+            "version": "v1.4.3"
+        }
+    },
+    "进入挑战要塞（巨龙遗迹）": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    928,
+                    537,
+                    121,
+                    45
+                ],
+                "expected": [
+                    "挑战要塞"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击全部功能"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3980,
+                "y": 159
+            }
+        }
+    },
+    "点击全部功能": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "更多.png"
+                ]
+            }
+        },
+        "next": [
+            "进入巨龙遗迹"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4240,
+                "y": 159
+            }
+        }
+    },
+    "进入巨龙遗迹": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    932,
+                    360,
+                    116,
+                    45
+                ],
+                "expected": [
+                    "巨龙遗迹"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4500,
+                "y": 159
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "$__mpe_config_休伯利安": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 173,
+                "y": 285,
+                "zoom": 1
+            },
+            "filename": "休伯利安",
+            "version": "v1.4.3"
+        }
+    },
+    "休伯利安启动": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    208,
+                    500,
+                    0,
+                    0
+                ],
+                "end": [
+                    [
+                        1122,
+                        500,
+                        0,
+                        0
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "点击休伯利安"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 29,
+                "y": 24
+            }
+        }
+    },
+    "点击休伯利安": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    874,
+                    338,
+                    65,
+                    68
+                ],
+                "template": [
+                    "休伯利安图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测是否有奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 314,
+                "y": -61
+            }
+        }
+    },
+    "检测是否有奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点击关闭.png"
+                ]
+            }
+        },
+        "next": [
+            "领取奖励"
+        ],
+        "on_error": [
+            "无奖励_返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 632,
+                "y": 35
+            }
+        }
+    },
+    "领取奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点击关闭.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测是否有奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 642,
+                "y": -173
+            }
+        }
+    },
+    "无奖励_返回主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    2,
+                    113,
+                    53
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 942,
+                "y": 20
+            }
+        }
+    }
+}
