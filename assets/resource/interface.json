@@ -1,0 +1,42 @@
+{
+    "interface_version": 2,
+    "name": "MAA-E7",
+    "description": "自动化脚本",
+    "contact": "",
+    "license": "MIT",
+    "welcome": "欢迎使用游戏自动化助手",
+    "version": "1.0.0",
+    "controller": [
+        {
+            "name": "安卓端",
+            "type": "Adb",
+            "display_short_side": 720
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "./resource"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "🎮 进入游戏",
+            "entry": "进入登陆界面"
+        },
+        {
+            "name": "❌ 关闭公告栏",
+            "entry": "检测公告栏"
+        },
+        {
+            "name": "⚔️ 刷体力",
+            "entry": "进入战斗界面"
+        },
+        {
+            "name": "🛒 商店购买每日物品",
+            "entry": "进入商店界面"
+        }
+    ]
+}
