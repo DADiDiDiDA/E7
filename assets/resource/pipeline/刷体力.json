@@ -3,8 +3,8 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -2715,
-                "y": 217,
+                "x": -1484,
+                "y": 203,
                 "zoom": 1
             },
             "filename": "刷体力",
@@ -29,6 +29,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 5000,
         "next": [
             "进入讨伐界面"
         ],
@@ -57,6 +58,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 5000,
         "next": [
             "双足飞龙"
         ],
@@ -85,6 +87,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 5000,
         "next": [
             "检查快速战斗次数"
         ],
@@ -110,6 +113,7 @@
                 ]
             }
         },
+        "post_delay": 5000,
         "next": [
             "战斗结束"
         ],
@@ -135,6 +139,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 5000,
         "next": [
             "检测战斗是否开始"
         ],
@@ -160,6 +165,7 @@
                 ]
             }
         },
+        "post_delay": 5000,
         "next": [
             "快速战斗结束"
         ],
@@ -188,6 +194,7 @@
                 ]
             }
         },
+        "post_delay": 5000,
         "next": [
             "取消战斗"
         ],
@@ -213,6 +220,7 @@
                 ]
             }
         },
+        "post_delay": 5000,
         "next": [
             "战斗结束"
         ],
@@ -238,6 +246,7 @@
                 ]
             }
         },
+        "post_delay": 5000,
         "next": [
             "战斗结束"
         ],
@@ -262,6 +271,7 @@
         },
         "repeat": 3,
         "repeat_delay": 3000,
+        "post_delay": 5000,
         "$__mpe_code": {
             "position": {
                 "x": 3387,

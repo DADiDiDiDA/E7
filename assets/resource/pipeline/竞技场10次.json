@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -664,
-                "y": 243,
-                "zoom": 0.76
+                "x": -182,
+                "y": 109,
+                "zoom": 0.87
             },
             "filename": "竞技场10次",
             "version": "v1.4.3"
@@ -29,6 +29,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 5000,
         "next": [
             "进入新手竞技场"
         ],
