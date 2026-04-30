@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1758,
-                "y": 163,
-                "zoom": 0.75
+                "x": -2715,
+                "y": 217,
+                "zoom": 1
             },
             "filename": "刷体力",
             "version": "v1.4.3"
@@ -110,11 +110,11 @@
                 ]
             }
         },
-        "on_error": [
-            "开始快速战斗"
-        ],
         "next": [
             "战斗结束"
+        ],
+        "on_error": [
+            "开始快速战斗"
         ],
         "$__mpe_code": {
             "position": {
@@ -160,11 +160,11 @@
                 ]
             }
         },
-        "on_error": [
-            "没开始体力不足"
-        ],
         "next": [
             "快速战斗结束"
+        ],
+        "on_error": [
+            "没开始体力不足"
         ],
         "$__mpe_code": {
             "position": {

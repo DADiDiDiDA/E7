@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -2490,
-                "y": 234,
-                "zoom": 1.5
+                "x": -1912,
+                "y": 323,
+                "zoom": 0.86
             },
             "filename": "返回主界面两次",
             "version": "v1.4.3"
@@ -13,16 +13,10 @@
     },
     "返回主界面两次": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
-                "roi": [
-                    21,
-                    14,
-                    36,
-                    40
-                ],
-                "expected": [
-                    "<"
+                "template": [
+                    "返回箭头.png"
                 ]
             }
         },
@@ -30,11 +24,11 @@
             "type": "Click"
         },
         "repeat": 2,
-        "repeat_delay": 2000,
+        "repeat_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 1985,
-                "y": -132
+                "x": 2861,
+                "y": -145
             }
         }
     }
