@@ -1,0 +1,97 @@
+{
+    "$__mpe_config_刷商店": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -1947,
+                "y": 184,
+                "zoom": 0.86
+            },
+            "filename": "刷商店",
+            "version": "v1.4.3"
+        }
+    },
+    "进入秘密商店": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    18,
+                    347,
+                    78,
+                    31
+                ],
+                "expected": [
+                    "商店"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "识别花费图片"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2612,
+                "y": 104
+            }
+        }
+    },
+    "识别花费图片": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1065,
+                    67,
+                    183,
+                    639
+                ],
+                "template": [
+                    "刷商店/confirmBuyButton-1.png",
+                    "刷商店/confirmBuyButton-2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "购买界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2931,
+                "y": -107
+            }
+        }
+    },
+    "购买界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    599,
+                    474,
+                    304,
+                    71
+                ],
+                "template": [
+                    "刷商店/confirmBuyButton-1.png",
+                    "刷商店/confirmBuyButton-2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3229,
+                "y": -146
+            }
+        }
+    }
+}

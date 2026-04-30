@@ -1,0 +1,41 @@
+{
+    "$__mpe_config_返回主界面两次": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -2490,
+                "y": 234,
+                "zoom": 1.5
+            },
+            "filename": "返回主界面两次",
+            "version": "v1.4.3"
+        }
+    },
+    "返回主界面两次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    21,
+                    14,
+                    36,
+                    40
+                ],
+                "expected": [
+                    "<"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "repeat_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1985,
+                "y": -132
+            }
+        }
+    }
+}

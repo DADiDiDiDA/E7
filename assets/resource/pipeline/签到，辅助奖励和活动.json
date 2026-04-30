@@ -1,0 +1,36 @@
+{
+    "$__mpe_config_签到，辅助奖励和活动": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -1584,
+                "y": 170,
+                "zoom": 1
+            },
+            "filename": "签到，辅助奖励和活动",
+            "version": "v1.4.3"
+        }
+    },
+    "友情奖励领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    589,
+                    563,
+                    104,
+                    40
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2241,
+                "y": 71
+            }
+        }
+    }
+}

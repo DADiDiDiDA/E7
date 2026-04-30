@@ -1,0 +1,142 @@
+{
+    "$__mpe_config_领取活跃度奖励": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -107,
+                "y": 276,
+                "zoom": 0.75
+            },
+            "filename": "领取活跃度奖励",
+            "version": "v1.4.3"
+        }
+    },
+    "点击每日任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "日记"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "收取活跃度100奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 592,
+                "y": 12
+            }
+        }
+    },
+    "进入选择菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1217,
+                    8,
+                    49,
+                    50
+                ],
+                "template": [
+                    "主界面特征.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入活跃度界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 12
+            }
+        }
+    },
+    "进入活跃度界面": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "roi": [
+                    919,
+                    110,
+                    67,
+                    56
+                ],
+                "template": [
+                    "日常任务.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击每日任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 12
+            }
+        }
+    },
+    "收取活跃度100奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1159,
+                    142,
+                    36,
+                    20
+                ],
+                "expected": [
+                    "100"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    -51,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "确认奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 979,
+                "y": -154
+            }
+        }
+    },
+    "确认奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": ""
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1223,
+                "y": -14
+            }
+        }
+    }
+}

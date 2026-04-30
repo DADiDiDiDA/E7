@@ -1,0 +1,278 @@
+{
+    "$__mpe_config_竞技场10次": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -948,
+                "y": 337,
+                "zoom": 0.86
+            },
+            "filename": "竞技场10次",
+            "version": "v1.4.3"
+        }
+    },
+    "进入竞技场选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1165,
+                    371,
+                    74,
+                    34
+                ],
+                "expected": [
+                    "竞技场"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入新手竞技场"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 31
+            }
+        }
+    },
+    "进入新手竞技场": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    289,
+                    111,
+                    159,
+                    40
+                ],
+                "expected": [
+                    "新手竞技场"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择NPC对战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 31
+            }
+        }
+    },
+    "选择NPC对战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1062,
+                    195,
+                    107,
+                    39
+                ],
+                "expected": [
+                    "NPC对战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择第一位挑战者"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 31
+            }
+        }
+    },
+    "选择第一位挑战者": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    298,
+                    94,
+                    170,
+                    44
+                ],
+                "expected": [
+                    "NPC交战对手"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    109,
+                    110,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "点击挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 17
+            }
+        }
+    },
+    "点击挑战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    614,
+                    642,
+                    55,
+                    37
+                ],
+                "expected": [
+                    "挑战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 7000,
+        "next": [
+            "是快速对战吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 31
+            }
+        }
+    },
+    "是快速对战吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    712,
+                    635,
+                    193,
+                    53
+                ],
+                "template": [
+                    "快速战斗开始.png"
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "是快速对战"
+        ],
+        "on_error": [
+            "对战结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1682,
+                "y": -144
+            }
+        }
+    },
+    "是快速对战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    798,
+                    643,
+                    93,
+                    34
+                ],
+                "expected": [
+                    "快速对战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "post_delay": 7000,
+        "next": [
+            "领取成功"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 387
+            }
+        }
+    },
+    "领取成功": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    713,
+                    618,
+                    61,
+                    36
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 7000,
+        "next": [
+            "选择第一位挑战者"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1376,
+                "y": -342
+            }
+        }
+    },
+    "对战结束": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "roi": [
+                    17,
+                    15,
+                    38,
+                    36
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "repeat_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2172,
+                "y": -49
+            }
+        }
+    }
+}
