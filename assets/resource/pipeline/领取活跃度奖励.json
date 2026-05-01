@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -107,
-                "y": 276,
-                "zoom": 0.75
+                "x": -1258,
+                "y": 229,
+                "zoom": 1
             },
             "filename": "领取活跃度奖励",
             "version": "v1.4.3"
@@ -15,6 +15,12 @@
         "recognition": {
             "type": "OCR",
             "param": {
+                "roi": [
+                    115,
+                    125,
+                    97,
+                    27
+                ],
                 "expected": [
                     "日记"
                 ]
@@ -28,8 +34,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 592,
-                "y": 12
+                "x": 621,
+                "y": -39
             }
         }
     },
@@ -94,10 +100,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    1159,
+                    1156,
                     142,
-                    36,
-                    20
+                    44,
+                    21
                 ],
                 "expected": [
                     "100"
@@ -116,7 +122,7 @@
             }
         },
         "next": [
-            "确认奖励"
+            "有没有活跃度弹窗"
         ],
         "$__mpe_code": {
             "position": {
@@ -125,17 +131,84 @@
             }
         }
     },
-    "确认奖励": {
+    "有没有活跃度弹窗": {
         "recognition": {
             "type": "OCR",
             "param": {
-                "expected": ""
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": [
+                    "获得"
+                ]
             }
+        },
+        "next": [
+            "领取活跃度奖励"
+        ],
+        "on_error": [
+            "无弹窗关闭界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1328,
+                "y": -40
+            }
+        }
+    },
+    "领取活跃度奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    596,
+                    508,
+                    91,
+                    34
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "无弹窗关闭界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1701,
+                "y": -171
+            }
+        }
+    },
+    "无弹窗关闭界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    589,
+                    677,
+                    99,
+                    32
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
         },
         "$__mpe_code": {
             "position": {
-                "x": 1223,
-                "y": -14
+                "x": 2019,
+                "y": 13
             }
         }
     }

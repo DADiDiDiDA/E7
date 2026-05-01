@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -182,
-                "y": 109,
-                "zoom": 0.87
+                "x": -2192,
+                "y": 363,
+                "zoom": 1
             },
             "filename": "竞技场10次",
             "version": "v1.4.3"
@@ -163,7 +163,7 @@
     },
     "是快速对战吗": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
                     712,
@@ -171,22 +171,22 @@
                     193,
                     53
                 ],
-                "template": [
-                    "快速战斗开始.png"
+                "expected": [
+                    "快速"
                 ]
             }
         },
         "post_delay": 2000,
+        "on_error": [
+            "结束"
+        ],
         "next": [
             "是快速对战"
         ],
-        "on_error": [
-            "返回主界面两次"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 1682,
-                "y": -144
+                "x": 1743,
+                "y": -251
             }
         }
     },
@@ -211,12 +211,12 @@
         "repeat": 2,
         "post_delay": 7000,
         "next": [
-            "领取成功"
+            "有没有提示次数不足"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1932,
-                "y": 387
+                "x": 2156,
+                "y": -444
             }
         }
     },
@@ -244,16 +244,72 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1376,
-                "y": -342
+                "x": 1474,
+                "y": -628
             }
         }
     },
-    "$__mpe_external_返回主界面两次_竞技场10次": {
+    "有没有提示次数不足": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    567,
+                    130,
+                    149,
+                    58
+                ],
+                "expected": [
+                    "购买旗帜"
+                ]
+            }
+        },
+        "on_error": [
+            "领取成功"
+        ],
+        "next": [
+            "取消购买"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 2100,
-                "y": 60
+                "x": 2416,
+                "y": -444
+            }
+        }
+    },
+    "取消购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    487,
+                    528,
+                    95,
+                    44
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2780,
+                "y": -464
+            }
+        }
+    },
+    "结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2801,
+                "y": -170
             }
         }
     }

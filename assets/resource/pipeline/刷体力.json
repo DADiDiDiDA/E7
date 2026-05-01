@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1484,
-                "y": 203,
-                "zoom": 1
+                "x": -715,
+                "y": 185,
+                "zoom": 0.66
             },
             "filename": "刷体力",
             "version": "v1.4.3"
@@ -100,39 +100,16 @@
     },
     "检查快速战斗次数": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    1207,
-                    635,
-                    60,
-                    66
+                    1078,
+                    640,
+                    99,
+                    43
                 ],
-                "template": [
-                    "快速战斗购买图标.png"
-                ]
-            }
-        },
-        "post_delay": 5000,
-        "next": [
-            "战斗结束"
-        ],
-        "on_error": [
-            "开始快速战斗"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1692,
-                "y": 45
-            }
-        }
-    },
-    "开始快速战斗": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "快速战斗开始.png"
+                "expected": [
+                    "快速"
                 ]
             }
         },
@@ -143,10 +120,13 @@
         "next": [
             "检测战斗是否开始"
         ],
+        "on_error": [
+            "战斗结束"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 1960,
-                "y": -134
+                "x": 1692,
+                "y": 45
             }
         }
     },
@@ -165,7 +145,7 @@
                 ]
             }
         },
-        "post_delay": 5000,
+        "post_delay": 25000,
         "next": [
             "快速战斗结束"
         ],
@@ -174,8 +154,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2220,
-                "y": -60
+                "x": 2106,
+                "y": -112
             }
         }
     },
@@ -252,8 +232,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2540,
-                "y": -140
+                "x": 2489,
+                "y": -206
             }
         }
     },
@@ -270,12 +250,11 @@
             "type": "Click"
         },
         "repeat": 3,
-        "repeat_delay": 3000,
-        "post_delay": 5000,
+        "repeat_delay": 500,
         "$__mpe_code": {
             "position": {
-                "x": 3387,
-                "y": -100
+                "x": 3242,
+                "y": -103
             }
         }
     }

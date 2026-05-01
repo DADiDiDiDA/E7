@@ -3,12 +3,179 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1584,
-                "y": 170,
-                "zoom": 1
+                "x": -69,
+                "y": 117,
+                "zoom": 0.57
             },
             "filename": "签到，辅助奖励和活动",
             "version": "v1.4.3"
+        }
+    },
+    "签到奖励领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1010,
+                    641,
+                    125,
+                    49
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有登陆奖励吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 130
+            }
+        }
+    },
+    "有签到奖励吗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    450,
+                    49,
+                    203,
+                    56
+                ],
+                "expected": [
+                    "签到奖励"
+                ]
+            }
+        },
+        "next": [
+            "签到奖励领取"
+        ],
+        "on_error": [
+            "[JumpBack]有登陆奖励吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 33
+            }
+        }
+    },
+    "有登陆奖励吗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    544,
+                    111,
+                    200,
+                    48
+                ],
+                "expected": [
+                    "获得登录奖励"
+                ]
+            }
+        },
+        "next": [
+            "关闭登录奖励"
+        ],
+        "on_error": [
+            "[JumpBack]有友情奖励吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 87
+            }
+        }
+    },
+    "关闭登录奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    586,
+                    670,
+                    110,
+                    37
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有友情奖励吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 155
+            }
+        }
+    },
+    "有友情奖励吗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    477,
+                    99,
+                    320,
+                    40
+                ],
+                "expected": [
+                    "友情点数抵达"
+                ]
+            }
+        },
+        "next": [
+            "友情奖励领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 87
+            }
+        }
+    },
+    "到主界面了吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "主界面特征.png"
+                ]
+            }
+        },
+        "next": [
+            "已到达主界面"
+        ],
+        "on_error": [
+            "有签到奖励吗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 12
+            }
+        }
+    },
+    "已到达主界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 54
+            }
         }
     },
     "友情奖励领取": {
@@ -26,10 +193,16 @@
                 ]
             }
         },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "到主界面了吗"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 2241,
-                "y": 71
+                "x": 1612,
+                "y": 87
             }
         }
     }
