@@ -3,12 +3,20 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -3393,
-                "y": 37,
-                "zoom": 0.54
+                "x": -1265,
+                "y": 5,
+                "zoom": 0.76
             },
             "filename": "商店购买每日物品",
             "version": "v1.4.3"
+        }
+    },
+    "========== 入口与退出 ==========": {
+        "$__mpe_code": {
+            "position": {
+                "x": 252,
+                "y": 12
+            }
         }
     },
     "进入商店界面": {
@@ -29,13 +37,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "进入下级商店界面"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 806
+                "y": 505
             }
         }
     },
@@ -57,804 +66,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "识别第一行免费商品"
+            "识别_第一行_免费商品"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 332,
-                "y": 806
-            }
-        }
-    },
-    "识别第一行免费商品": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    326,
-                    343,
-                    758,
-                    32
-                ],
-                "template": [
-                    "免费商品.png",
-                    "商店友情点图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "识别第一行友情点商品"
-        ],
-        "next": [
-            "是否可选择数量"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 652,
-                "y": 787
-            }
-        }
-    },
-    "确认第一次购买": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    785,
-                    490,
-                    72,
-                    38
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第一行友情点商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1281,
-                "y": 716
-            }
-        }
-    },
-    "识别第一行的商品": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    349,
-                    343,
-                    110,
-                    31
-                ],
-                "template": [
-                    "免费商品.png",
-                    "商店友情点图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "识别第一个商品"
-        ],
-        "next": [
-            "是否可选择数量_副本27"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2572,
-                "y": 656
-            }
-        }
-    },
-    "识别第一行友情点商品": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    349,
-                    343,
-                    110,
-                    31
-                ],
-                "template": [
-                    "免费商品.png",
-                    "商店友情点图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "识别第一行的商品"
-        ],
-        "next": [
-            "是否可选择数量_副本24"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1612,
-                "y": 725
-            }
-        }
-    },
-    "识别第一个商品": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    349,
-                    343,
-                    110,
-                    31
-                ],
-                "template": [
-                    "免费商品.png",
-                    "商店友情点图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "识别第二行商品"
-        ],
-        "next": [
-            "是否可选择数量_副本27_副本30"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3532,
-                "y": 587
-            }
-        }
-    },
-    "识别第二行商品": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    319,
-                    585,
-                    765,
-                    35
-                ],
-                "template": [
-                    "免费商品.png",
-                    "商店友情点图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "识别第二行商品_副本18"
-        ],
-        "next": [
-            "是否可选择数量_副本27_副本30_副本33"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4492,
-                "y": 518
-            }
-        }
-    },
-    "识别第二行商品_副本18": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    319,
-                    585,
-                    765,
-                    35
-                ],
-                "template": [
-                    "免费商品.png",
-                    "商店友情点图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "识别第二行商品_副本19"
-        ],
-        "next": [
-            "是否可选择数量_副本27_副本30_副本33_副本36"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5452,
-                "y": 441
-            }
-        }
-    },
-    "识别第二行商品_副本19": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    319,
-                    585,
-                    765,
-                    35
-                ],
-                "template": [
-                    "免费商品.png",
-                    "商店友情点图标.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "退出商店"
-        ],
-        "next": [
-            "是否可选择数量_副本27_副本30_副本33_副本36_副本39"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6412,
-                "y": 365
-            }
-        }
-    },
-    "是否可选择数量": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "数量选择.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "on_error": [
-            "确认第一次购买"
-        ],
-        "next": [
-            "确认第一次购买_副本22"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 972,
-                "y": 704
-            }
-        }
-    },
-    "确认第一次购买_副本22": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    802,
-                    573,
-                    63,
-                    36
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第一行友情点商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1292,
-                "y": 475
-            }
-        }
-    },
-    "确认第一次购买_副本23": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    785,
-                    490,
-                    72,
-                    38
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第一行的商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 667
-            }
-        }
-    },
-    "是否可选择数量_副本24": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "数量选择.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认第一次购买_副本22_副本25"
-        ],
-        "on_error": [
-            "确认第一次购买_副本23"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1932,
-                "y": 625
-            }
-        }
-    },
-    "确认第一次购买_副本22_副本25": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    802,
-                    573,
-                    63,
-                    36
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第一行的商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 398
-            }
-        }
-    },
-    "确认第一次购买_副本26": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    785,
-                    490,
-                    72,
-                    38
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第一个商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3212,
-                "y": 598
-            }
-        }
-    },
-    "是否可选择数量_副本27": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "数量选择.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认第一次购买_副本22_副本28"
-        ],
-        "on_error": [
-            "确认第一次购买_副本26"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2892,
-                "y": 556
-            }
-        }
-    },
-    "确认第一次购买_副本22_副本28": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    802,
-                    573,
-                    63,
-                    36
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第一个商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3212,
-                "y": 329
-            }
-        }
-    },
-    "确认第一次购买_副本26_副本29": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    785,
-                    490,
-                    72,
-                    38
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第二行商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4172,
-                "y": 529
-            }
-        }
-    },
-    "是否可选择数量_副本27_副本30": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "数量选择.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认第一次购买_副本22_副本28_副本31"
-        ],
-        "on_error": [
-            "确认第一次购买_副本26_副本29"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3852,
-                "y": 487
-            }
-        }
-    },
-    "确认第一次购买_副本22_副本28_副本31": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    802,
-                    573,
-                    63,
-                    36
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第二行商品"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4172,
-                "y": 260
-            }
-        }
-    },
-    "确认第一次购买_副本26_副本29_副本32": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    785,
-                    490,
-                    72,
-                    38
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第二行商品_副本18"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5132,
-                "y": 460
-            }
-        }
-    },
-    "是否可选择数量_副本27_副本30_副本33": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "数量选择.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认第一次购买_副本22_副本28_副本31_副本34"
-        ],
-        "on_error": [
-            "确认第一次购买_副本26_副本29_副本32"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4812,
-                "y": 418
-            }
-        }
-    },
-    "确认第一次购买_副本22_副本28_副本31_副本34": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    802,
-                    573,
-                    63,
-                    36
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第二行商品_副本18"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5132,
-                "y": 173
-            }
-        }
-    },
-    "确认第一次购买_副本26_副本29_副本32_副本35": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    785,
-                    490,
-                    72,
-                    38
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第二行商品_副本19"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6092,
-                "y": 375
-            }
-        }
-    },
-    "是否可选择数量_副本27_副本30_副本33_副本36": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "数量选择.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认第一次购买_副本22_副本28_副本31_副本34_副本37"
-        ],
-        "on_error": [
-            "确认第一次购买_副本26_副本29_副本32_副本35"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5772,
-                "y": 330
-            }
-        }
-    },
-    "确认第一次购买_副本22_副本28_副本31_副本34_副本37": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    802,
-                    573,
-                    63,
-                    36
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "识别第二行商品_副本19"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6092,
-                "y": 88
-            }
-        }
-    },
-    "确认第一次购买_副本26_副本29_副本32_副本35_副本38": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    785,
-                    490,
-                    72,
-                    38
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "退出商店"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 7052,
-                "y": 12
-            }
-        }
-    },
-    "是否可选择数量_副本27_副本30_副本33_副本36_副本39": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "数量选择.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "确认第一次购买_副本22_副本28_副本31_副本34_副本37_副本40"
-        ],
-        "on_error": [
-            "确认第一次购买_副本26_副本29_副本32_副本35_副本38"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6732,
-                "y": 254
-            }
-        }
-    },
-    "确认第一次购买_副本22_副本28_副本31_副本34_副本37_副本40": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    802,
-                    573,
-                    63,
-                    36
-                ],
-                "expected": [
-                    "购买"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "退出商店"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 7052,
-                "y": 299
+                "y": 505
             }
         }
     },
@@ -876,10 +95,490 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 7372,
-                "y": 290
+                "x": 5132,
+                "y": 185
+            }
+        }
+    },
+    "========== 第一行商品识别 ==========": {
+        "$__mpe_code": {
+            "position": {
+                "x": 492,
+                "y": 12
+            }
+        }
+    },
+    "识别_第一行_免费商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    326,
+                    343,
+                    758,
+                    32
+                ],
+                "template": [
+                    "免费商品.png",
+                    "商店友情点图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "购买_确认"
+        ],
+        "on_error": [
+            "识别_第一行_友情点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 486
+            }
+        }
+    },
+    "识别_第一行_友情点": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    349,
+                    343,
+                    110,
+                    31
+                ],
+                "template": [
+                    "免费商品.png",
+                    "商店友情点图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "购买_确认_2"
+        ],
+        "on_error": [
+            "识别_第二行_普通商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 444
+            }
+        }
+    },
+    "========== 第二行商品识别 ==========": {
+        "$__mpe_code": {
+            "position": {
+                "x": 732,
+                "y": 12
+            }
+        }
+    },
+    "识别_第二行_普通商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    349,
+                    343,
+                    110,
+                    31
+                ],
+                "template": [
+                    "免费商品.png",
+                    "商店友情点图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "购买_确认_3"
+        ],
+        "on_error": [
+            "识别_第三行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 402
+            }
+        }
+    },
+    "识别_第三行_商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    349,
+                    343,
+                    110,
+                    31
+                ],
+                "template": [
+                    "免费商品.png",
+                    "商店友情点图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "购买_确认_4"
+        ],
+        "on_error": [
+            "识别_第四行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2572,
+                "y": 360
+            }
+        }
+    },
+    "识别_第四行_商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    319,
+                    585,
+                    765,
+                    35
+                ],
+                "template": [
+                    "免费商品.png",
+                    "商店友情点图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "购买_确认_5"
+        ],
+        "on_error": [
+            "识别_第五行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3212,
+                "y": 318
+            }
+        }
+    },
+    "识别_第五行_商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    319,
+                    585,
+                    765,
+                    35
+                ],
+                "template": [
+                    "免费商品.png",
+                    "商店友情点图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "购买_确认_6"
+        ],
+        "on_error": [
+            "识别_第六行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3852,
+                "y": 276
+            }
+        }
+    },
+    "识别_第六行_商品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    319,
+                    585,
+                    765,
+                    35
+                ],
+                "template": [
+                    "免费商品.png",
+                    "商店友情点图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "购买_确认_7"
+        ],
+        "on_error": [
+            "退出商店"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4492,
+                "y": 234
+            }
+        }
+    },
+    "========== 购买确认 ==========": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 12
+            }
+        }
+    },
+    "购买_确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    796,
+                    478,
+                    65,
+                    133
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "识别_第一行_友情点"
+        ],
+        "on_error": [
+            "识别_第一行_友情点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 425
+            }
+        }
+    },
+    "购买_确认_2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    796,
+                    478,
+                    65,
+                    133
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "识别_第二行_普通商品"
+        ],
+        "on_error": [
+            "识别_第二行_普通商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 383
+            }
+        }
+    },
+    "购买_确认_3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    796,
+                    478,
+                    65,
+                    133
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "识别_第三行_商品"
+        ],
+        "on_error": [
+            "识别_第三行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 341
+            }
+        }
+    },
+    "购买_确认_4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    796,
+                    478,
+                    65,
+                    133
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "识别_第四行_商品"
+        ],
+        "on_error": [
+            "识别_第四行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2892,
+                "y": 299
+            }
+        }
+    },
+    "购买_确认_5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    796,
+                    478,
+                    65,
+                    133
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "识别_第五行_商品"
+        ],
+        "on_error": [
+            "识别_第五行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3532,
+                "y": 257
+            }
+        }
+    },
+    "购买_确认_6": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    796,
+                    478,
+                    65,
+                    133
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "识别_第六行_商品"
+        ],
+        "on_error": [
+            "识别_第六行_商品"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4172,
+                "y": 215
+            }
+        }
+    },
+    "购买_确认_7": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    796,
+                    478,
+                    65,
+                    133
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "退出商店"
+        ],
+        "on_error": [
+            "退出商店"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4812,
+                "y": 173
             }
         }
     }
