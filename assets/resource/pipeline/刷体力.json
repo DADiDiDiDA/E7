@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -715,
-                "y": 185,
-                "zoom": 0.66
+                "x": -1267,
+                "y": 104,
+                "zoom": 0.87
             },
             "filename": "刷体力",
             "version": "v1.4.3"
@@ -253,8 +253,8 @@
         "repeat_delay": 500,
         "$__mpe_code": {
             "position": {
-                "x": 3242,
-                "y": -103
+                "x": 3137,
+                "y": 190
             }
         }
     }
