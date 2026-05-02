@@ -1,0 +1,434 @@
+{
+    "$__mpe_config_骑士团签到并请求资源": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -1231,
+                "y": 77,
+                "zoom": 0.99
+            },
+            "filename": "骑士团签到并请求资源",
+            "version": "v1.5.0"
+        }
+    },
+    "点击主界面菜单选择": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1216,
+                    7,
+                    49,
+                    48
+                ],
+                "template": [
+                    "主界面特征.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "点击骑士团"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1053,
+                "y": 128
+            }
+        }
+    },
+    "点击骑士团": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1053,
+                    351,
+                    55,
+                    68
+                ],
+                "template": [
+                    "骑士团图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "有没有昨日签到奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1373,
+                "y": 110
+            }
+        }
+    },
+    "有没有昨日签到奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    482,
+                    145,
+                    316,
+                    49
+                ],
+                "expected": [
+                    "骑士团签到达成度奖励"
+                ]
+            }
+        },
+        "post_delay": 4000,
+        "next": [
+            "有昨日签到奖励"
+        ],
+        "on_error": [
+            "进入今日签到界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1680,
+                "y": 53
+            }
+        }
+    },
+    "有昨日签到奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    600,
+                    518,
+                    84,
+                    26
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "进入今日签到界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1982,
+                "y": -100
+            }
+        }
+    },
+    "进入今日签到界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    16,
+                    350,
+                    78,
+                    24
+                ],
+                "expected": [
+                    "骑士团活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "支援别人"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2277,
+                "y": 84
+            }
+        }
+    },
+    "支援别人": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1053,
+                    306,
+                    135,
+                    50
+                ],
+                "template": [
+                    "点击支援.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "收获支援奖励"
+        ],
+        "on_error": [
+            "支援别人_副本4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2535,
+                "y": -159
+            }
+        }
+    },
+    "收获支援奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    596,
+                    512,
+                    88,
+                    30
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "支援别人_副本4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2805,
+                "y": -314
+            }
+        }
+    },
+    "支援别人_副本4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1053,
+                    306,
+                    135,
+                    50
+                ],
+                "template": [
+                    "点击支援.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "收获支援奖励_副本5"
+        ],
+        "on_error": [
+            "请求资源"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3059,
+                "y": -76
+            }
+        }
+    },
+    "收获支援奖励_副本5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    596,
+                    512,
+                    88,
+                    30
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "请求资源"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3322,
+                "y": -127
+            }
+        }
+    },
+    "请求资源": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1054,
+                    74,
+                    112,
+                    36
+                ],
+                "expected": [
+                    "请求支援"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "选择经验精灵"
+        ],
+        "on_error": [
+            "返回骑士团"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3679,
+                "y": 0
+            }
+        }
+    },
+    "选择经验精灵": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    913,
+                    355,
+                    101,
+                    122
+                ],
+                "template": [
+                    "经验精灵.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "确认请求资源"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3962,
+                "y": -254
+            }
+        }
+    },
+    "确认请求资源": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    947,
+                    576,
+                    143,
+                    51
+                ],
+                "template": [
+                    "请求资源.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "返回骑士团"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4219,
+                "y": -253
+            }
+        }
+    },
+    "返回骑士团": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    618,
+                    679,
+                    74,
+                    28
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "返回上一级"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4547,
+                "y": -60
+            }
+        }
+    },
+    "返回上一级": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    62,
+                    18,
+                    83,
+                    32
+                ],
+                "expected": [
+                    "骑士团"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    23,
+                    28,
+                    14,
+                    12
+                ]
+            }
+        },
+        "post_delay": 4000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4807,
+                "y": -60
+            }
+        }
+    }
+}
