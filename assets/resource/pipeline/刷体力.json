@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1267,
-                "y": 104,
-                "zoom": 0.87
+                "x": -855,
+                "y": -513,
+                "zoom": 1.5
             },
             "filename": "刷体力",
-            "version": "v1.4.3"
+            "version": "v1.5.0"
         }
     },
     "进入战斗界面": {
@@ -35,8 +35,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 898,
-                "y": 6
+                "x": 12,
+                "y": 405
             }
         }
     },
@@ -64,8 +64,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1158,
-                "y": 6
+                "x": 332,
+                "y": 405
             }
         }
     },
@@ -93,23 +93,23 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1418,
-                "y": 6
+                "x": 652,
+                "y": 405
             }
         }
     },
     "检查快速战斗次数": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    1078,
-                    640,
-                    99,
-                    43
+                    1070,
+                    631,
+                    136,
+                    62
                 ],
-                "expected": [
-                    "快速"
+                "template": [
+                    "讨伐快速战斗.png"
                 ]
             }
         },
@@ -125,8 +125,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1692,
-                "y": 45
+                "x": 972,
+                "y": 405
             }
         }
     },
@@ -154,8 +154,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2106,
-                "y": -112
+                "x": 1292,
+                "y": 282
             }
         }
     },
@@ -180,8 +180,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2493,
-                "y": 81
+                "x": 1633,
+                "y": 315
             }
         }
     },
@@ -206,8 +206,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2777,
-                "y": 42
+                "x": 1908,
+                "y": 258
             }
         }
     },
@@ -232,8 +232,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2489,
-                "y": -206
+                "x": 1932,
+                "y": 12
             }
         }
     },
@@ -241,6 +241,12 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
+                "roi": [
+                    2,
+                    3,
+                    65,
+                    63
+                ],
                 "template": [
                     "返回箭头.png"
                 ]
@@ -249,12 +255,68 @@
         "action": {
             "type": "Click"
         },
-        "repeat": 3,
-        "repeat_delay": 500,
+        "post_delay": 2000,
+        "next": [
+            "战斗结束_副本1"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 3137,
-                "y": 190
+                "x": 2252,
+                "y": 293
+            }
+        }
+    },
+    "战斗结束_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    3,
+                    65,
+                    63
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "战斗结束_副本2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2517,
+                "y": 232
+            }
+        }
+    },
+    "战斗结束_副本2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    3,
+                    65,
+                    63
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2793,
+                "y": 280
             }
         }
     }

@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -2192,
-                "y": 363,
-                "zoom": 1
+                "x": -1046,
+                "y": 159,
+                "zoom": 0.86
             },
             "filename": "竞技场10次",
-            "version": "v1.4.3"
+            "version": "v1.5.0"
         }
     },
     "进入竞技场选择": {
@@ -36,7 +36,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 31
+                "y": 489
             }
         }
     },
@@ -64,7 +64,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 332,
-                "y": 31
+                "y": 517
             }
         }
     },
@@ -92,7 +92,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 652,
-                "y": 31
+                "y": 517
             }
         }
     },
@@ -128,7 +128,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 972,
-                "y": 17
+                "y": 469
             }
         }
     },
@@ -157,7 +157,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 1292,
-                "y": 31
+                "y": 455
             }
         }
     },
@@ -177,16 +177,16 @@
             }
         },
         "post_delay": 2000,
-        "on_error": [
-            "结束"
-        ],
         "next": [
             "是快速对战"
         ],
+        "on_error": [
+            "结束"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 1743,
-                "y": -251
+                "x": 1559,
+                "y": 127
             }
         }
     },
@@ -215,8 +215,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2156,
-                "y": -444
+                "x": 12,
+                "y": 109
             }
         }
     },
@@ -238,20 +238,19 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 7000,
         "next": [
             "选择第一位挑战者"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1474,
-                "y": -628
+                "x": 652,
+                "y": 207
             }
         }
     },
     "有没有提示次数不足": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     567,
@@ -259,21 +258,22 @@
                     149,
                     58
                 ],
-                "expected": [
-                    "购买旗帜"
+                "template": [
+                    "竞技场购买次数.png"
                 ]
             }
         },
-        "on_error": [
-            "领取成功"
-        ],
+        "post_delay": 8000,
         "next": [
             "取消购买"
         ],
+        "on_error": [
+            "领取成功"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 2416,
-                "y": -444
+                "x": 332,
+                "y": 207
             }
         }
     },
@@ -300,16 +300,33 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2780,
-                "y": -464
+                "x": 972,
+                "y": 12
             }
         }
     },
     "结束": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    10,
+                    57,
+                    49
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
         "$__mpe_code": {
             "position": {
-                "x": 2801,
-                "y": -170
+                "x": 2117,
+                "y": 4
             }
         }
     }
