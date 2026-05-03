@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1046,
-                "y": 159,
-                "zoom": 0.86
+                "x": -2063,
+                "y": -638,
+                "zoom": 1.14
             },
             "filename": "竞技场10次",
             "version": "v1.5.0"
@@ -36,7 +36,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 489
+                "y": 722
             }
         }
     },
@@ -64,7 +64,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 332,
-                "y": 517
+                "y": 750
             }
         }
     },
@@ -91,8 +91,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 652,
-                "y": 517
+                "x": 621,
+                "y": 631
             }
         }
     },
@@ -127,8 +127,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 972,
-                "y": 469
+                "x": 819,
+                "y": 875
             }
         }
     },
@@ -152,27 +152,27 @@
         },
         "post_delay": 7000,
         "next": [
-            "是快速对战吗"
+            "检测剩余次数"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1292,
-                "y": 455
+                "x": 1010,
+                "y": 528
             }
         }
     },
     "是快速对战吗": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    712,
-                    635,
-                    193,
-                    53
+                    776,
+                    631,
+                    140,
+                    64
                 ],
-                "expected": [
-                    "快速"
+                "template": [
+                    "讨伐快速战斗.png"
                 ]
             }
         },
@@ -181,12 +181,12 @@
             "是快速对战"
         ],
         "on_error": [
-            "结束"
+            "结束竞技场1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1559,
-                "y": 127
+                "x": 1582,
+                "y": 288
             }
         }
     },
@@ -209,14 +209,14 @@
             "type": "Click"
         },
         "repeat": 2,
-        "post_delay": 7000,
+        "post_delay": 8000,
         "next": [
-            "有没有提示次数不足"
+            "领取成功"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 12,
-                "y": 109
+                "x": 1932,
+                "y": 293
             }
         }
     },
@@ -238,57 +238,58 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 6000,
         "next": [
             "选择第一位挑战者"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 652,
-                "y": 207
+                "x": 2274,
+                "y": 320
             }
         }
     },
-    "有没有提示次数不足": {
+    "检测剩余次数": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    567,
-                    130,
-                    149,
-                    58
+                    552,
+                    2,
+                    81,
+                    61
                 ],
                 "template": [
-                    "竞技场购买次数.png"
+                    "竞技次数0.png"
                 ]
             }
         },
         "post_delay": 8000,
         "next": [
-            "取消购买"
+            "结束竞技场1"
         ],
         "on_error": [
-            "领取成功"
+            "是快速对战吗"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 332,
-                "y": 207
+                "x": 1303,
+                "y": 300
             }
         }
     },
-    "取消购买": {
+    "结束竞技场1": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    487,
-                    528,
-                    95,
-                    44
+                    9,
+                    10,
+                    57,
+                    49
                 ],
-                "expected": [
-                    "取消"
+                "template": [
+                    "返回箭头.png"
                 ]
             }
         },
@@ -296,16 +297,16 @@
             "type": "Click"
         },
         "next": [
-            "结束"
+            "结束竞技场2"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 972,
-                "y": 12
+                "x": 2410,
+                "y": 661
             }
         }
     },
-    "结束": {
+    "结束竞技场2": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -325,8 +326,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2117,
-                "y": 4
+                "x": 2686,
+                "y": 680
             }
         }
     }

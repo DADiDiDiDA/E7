@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -855,
-                "y": -513,
-                "zoom": 1.5
+                "x": -1559,
+                "y": -175,
+                "zoom": 0.86
             },
             "filename": "刷体力",
             "version": "v1.5.0"
@@ -132,7 +132,7 @@
     },
     "检测战斗是否开始": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     609,
@@ -140,8 +140,8 @@
                     311,
                     29
                 ],
-                "expected": [
-                    "快速战斗"
+                "template": [
+                    "快速战斗进行中.png"
                 ]
             }
         },
@@ -154,23 +154,23 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1292,
-                "y": 282
+                "x": 1284,
+                "y": 263
             }
         }
     },
     "没开始体力不足": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    555,
-                    135,
-                    168,
-                    50
+                    549,
+                    115,
+                    181,
+                    83
                 ],
-                "expected": [
-                    "行动力不足"
+                "template": [
+                    "行动力不足.png"
                 ]
             }
         },
@@ -180,8 +180,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1633,
-                "y": 315
+                "x": 1629,
+                "y": 266
             }
         }
     },
@@ -199,6 +199,9 @@
                     "取消"
                 ]
             }
+        },
+        "action": {
+            "type": "Click"
         },
         "post_delay": 5000,
         "next": [
@@ -255,14 +258,14 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "战斗结束_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2252,
-                "y": 293
+                "x": 2254,
+                "y": 456
             }
         }
     },
@@ -284,7 +287,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "战斗结束_副本2"
         ],

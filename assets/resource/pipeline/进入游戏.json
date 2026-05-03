@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -777,
-                "y": 142,
-                "zoom": 1
+                "x": -1266,
+                "y": -8,
+                "zoom": 1.5
             },
             "filename": "进入游戏",
             "version": "v1.5.0"
@@ -26,8 +26,8 @@
                 ]
             }
         },
-        "repeat": 5,
-        "repeat_delay": 1000,
+        "repeat": 7,
+        "repeat_delay": 1500,
         "next": [
             "登陆游戏"
         ],
