@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -601,
-                "y": -69,
+                "x": -1500,
+                "y": -140,
                 "zoom": 0.86
             },
             "filename": "刷体力",
-            "version": "v1.5.1"
+            "version": "v1.5.2"
         }
     },
     "进入战斗界面": {
@@ -117,11 +117,11 @@
             "type": "Click"
         },
         "post_delay": 5000,
-        "on_error": [
-            "战斗结束"
-        ],
         "next": [
             "新建节点1"
+        ],
+        "on_error": [
+            "战斗结束543243584"
         ],
         "$__mpe_code": {
             "position": {
@@ -205,7 +205,7 @@
         },
         "post_delay": 5000,
         "next": [
-            "战斗结束"
+            "战斗结束543243584"
         ],
         "$__mpe_code": {
             "position": {
@@ -231,7 +231,7 @@
         },
         "post_delay": 5000,
         "next": [
-            "战斗结束"
+            "战斗结束543243584"
         ],
         "$__mpe_code": {
             "position": {
@@ -240,7 +240,7 @@
             }
         }
     },
-    "战斗结束": {
+    "战斗结束543243584": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -260,7 +260,7 @@
         },
         "post_delay": 3000,
         "next": [
-            "战斗结束_副本1"
+            "战斗结束34535423"
         ],
         "$__mpe_code": {
             "position": {
@@ -269,7 +269,7 @@
             }
         }
     },
-    "战斗结束_副本1": {
+    "战斗结束34535423": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -289,16 +289,16 @@
         },
         "post_delay": 3000,
         "next": [
-            "战斗结束_副本2"
+            "战斗结束453453453"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2517,
-                "y": 232
+                "x": 2545,
+                "y": 231
             }
         }
     },
-    "战斗结束_副本2": {
+    "战斗结束453453453": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -316,10 +316,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
+        "next": [
+            "战斗结束543453245"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 2793,
-                "y": 280
+                "x": 2867,
+                "y": 241
             }
         }
     },
@@ -334,6 +338,31 @@
             "position": {
                 "x": 1048,
                 "y": 173
+            }
+        }
+    },
+    "战斗结束543453245": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    3,
+                    65,
+                    63
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3196,
+                "y": 309
             }
         }
     }
