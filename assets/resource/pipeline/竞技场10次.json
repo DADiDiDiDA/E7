@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1727,
-                "y": -431,
-                "zoom": 0.86
+                "x": -100,
+                "y": -12,
+                "zoom": 0.57
             },
             "filename": "竞技场10次",
             "version": "v1.5.2"
@@ -185,8 +185,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1619,
-                "y": -95
+                "x": 1550,
+                "y": -250
             }
         }
     },
@@ -251,19 +251,16 @@
     },
     "检测剩余次数": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    552,
-                    2,
-                    81,
-                    61
+                    712,
+                    646,
+                    61,
+                    35
                 ],
-                "template": [
-                    "竞技次数0.png"
-                ],
-                "threshold": [
-                    0.95
+                "expected": [
+                    "1/0"
                 ]
             }
         },
@@ -330,7 +327,7 @@
         },
         "post_delay": 3000,
         "next": [
-            "结束竞技场7867865"
+            "结束竞技场54768766"
         ],
         "$__mpe_code": {
             "position": {
@@ -354,11 +351,11 @@
         }
     },
     "新建节点354346463": {
-        "on_error": [
-            "结束竞技场16876746"
-        ],
         "next": [
             "是快速对战吗"
+        ],
+        "on_error": [
+            "结束竞技场16876746"
         ],
         "$__mpe_code": {
             "position": {
@@ -367,7 +364,7 @@
             }
         }
     },
-    "结束竞技场7867865": {
+    "结束竞技场54768766": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -385,10 +382,11 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2943,
-                "y": 663
+                "x": 2968,
+                "y": 660
             }
         }
     }
