@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -735,
-                "y": 124,
+                "x": -1036,
+                "y": 183,
                 "zoom": 1
             },
             "filename": "进入游戏",
-            "version": "v1.5.1"
+            "version": "v1.5.2"
         }
     },
     "进入登陆界面": {
@@ -56,10 +56,21 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 15000,
+        "post_delay": 30000,
+        "next": [
+            "新建节点14678557"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 1541,
+                "y": 37
+            }
+        }
+    },
+    "新建节点14678557": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1801,
                 "y": 37
             }
         }

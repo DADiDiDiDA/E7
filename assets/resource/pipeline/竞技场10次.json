@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -100,
-                "y": -12,
-                "zoom": 0.57
+                "x": -2301,
+                "y": -535,
+                "zoom": 1
             },
             "filename": "竞技场10次",
             "version": "v1.5.2"
@@ -326,9 +326,6 @@
             "type": "Click"
         },
         "post_delay": 3000,
-        "next": [
-            "结束竞技场54768766"
-        ],
         "$__mpe_code": {
             "position": {
                 "x": 2686,
@@ -361,32 +358,6 @@
             "position": {
                 "x": 1303,
                 "y": 42
-            }
-        }
-    },
-    "结束竞技场54768766": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    9,
-                    10,
-                    57,
-                    49
-                ],
-                "template": [
-                    "返回箭头.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000,
-        "$__mpe_code": {
-            "position": {
-                "x": 2968,
-                "y": 660
             }
         }
     }
