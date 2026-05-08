@@ -4,7 +4,7 @@
     "description": "《第七史诗》自动化脚本 - 包含启动游戏、关闭公告栏、签到、刷体力、竞技场、商店购买、活跃度奖励等功能",
     "contact": "",
     "license": "MIT",
-    "welcome": "欢迎使用 MAA-E7 第七史诗自动化助手",
+    "welcome": "欢迎使用第七史诗自动化助手",
     "version": "1.0.0",
     
     "controller": [
