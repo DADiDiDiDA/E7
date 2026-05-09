@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -797,
-                "y": -30,
-                "zoom": 0.75
+                "x": -1083,
+                "y": 46,
+                "zoom": 0.66
             },
             "filename": "刷体力",
             "version": "v1.5.2"
@@ -331,38 +331,10 @@
             "type": "Click"
         },
         "post_delay": 3000,
-        "next": [
-            "战斗结束返回四次"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 2867,
-                "y": 241
-            }
-        }
-    },
-    "战斗结束返回四次": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    2,
-                    3,
-                    65,
-                    63
-                ],
-                "template": [
-                    "返回箭头.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3196,
-                "y": 309
+                "x": 2920,
+                "y": 314
             }
         }
     }

@@ -1,14 +1,14 @@
 {
-    "$__mpe_config_刷圣女3-7（已经进入重复战斗再开）": {
+    "$__mpe_config_重复战斗": {
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": 237,
-                "y": 152,
-                "zoom": 0.43
+                "x": -295,
+                "y": 37,
+                "zoom": 1
             },
-            "filename": "刷圣女3-7（已经进入重复战斗再开）",
-            "version": "v1.5.1"
+            "filename": "重复战斗",
+            "version": "v1.5.2"
         }
     },
     "确认战斗结果": {

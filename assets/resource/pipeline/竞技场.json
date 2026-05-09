@@ -1,13 +1,13 @@
 {
-    "$__mpe_config_竞技场10次": {
+    "$__mpe_config_竞技场": {
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -211,
-                "y": 325,
-                "zoom": 0.49
+                "x": -2288,
+                "y": -439,
+                "zoom": 1
             },
-            "filename": "竞技场10次",
+            "filename": "竞技场",
             "version": "v1.5.2"
         }
     },
@@ -323,7 +323,10 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 3000,
+        "post_delay": 7000,
+        "next": [
+            "新建节点186522452"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 2686,
@@ -435,6 +438,14 @@
             "position": {
                 "x": 1253,
                 "y": -509
+            }
+        }
+    },
+    "新建节点186522452": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3028,
+                "y": 677
             }
         }
     }
