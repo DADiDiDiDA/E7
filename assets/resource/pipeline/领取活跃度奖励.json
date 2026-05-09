@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1258,
-                "y": 229,
-                "zoom": 1
+                "x": 286,
+                "y": 157,
+                "zoom": 0.86
             },
             "filename": "领取活跃度奖励",
-            "version": "v1.4.3"
+            "version": "v1.5.2"
         }
     },
     "点击每日任务": {
