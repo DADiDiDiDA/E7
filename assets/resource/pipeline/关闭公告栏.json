@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -365,
-                "y": 86,
-                "zoom": 0.99
+                "x": -587,
+                "y": 9,
+                "zoom": 1.52
             },
             "filename": "关闭公告栏",
-            "version": "v1.4.3"
+            "version": "v1.5.2"
         }
     },
     "检测公告栏": {
@@ -26,6 +26,7 @@
                 ]
             }
         },
+        "timeout": 40000,
         "next": [
             "关闭公告栏"
         ],
