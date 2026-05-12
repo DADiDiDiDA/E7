@@ -2,13 +2,14 @@
     "$__mpe_config_刷体力": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 348,
-                "y": -78,
-                "zoom": 0.87
+                "x": -1092,
+                "y": -124,
+                "zoom": 0.65
             },
             "filename": "刷体力",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "检查快速战斗": {
@@ -307,8 +308,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2545,
-                "y": 231
+                "x": 2612,
+                "y": 198
             }
         }
     },
@@ -333,8 +334,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2920,
-                "y": 314
+                "x": 3008,
+                "y": 279
             }
         }
     }
