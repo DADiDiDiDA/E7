@@ -2,13 +2,14 @@
     "$__mpe_config_领取活跃度奖励": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 382,
-                "y": 183,
-                "zoom": 0.76
+                "x": -1312,
+                "y": 237,
+                "zoom": 0.87
             },
             "filename": "领取活跃度奖励",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "点击每日任务": {
@@ -208,6 +209,10 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
+        "next": [
+            "领取活跃度奖励正式结束"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 2019,
@@ -224,6 +229,14 @@
             "position": {
                 "x": -487,
                 "y": -3
+            }
+        }
+    },
+    "领取活跃度奖励正式结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2349,
+                "y": -7
             }
         }
     }

@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 383,
-                "y": -356,
-                "zoom": 0.65
+                "x": -2173,
+                "y": 5,
+                "zoom": 0.87
             },
             "filename": "刷体力",
             "version": "v1.5.3"
@@ -332,6 +332,9 @@
             "type": "Click"
         },
         "post_delay": 3000,
+        "next": [
+            "刷体力任务正式结束"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 3008,
@@ -557,6 +560,14 @@
             "position": {
                 "x": -5,
                 "y": 72
+            }
+        }
+    },
+    "刷体力任务正式结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3268,
+                "y": 279
             }
         }
     }

@@ -2,13 +2,14 @@
     "$__mpe_config_商店购买每日物品": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1026,
-                "y": -43,
-                "zoom": 0.65
+                "x": -2996,
+                "y": 156,
+                "zoom": 0.66
             },
             "filename": "商店购买每日物品",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "开始购买第一行免费商品": {
@@ -186,6 +187,9 @@
             "type": "Click"
         },
         "post_delay": 2000,
+        "next": [
+            "商店购买每日物品结束"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 5335,
@@ -615,8 +619,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4824,
-                "y": 10
+                "x": 4856,
+                "y": -114
             }
         }
     },
@@ -645,6 +649,14 @@
             "position": {
                 "x": 832,
                 "y": 51
+            }
+        }
+    },
+    "商店购买每日物品结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5707,
+                "y": 121
             }
         }
     }
