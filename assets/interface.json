@@ -48,7 +48,8 @@
         {
             "name": "⚔️ 刷体力",
             "entry": "进入战斗界面",
-            "description": "只会刷取飞龙难度三"
+            "description": "可自定义选择要刷取的讨伐副本；只刷地狱级难度！！！！",
+            "option": ["讨伐关卡选择"]
         },
         {
             "name": "🏟️ 竞技场10次",
@@ -63,12 +64,12 @@
         {
             "name": "🎁 领取活跃度奖励",
             "entry": "进入选择菜单前等待",
-            "description": "只会领取活跃度100时的奖励，未到一百不会领取"
+            "description": "只会领取活跃度100时的奖励，未到100不会领取"
         },
         {
             "name": "⚔️ 骑士团签到并请求资源",
             "entry": "点击主界面菜单选择",
-            "description": "只请求经验精灵"
+            "description": "只会请求经验精灵"
         },
         {
             "name": "⏹️ 退出游戏",
@@ -90,5 +91,66 @@
             "entry": "TEST开始",
             "description": "测试任务 - 执行后直接退出游戏"
         }
-    ]
+    ],
+    
+    "option": {
+        "讨伐关卡选择": {
+            "type": "select",
+            "label": "讨伐关卡选择",
+            "description": "选择要自动刷取的讨伐副本",
+            "default_case": "双足飞龙",
+            "cases": [
+                {
+                    "name": "双足飞龙",
+                    "label": "双足飞龙",
+                    "description": "暴击/命中/速度",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择双足飞龙关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "魔像",
+                    "label": "魔像",
+                    "description": "攻击/生命/防御/守护",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择魔像关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "报丧妖",
+                    "label": "报丧妖",
+                    "description": "抵抗/吸血/爆伤/反击",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择报丧妖关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "阿吉玛纳克",
+                    "label": "阿吉玛纳克",
+                    "description": "夹攻/免疫/愤怒",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择讨伐阿吉玛纳克关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "卡戴斯",
+                    "label": "卡戴斯",
+                    "description": "憎恨/伤口/穿透/激流",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择讨伐卡戴斯关卡"]
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }

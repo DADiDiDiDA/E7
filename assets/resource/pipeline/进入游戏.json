@@ -2,13 +2,14 @@
     "$__mpe_config_进入游戏": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1030,
-                "y": 71,
-                "zoom": 1
+                "x": -646,
+                "y": 135,
+                "zoom": 0.74
             },
             "filename": "进入游戏",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "进入登陆界面": {
@@ -29,6 +30,9 @@
         "post_delay": 55000,
         "next": [
             "登陆游戏"
+        ],
+        "on_error": [
+            "好像需要更新了"
         ],
         "$__mpe_code": {
             "position": {
@@ -55,7 +59,6 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 45000,
         "next": [
             "等待加载完成"
         ],
@@ -67,10 +70,51 @@
         }
     },
     "等待加载完成": {
+        "post_delay": 45000,
         "$__mpe_code": {
             "position": {
-                "x": 1801,
-                "y": 37
+                "x": 1899,
+                "y": -102
+            }
+        }
+    },
+    "好像需要更新了": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    551,
+                    521,
+                    189,
+                    50
+                ],
+                "expected": [
+                    "进行"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "等待更新下载进行"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1634,
+                "y": 279
+            }
+        }
+    },
+    "等待更新下载进行": {
+        "post_delay": 60000,
+        "next": [
+            "进入登陆界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1894,
+                "y": 279
             }
         }
     }
