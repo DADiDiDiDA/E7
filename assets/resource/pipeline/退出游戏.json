@@ -1,0 +1,40 @@
+{
+    "$__mpe_config_退出游戏": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -1432,
+                "y": 128,
+                "zoom": 1.15
+            },
+            "filename": "退出游戏",
+            "version": "v1.5.3"
+        }
+    },
+    "退出游戏": {
+        "next": [
+            "退出游戏执行"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1592,
+                "y": 67
+            }
+        }
+    },
+    "退出游戏执行": {
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.zlongame.cn.epicseven"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1852,
+                "y": 67
+            }
+        }
+    }
+}

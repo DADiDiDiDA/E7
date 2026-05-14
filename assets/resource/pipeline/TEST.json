@@ -1,0 +1,34 @@
+{
+    "$__mpe_config_TEST": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -2456,
+                "y": 131,
+                "zoom": 1.15
+            },
+            "filename": "TEST",
+            "version": "v1.5.3"
+        }
+    },
+    "TEST开始": {
+        "next": [
+            "TEST"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2420,
+                "y": 86
+            }
+        }
+    },
+    "TEST": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2680,
+                "y": 86
+            }
+        }
+    }
+}

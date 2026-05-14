@@ -2,13 +2,14 @@
     "$__mpe_config_竞技场": {
         "$__mpe_code": {
             "prefix": "",
+            "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 539,
-                "y": -198,
-                "zoom": 0.67
+                "x": 1294,
+                "y": 88,
+                "zoom": 0.76
             },
             "filename": "竞技场",
-            "version": "v1.5.2"
+            "version": "v1.5.3"
         }
     },
     "进入竞技场选择开始": {
@@ -35,8 +36,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1124,
-                "y": 60
+                "x": -1189,
+                "y": 44
             }
         }
     },
@@ -450,10 +451,13 @@
         "next": [
             "进入竞技场选择开始"
         ],
+        "on_error": [
+            "找不到竞技场尝试回到主界面"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": -1376,
-                "y": 348
+                "x": -1701,
+                "y": 285
             }
         }
     },
@@ -592,6 +596,45 @@
             "position": {
                 "x": -518,
                 "y": -316
+            }
+        }
+    },
+    "未在主界面执行一次退出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    1,
+                    142,
+                    60
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入竞技场选择开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -932,
+                "y": 354
+            }
+        }
+    },
+    "找不到竞技场尝试回到主界面": {
+        "next": [
+            "未在主界面执行一次退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1312,
+                "y": 369
             }
         }
     }
