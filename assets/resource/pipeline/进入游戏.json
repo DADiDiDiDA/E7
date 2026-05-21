@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1039,
-                "y": 204,
-                "zoom": 0.66
+                "x": -1350,
+                "y": 114,
+                "zoom": 0.62
             },
             "filename": "进入游戏",
             "version": "v1.5.3"
@@ -112,20 +112,125 @@
     "等待更新下载进行": {
         "post_delay": 60000,
         "next": [
-            "进入登陆界面"
+            "进入登陆界面已更新"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1867,
-                "y": 246
+                "x": 1778,
+                "y": 371
             }
         }
     },
     "进入游戏完成": {
         "$__mpe_code": {
             "position": {
-                "x": 2434,
-                "y": 39
+                "x": 4165,
+                "y": -21
+            }
+        }
+    },
+    "进入登陆界面已更新": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    26,
+                    36,
+                    110,
+                    116
+                ],
+                "template": [
+                    "登陆界面特征.png"
+                ]
+            }
+        },
+        "post_delay": 55000,
+        "next": [
+            "登陆游戏已更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2211,
+                "y": 268
+            }
+        }
+    },
+    "登陆游戏已更新": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    580,
+                    134,
+                    32
+                ],
+                "expected": [
+                    "轻触画面开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "等待加载完成已更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2665,
+                "y": 267
+            }
+        }
+    },
+    "等待加载完成已更新": {
+        "post_delay": 45000,
+        "next": [
+            "关闭新角色介绍开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3164,
+                "y": 237
+            }
+        }
+    },
+    "关闭新角色介绍开始": {
+        "next": [
+            "关闭新角色介绍"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3561,
+                "y": 216
+            }
+        }
+    },
+    "关闭新角色介绍": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1042,
+                    625,
+                    212,
+                    73
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入游戏完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3861,
+                "y": 195
             }
         }
     }
