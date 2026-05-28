@@ -3,26 +3,182 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779935955407,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -514,
-                "y": 98,
-                "zoom": 0.66
+                "x": 1032,
+                "y": 111,
+                "zoom": 0.61
             },
             "filename": "刷体力",
             "version": "v1.5.3"
         }
     },
+    "开始讨伐关卡选择": {
+        "next": [
+            "选择双足飞龙关卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -5,
+                "y": 72
+            }
+        }
+    },
     "检查快速战斗开始": {
+        "timeout": 3000,
         "next": [
             "检查快速战斗次数"
         ],
         "on_error": [
-            "战斗结束返回"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 859,
-                "y": 394
+                "x": 965,
+                "y": 252
+            }
+        }
+    },
+    "检查快速战斗次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1070,
+                    631,
+                    136,
+                    62
+                ],
+                "template": [
+                    "讨伐快速战斗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "timeout": 4000,
+        "next": [
+            "等待战斗开始"
+        ],
+        "on_error": [
+            "检测体力不足"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1274,
+                "y": 1
+            }
+        }
+    },
+    "检测体力不足": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    549,
+                    115,
+                    181,
+                    83
+                ],
+                "template": [
+                    "行动力不足.png"
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1726,
+                "y": 127
+            }
+        }
+    },
+    "点击讨伐卡戴斯": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1034,
+                    128,
+                    176,
+                    591
+                ],
+                "expected": [
+                    "卡戴斯"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择讨伐关卡难度为地狱级别"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 363,
+                "y": 954
+            }
+        }
+    },
+    "点击讨伐阿吉玛纳克": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1029,
+                    123,
+                    194,
+                    595
+                ],
+                "expected": [
+                    "阿吉玛纳克"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择讨伐关卡难度为地狱级别"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 299,
+                "y": 717
+            }
+        }
+    },
+    "等待战斗开始": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    609,
+                    143,
+                    311,
+                    29
+                ],
+                "template": [
+                    "快速战斗进行中.png"
+                ]
+            }
+        },
+        "post_delay": 25000,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1666,
+                "y": -209
             }
         }
     },
@@ -50,8 +206,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -933,
-                "y": 158
+                "x": -1177,
+                "y": 102
             }
         }
     },
@@ -79,263 +235,33 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -285,
-                "y": 140
+                "x": -366,
+                "y": 62
             }
         }
     },
-    "选择讨伐关卡难度为地狱级别": {
+    "选择一般战斗": {
         "recognition": {
-            "type": "OCR",
+            "type": "DirectHit",
             "param": {
                 "roi": [
-                    771,
-                    379,
-                    121,
-                    34
-                ],
-                "expected": [
-                    "地狱级"
+                    75,
+                    93,
+                    97,
+                    45
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_delay": 5000,
         "next": [
-            "检查快速战斗开始"
+            "进入讨伐界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 617,
-                "y": 255
-            }
-        }
-    },
-    "检查快速战斗次数": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1070,
-                    631,
-                    136,
-                    62
-                ],
-                "template": [
-                    "讨伐快速战斗.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 5000,
-        "next": [
-            "等待战斗开始"
-        ],
-        "on_error": [
-            "检测体力不足"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1149,
-                "y": 27
-            }
-        }
-    },
-    "等待战斗开始": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    609,
-                    143,
-                    311,
-                    29
-                ],
-                "template": [
-                    "快速战斗进行中.png"
-                ]
-            }
-        },
-        "post_delay": 25000,
-        "next": [
-            "快速战斗结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1526,
-                "y": -118
-            }
-        }
-    },
-    "检测体力不足": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    549,
-                    115,
-                    181,
-                    83
-                ],
-                "template": [
-                    "行动力不足.png"
-                ]
-            }
-        },
-        "post_delay": 2000,
-        "next": [
-            "取消战斗"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1726,
-                "y": 127
-            }
-        }
-    },
-    "取消战斗": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    492,
-                    531,
-                    84,
-                    37
-                ],
-                "expected": [
-                    "取消"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000,
-        "next": [
-            "战斗结束返回"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2122,
-                "y": 154
-            }
-        }
-    },
-    "快速战斗结束": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    771,
-                    537,
-                    168,
-                    42
-                ],
-                "expected": [
-                    "关闭"
-                ]
-            }
-        },
-        "post_delay": 5000,
-        "next": [
-            "战斗结束返回"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2167,
-                "y": -171
-            }
-        }
-    },
-    "战斗结束返回": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    2,
-                    3,
-                    65,
-                    63
-                ],
-                "template": [
-                    "返回箭头.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000,
-        "next": [
-            "战斗结束返回二次"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2629,
-                "y": 415
-            }
-        }
-    },
-    "战斗结束返回二次": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    2,
-                    3,
-                    65,
-                    63
-                ],
-                "template": [
-                    "返回箭头.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000,
-        "next": [
-            "战斗结束返回三次"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2892,
-                "y": 232
-            }
-        }
-    },
-    "战斗结束返回三次": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    2,
-                    3,
-                    65,
-                    63
-                ],
-                "template": [
-                    "返回箭头.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000,
-        "next": [
-            "刷体力任务正式结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3211,
-                "y": 235
+                "x": -778,
+                "y": 11
             }
         }
     },
@@ -347,34 +273,6 @@
             "position": {
                 "x": 349,
                 "y": 89
-            }
-        }
-    },
-    "选择魔像关卡": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1029,
-                    133,
-                    150,
-                    582
-                ],
-                "expected": [
-                    "魔像"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "选择讨伐关卡难度为地狱级别"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 309,
-                "y": 278
             }
         }
     },
@@ -406,62 +304,33 @@
             }
         }
     },
-    "选择讨伐阿吉玛纳克关卡": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    1128,
-                    597,
-                    1,
-                    1
-                ],
-                "end": [
-                    [
-                        1112,
-                        230,
-                        1,
-                        1
-                    ]
-                ]
-            }
-        },
-        "repeat": 3,
-        "next": [
-            "点击讨伐阿吉玛纳克"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -3,
-                "y": 699
-            }
-        }
-    },
-    "点击讨伐阿吉玛纳克": {
+    "选择讨伐关卡难度为地狱级别": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    1029,
-                    123,
-                    194,
-                    595
+                    771,
+                    379,
+                    121,
+                    34
                 ],
                 "expected": [
-                    "阿吉玛纳克"
+                    "地狱级"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "post_delay": 5000,
+        "timeout": 3000,
         "next": [
-            "选择讨伐关卡难度为地狱级别"
+            "检查快速战斗开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 299,
-                "y": 717
+                "x": 617,
+                "y": 255
             }
         }
     },
@@ -496,18 +365,49 @@
             }
         }
     },
-    "点击讨伐卡戴斯": {
+    "选择讨伐阿吉玛纳克关卡": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1128,
+                    597,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        1112,
+                        230,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "repeat": 3,
+        "next": [
+            "点击讨伐阿吉玛纳克"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -3,
+                "y": 699
+            }
+        }
+    },
+    "选择魔像关卡": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    1034,
-                    128,
-                    176,
-                    591
+                    1029,
+                    133,
+                    150,
+                    582
                 ],
                 "expected": [
-                    "卡戴斯"
+                    "魔像"
                 ]
             }
         },
@@ -519,52 +419,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 363,
-                "y": 954
+                "x": 309,
+                "y": 278
             }
         }
     },
-    "选择一般战斗": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {
-                "roi": [
-                    75,
-                    93,
-                    97,
-                    45
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "进入讨伐界面"
-        ],
+    "$__mpe_external_返回主界面开始_刷体力": {
         "$__mpe_code": {
             "position": {
-                "x": -608,
-                "y": 163
-            }
-        }
-    },
-    "开始讨伐关卡选择": {
-        "next": [
-            "选择双足飞龙关卡"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -5,
-                "y": 72
-            }
-        }
-    },
-    "刷体力任务正式结束": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3491,
-                "y": 361
+                "x": 2966,
+                "y": 444
             }
         }
     }

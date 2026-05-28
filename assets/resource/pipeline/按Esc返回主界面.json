@@ -1,0 +1,83 @@
+{
+    "$__mpe_config_按Esc返回主界面": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1779937888949,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\按Esc返回主界面.json",
+            "savedViewport": {
+                "x": 652,
+                "y": 260,
+                "zoom": 0.5
+            },
+            "filename": "按Esc返回主界面",
+            "version": "v1.5.3"
+        }
+    },
+    "检测是否在主界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    945,
+                    607,
+                    314,
+                    89
+                ],
+                "expected": [
+                    "英雄"
+                ],
+                "threshold": 0.85
+            }
+        },
+        "next": [
+            "没有广告弹出，任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 265,
+                "y": -325
+            }
+        }
+    },
+    "没有广告弹出，任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 842,
+                "y": 225
+            }
+        }
+    },
+    "返回主界面开始": {
+        "post_delay": 3000,
+        "timeout": 2000,
+        "next": [
+            "检测是否在主界面"
+        ],
+        "on_error": [
+            "[JumpBack]连续点击Esc尝试中途退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -605,
+                "y": -57
+            }
+        }
+    },
+    "连续点击Esc尝试中途退出": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": 111
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 222,
+                "y": 248
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "$__mpe_config_邮件奖励领取": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -5573,
+                "y": -601,
+                "zoom": 0.65
+            },
+            "filename": "邮件奖励领取",
+            "version": "v1.5.3"
+        }
+    },
+    "点击邮箱": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    971,
+                    4,
+                    309,
+                    57
+                ],
+                "template": [
+                    "邮箱图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始全部领取邮箱奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8373,
+                "y": 1103
+            }
+        }
+    },
+    "开始全部领取邮箱奖励": {
+        "next": [
+            "全部领取邮箱奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8751,
+                "y": 1107
+            }
+        }
+    },
+    "全部领取邮箱奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1057,
+                    631,
+                    163,
+                    68
+                ],
+                "expected": [
+                    "全部"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始确认领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9048,
+                "y": 1106
+            }
+        }
+    },
+    "开始确认领取奖励": {
+        "next": [
+            "确认领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9324,
+                "y": 1039
+            }
+        }
+    },
+    "确认领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    680,
+                    437,
+                    133,
+                    50
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9633,
+                "y": 965
+            }
+        }
+    },
+    "开始领取邮件奖励": {
+        "next": [
+            "点击邮箱"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8014,
+                "y": 1281
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_邮件奖励领取": {
+        "$__mpe_code": {
+            "position": {
+                "x": 10012,
+                "y": 1220
+            }
+        }
+    }
+}

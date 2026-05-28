@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 164,
-                "y": 232,
-                "zoom": 0.66
+                "x": 219,
+                "y": 241,
+                "zoom": 0.57
             },
             "filename": "骑士团签到并请求资源",
             "version": "v1.5.3"
@@ -75,13 +75,13 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    598,
-                    517,
-                    88,
-                    40
+                    538,
+                    463,
+                    248,
+                    254
                 ],
                 "expected": [
-                    "点击关闭"
+                    "关闭"
                 ]
             }
         },
@@ -155,11 +155,12 @@
             "type": "Click"
         },
         "post_delay": 4000,
+        "timeout": 3000,
         "next": [
             "选择经验精灵"
         ],
         "on_error": [
-            "返回骑士团"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -217,7 +218,7 @@
         },
         "post_delay": 4000,
         "next": [
-            "返回骑士团"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -226,75 +227,13 @@
             }
         }
     },
-    "返回骑士团": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    618,
-                    679,
-                    74,
-                    28
-                ],
-                "expected": [
-                    "点击关闭"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 4000,
-        "next": [
-            "返回上一级骑士团"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2763,
-                "y": -232
-            }
-        }
-    },
-    "返回上一级骑士团": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    5,
-                    4,
-                    170,
-                    64
-                ],
-                "expected": [
-                    "骑士团"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    23,
-                    28,
-                    14,
-                    12
-                ]
-            }
-        },
-        "post_delay": 4000,
-        "$__mpe_code": {
-            "position": {
-                "x": 3140,
-                "y": -57
-            }
-        }
-    },
     "请求资源流程": {
+        "timeout": 4000,
         "next": [
             "请求资源"
         ],
         "on_error": [
-            "返回骑士团"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -304,6 +243,7 @@
         }
     },
     "检查昨日签到奖励节点": {
+        "timeout": 5000,
         "next": [
             "领取昨日签到奖励"
         ],
@@ -336,6 +276,14 @@
             "position": {
                 "x": 840,
                 "y": 171
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_骑士团签到并请求资源": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3022,
+                "y": 47
             }
         }
     }

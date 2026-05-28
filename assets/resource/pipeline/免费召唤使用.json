@@ -1,0 +1,275 @@
+{
+    "$__mpe_config_免费召唤使用": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": 649,
+                "y": 208,
+                "zoom": 0.57
+            },
+            "filename": "免费召唤使用",
+            "version": "v1.5.3"
+        }
+    },
+    "over": {
+        "$__mpe_code": {
+            "position": {
+                "x": -36,
+                "y": 259
+            }
+        }
+    },
+    "免费召唤开始": {
+        "next": [
+            "over"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -340,
+                "y": 122
+            }
+        }
+    },
+    "检查有无免费召唤开始": {
+        "timeout": 3000,
+        "next": [
+            "检查免费召唤"
+        ],
+        "on_error": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 358,
+                "y": 82
+            }
+        }
+    },
+    "检查免费召唤": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1172,
+                    403,
+                    81,
+                    84
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    21,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "开始寻找免费召唤栏目"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 636,
+                "y": -22
+            }
+        }
+    },
+    "开始寻找免费召唤栏目": {
+        "next": [
+            "进入免费召唤栏目"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 141
+            }
+        }
+    },
+    "进入免费召唤栏目": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    82,
+                    64,
+                    616
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    23,
+                    0,
+                    0
+                ]
+            }
+        },
+        "timeout": 4000,
+        "next": [
+            "开始免费召唤是否有十次"
+        ],
+        "on_error": [
+            "无十次-检测是否为一次召唤"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 64
+            }
+        }
+    },
+    "开始免费召唤是否有十次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1019,
+                    632,
+                    125,
+                    62
+                ],
+                "expected": [
+                    "免费"
+                ],
+                "order_by": "Horizontal"
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 10000,
+        "next": [
+            "免费召唤十次已确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 12
+            }
+        }
+    },
+    "免费召唤十次已确认": {
+        "next": [
+            "召唤十次奖励确认-返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 97
+            }
+        }
+    },
+    "召唤十次奖励确认-返回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    46,
+                    638,
+                    201,
+                    45
+                ],
+                "expected": [
+                    "返回"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 56
+            }
+        }
+    },
+    "无十次-检测是否为一次召唤": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    758,
+                    644,
+                    123,
+                    44
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 10000,
+        "next": [
+            "免费召唤一次已确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 369
+            }
+        }
+    },
+    "免费召唤一次已确认": {
+        "next": [
+            "免费召唤结束返回上一级"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 438
+            }
+        }
+    },
+    "免费召唤结束返回上一级": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    39,
+                    615,
+                    233,
+                    81
+                ],
+                "expected": [
+                    "返回"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 397
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_免费召唤使用": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2529,
+                "y": 1052
+            }
+        }
+    }
+}
