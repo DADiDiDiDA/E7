@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779936237367,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\竞技场.json",
             "savedViewport": {
-                "x": 3091,
-                "y": 550,
-                "zoom": 0.99
+                "x": 918,
+                "y": 114,
+                "zoom": 0.87
             },
             "filename": "竞技场",
             "version": "v1.5.3"
@@ -366,7 +363,7 @@
                     40
                 ],
                 "expected": [
-                    "新手竞技场"
+                    "竞技场"
                 ]
             }
         },

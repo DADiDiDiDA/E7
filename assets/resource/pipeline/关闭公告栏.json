@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 288,
-                "y": 74,
-                "zoom": 0.76
+                "x": 264,
+                "y": 106,
+                "zoom": 0.87
             },
             "filename": "关闭公告栏",
             "version": "v1.5.3"
@@ -27,7 +27,7 @@
                 ]
             }
         },
-        "timeout": 40000,
+        "timeout": -1,
         "next": [
             "关闭公告栏"
         ],

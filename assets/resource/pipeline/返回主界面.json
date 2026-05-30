@@ -1,14 +1,14 @@
 {
-    "$__mpe_config_按Esc返回主界面": {
+    "$__mpe_config_返回主界面": {
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 124,
-                "y": 110,
-                "zoom": 0.77
+                "x": 508,
+                "y": 203,
+                "zoom": 0.58
             },
-            "filename": "按Esc返回主界面",
+            "filename": "返回主界面",
             "version": "v1.5.3"
         }
     },
@@ -54,6 +54,9 @@
             "检测是否在主界面"
         ],
         "on_error": [
+            "[JumpBack]有每日首次增益界面吗",
+            "[JumpBack]有签到奖励吗",
+            "[JumpBack]关闭登录奖励",
             "[JumpBack]连续点击Back尝试中途退出"
         ],
         "$__mpe_code": {
@@ -75,8 +78,139 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 222,
-                "y": 248
+                "x": -119,
+                "y": 1115
+            }
+        }
+    },
+    "签到奖励领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1010,
+                    641,
+                    125,
+                    49
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 279,
+                "y": 402
+            }
+        }
+    },
+    "有签到奖励吗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    450,
+                    49,
+                    203,
+                    56
+                ],
+                "expected": [
+                    "签到奖励"
+                ]
+            }
+        },
+        "next": [
+            "签到奖励领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -48,
+                "y": 443
+            }
+        }
+    },
+    "关闭登录奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    546,
+                    515,
+                    199,
+                    201
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "可点击关闭的活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -135,
+                "y": 706
+            }
+        }
+    },
+    "可点击关闭的活动": {
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 281,
+                "y": 844
+            }
+        }
+    },
+    "有每日首次增益界面吗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    167,
+                    98,
+                    160,
+                    64
+                ],
+                "template": [
+                    "增益界面标志.png"
+                ]
+            }
+        },
+        "next": [
+            "关闭每日首次增益界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -49,
+                "y": 113
+            }
+        }
+    },
+    "关闭每日首次增益界面": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    631,
+                    688,
+                    29,
+                    11
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 271,
+                "y": 170
             }
         }
     }

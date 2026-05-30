@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -326,
-                "y": 89,
-                "zoom": 0.76
+                "x": -675,
+                "y": 23,
+                "zoom": 1
             },
             "filename": "启动游戏",
             "version": "v1.5.3"
@@ -19,7 +19,6 @@
                 "package": "com.zlongame.cn.epicseven"
             }
         },
-        "post_delay": 40000,
         "next": [
             "等待游戏启动"
         ],
