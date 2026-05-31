@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780187532119,
+            "lastSyncTime": 1780187890240,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 1316,
-                "y": 219,
-                "zoom": 0.99
+                "x": 489,
+                "y": 340,
+                "zoom": 0.75
             },
             "filename": "返回主界面",
             "version": "v1.5.3"
@@ -174,15 +174,30 @@
             }
         }
     },
+    "查看是不是退出过头了": {
+        "timeout": 4000,
+        "next": [
+            "是不是退出过头了"
+        ],
+        "on_error": [
+            "没有广告弹出，任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 525,
+                "y": -325
+            }
+        }
+    },
     "检测是否在主界面": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    945,
-                    607,
-                    314,
-                    89
+                    922,
+                    595,
+                    353,
+                    115
                 ],
                 "expected": [
                     "英雄"
@@ -268,21 +283,6 @@
             "position": {
                 "x": -205,
                 "y": 1539
-            }
-        }
-    },
-    "查看是不是退出过头了": {
-        "timeout": 4000,
-        "next": [
-            "是不是退出过头了"
-        ],
-        "on_error": [
-            "没有广告弹出，任务结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 525,
-                "y": -325
             }
         }
     }
