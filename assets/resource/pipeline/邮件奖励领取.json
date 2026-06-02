@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -5573,
-                "y": -601,
-                "zoom": 0.65
+                "x": -5812,
+                "y": -669,
+                "zoom": 0.74
             },
             "filename": "邮件奖励领取",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "点击邮箱": {
@@ -44,6 +44,9 @@
     "开始全部领取邮箱奖励": {
         "next": [
             "全部领取邮箱奖励"
+        ],
+        "on_error": [
+            "开始领取邮件奖励"
         ],
         "$__mpe_code": {
             "position": {

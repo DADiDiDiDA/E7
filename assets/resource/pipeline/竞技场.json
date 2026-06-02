@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 918,
-                "y": 114,
-                "zoom": 0.87
+                "x": 1904,
+                "y": 440,
+                "zoom": 0.74
             },
             "filename": "竞技场",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "剩余挑战次数检查节点": {
@@ -589,8 +589,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1473,
-                "y": -308
+                "x": -1353,
+                "y": -315
             }
         }
     },
