@@ -3,56 +3,32 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780487821437,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\进入游戏.json",
             "savedViewport": {
-                "x": -471,
-                "y": 202,
-                "zoom": 0.76
+                "x": -1209,
+                "y": 258,
+                "zoom": 0.43
             },
             "filename": "进入游戏",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
-    "进入登陆界面": {
+    "$__mpe_external_退出游戏_进入游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 187,
+                "y": -382
+            }
+        }
+    },
+    "关闭公告栏": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "roi": [
-                    26,
-                    36,
-                    110,
-                    116
-                ],
                 "template": [
-                    "登陆界面特征.png"
-                ]
-            }
-        },
-        "post_delay": 55000,
-        "next": [
-            "登陆游戏"
-        ],
-        "on_error": [
-            "好像需要更新了"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 922,
-                "y": 28
-            }
-        }
-    },
-    "登陆游戏": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    578,
-                    580,
-                    134,
-                    32
-                ],
-                "expected": [
-                    "轻触画面开始"
+                    "公告栏叉号.png"
                 ]
             }
         },
@@ -60,149 +36,12 @@
             "type": "Click"
         },
         "next": [
-            "等待加载完成"
+            "进入登陆界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1385,
-                "y": -48
-            }
-        }
-    },
-    "等待加载完成": {
-        "post_delay": 45000,
-        "next": [
-            "进入游戏完成"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1899,
-                "y": -102
-            }
-        }
-    },
-    "好像需要更新了": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    551,
-                    521,
-                    189,
-                    50
-                ],
-                "expected": [
-                    "进行"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "等待更新下载进行"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1393,
-                "y": 299
-            }
-        }
-    },
-    "等待更新下载进行": {
-        "post_delay": 60000,
-        "next": [
-            "进入登陆界面已更新"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1778,
-                "y": 371
-            }
-        }
-    },
-    "进入游戏完成": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4165,
-                "y": -21
-            }
-        }
-    },
-    "进入登陆界面已更新": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    26,
-                    36,
-                    110,
-                    116
-                ],
-                "template": [
-                    "登陆界面特征.png"
-                ]
-            }
-        },
-        "post_delay": 55000,
-        "next": [
-            "登陆游戏已更新"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2211,
-                "y": 268
-            }
-        }
-    },
-    "登陆游戏已更新": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    578,
-                    580,
-                    134,
-                    32
-                ],
-                "expected": [
-                    "轻触画面开始"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "等待加载完成已更新"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2665,
-                "y": 267
-            }
-        }
-    },
-    "等待加载完成已更新": {
-        "post_delay": 45000,
-        "next": [
-            "关闭新角色介绍开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3164,
-                "y": 237
-            }
-        }
-    },
-    "关闭新角色介绍开始": {
-        "next": [
-            "关闭新角色介绍"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3561,
-                "y": 216
+                "x": 38,
+                "y": -164
             }
         }
     },
@@ -229,8 +68,302 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3861,
-                "y": 195
+                "x": 3879,
+                "y": -196
+            }
+        }
+    },
+    "关闭新角色介绍开始": {
+        "next": [
+            "关闭新角色介绍"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3498,
+                "y": -135
+            }
+        }
+    },
+    "好像需要更新了": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    551,
+                    521,
+                    189,
+                    50
+                ],
+                "expected": [
+                    "进行"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "等待更新下载进行"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1332,
+                "y": -139
+            }
+        }
+    },
+    "是不是在更新": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    525,
+                    458,
+                    207,
+                    40
+                ],
+                "expected": [
+                    "维护"
+                ]
+            }
+        },
+        "next": [
+            "退出游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -330,
+                "y": -458
+            }
+        }
+    },
+    "检测公告栏": {
+        "timeout": -1,
+        "next": [
+            "是不是在更新",
+            "检测公告栏开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -845,
+                "y": -65
+            }
+        }
+    },
+    "检测公告栏开始": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    659,
+                    47,
+                    163,
+                    87
+                ],
+                "template": [
+                    "公告栏特征.png"
+                ]
+            }
+        },
+        "next": [
+            "关闭公告栏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -461,
+                "y": -149
+            }
+        }
+    },
+    "登陆游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    580,
+                    134,
+                    32
+                ],
+                "expected": [
+                    "轻触画面开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "等待加载完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1359,
+                "y": 501
+            }
+        }
+    },
+    "登陆游戏已更新": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    580,
+                    134,
+                    32
+                ],
+                "expected": [
+                    "轻触画面开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "等待加载完成已更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2641,
+                "y": 35
+            }
+        }
+    },
+    "等待加载完成": {
+        "post_delay": 20000,
+        "next": [
+            "进入游戏完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1947,
+                "y": 447
+            }
+        }
+    },
+    "等待加载完成已更新": {
+        "post_delay": 45000,
+        "next": [
+            "关闭新角色介绍开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3080,
+                "y": -74
+            }
+        }
+    },
+    "等待更新下载进行": {
+        "post_delay": 60000,
+        "next": [
+            "进入登陆界面已更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1818,
+                "y": -49
+            }
+        }
+    },
+    "进入游戏完成": {
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4165,
+                "y": -21
+            }
+        }
+    },
+    "进入登陆界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    26,
+                    36,
+                    110,
+                    116
+                ],
+                "template": [
+                    "登陆界面特征.png"
+                ]
+            }
+        },
+        "timeout": -1,
+        "next": [
+            "好像需要更新了",
+            "登陆游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 922,
+                "y": 28
+            }
+        }
+    },
+    "进入登陆界面已更新": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    26,
+                    36,
+                    110,
+                    116
+                ],
+                "template": [
+                    "登陆界面特征.png"
+                ]
+            }
+        },
+        "post_delay": 55000,
+        "next": [
+            "登陆游戏已更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2235,
+                "y": -72
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_进入游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4518,
+                "y": -2
+            }
+        }
+    },
+    "启动游戏": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.zlongame.cn.epicseven"
+            }
+        },
+        "next": [
+            "等待游戏启动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1437,
+                "y": -95
+            }
+        }
+    },
+    "等待游戏启动": {
+        "next": [
+            "检测公告栏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1177,
+                "y": -95
             }
         }
     }
