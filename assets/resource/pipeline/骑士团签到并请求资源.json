@@ -3,13 +3,61 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780491971002,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\骑士团签到并请求资源.json",
             "savedViewport": {
-                "x": 1005,
-                "y": 270,
-                "zoom": 0.77
+                "x": 788,
+                "y": 243,
+                "zoom": 0.75
             },
             "filename": "骑士团签到并请求资源",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_骑士团签到并请求资源": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2988,
+                "y": 550
+            }
+        }
+    },
+    "开始点击骑士团": {
+        "post_delay": 4000,
+        "next": [
+            "点击骑士团",
+            "点击主界面菜单选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -328,
+                "y": -8
+            }
+        }
+    },
+    "开始进入骑士团活动界面": {
+        "next": [
+            "进入骑士团活动界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 840,
+                "y": 171
+            }
+        }
+    },
+    "检查昨日签到奖励节点": {
+        "timeout": 5000,
+        "next": [
+            "领取昨日签到奖励",
+            "开始进入骑士团活动界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 444,
+                "y": 86
+            }
         }
     },
     "点击主界面菜单选择": {
@@ -70,18 +118,18 @@
             }
         }
     },
-    "领取昨日签到奖励": {
+    "确认请求资源": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    538,
-                    463,
-                    248,
-                    254
+                    947,
+                    576,
+                    143,
+                    51
                 ],
-                "expected": [
-                    "关闭"
+                "template": [
+                    "请求资源.png"
                 ]
             }
         },
@@ -90,12 +138,56 @@
         },
         "post_delay": 4000,
         "next": [
-            "骑士团昨日奖励结束"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 682,
-                "y": -399
+                "x": 2439,
+                "y": -538
+            }
+        }
+    },
+    "请求资源": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1054,
+                    74,
+                    112,
+                    36
+                ],
+                "expected": [
+                    "请求支援"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "timeout": 3000,
+        "next": [
+            "选择经验精灵",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1769,
+                "y": -409
+            }
+        }
+    },
+    "请求资源流程": {
+        "timeout": 4000,
+        "next": [
+            "请求资源",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1445,
+                "y": -167
             }
         }
     },
@@ -136,39 +228,6 @@
             }
         }
     },
-    "请求资源": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1054,
-                    74,
-                    112,
-                    36
-                ],
-                "expected": [
-                    "请求支援"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 4000,
-        "timeout": 3000,
-        "next": [
-            "选择经验精灵"
-        ],
-        "on_error": [
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1769,
-                "y": -409
-            }
-        }
-    },
     "选择经验精灵": {
         "recognition": {
             "type": "TemplateMatch",
@@ -198,18 +257,18 @@
             }
         }
     },
-    "确认请求资源": {
+    "领取昨日签到奖励": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    947,
-                    576,
-                    143,
-                    51
+                    538,
+                    463,
+                    248,
+                    254
                 ],
-                "template": [
-                    "请求资源.png"
+                "expected": [
+                    "关闭"
                 ]
             }
         },
@@ -218,42 +277,12 @@
         },
         "post_delay": 4000,
         "next": [
-            "返回主界面开始"
+            "骑士团昨日奖励结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2439,
-                "y": -538
-            }
-        }
-    },
-    "请求资源流程": {
-        "timeout": 4000,
-        "next": [
-            "请求资源"
-        ],
-        "on_error": [
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1445,
-                "y": -167
-            }
-        }
-    },
-    "检查昨日签到奖励节点": {
-        "timeout": 5000,
-        "next": [
-            "领取昨日签到奖励"
-        ],
-        "on_error": [
-            "开始进入骑士团活动界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 444,
-                "y": 86
+                "x": 682,
+                "y": -399
             }
         }
     },
@@ -265,39 +294,6 @@
             "position": {
                 "x": 1052,
                 "y": -181
-            }
-        }
-    },
-    "开始进入骑士团活动界面": {
-        "next": [
-            "进入骑士团活动界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 840,
-                "y": 171
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_骑士团签到并请求资源": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2988,
-                "y": 550
-            }
-        }
-    },
-    "开始点击骑士团": {
-        "next": [
-            "点击骑士团"
-        ],
-        "on_error": [
-            "点击主界面菜单选择"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -328,
-                "y": -8
             }
         }
     }

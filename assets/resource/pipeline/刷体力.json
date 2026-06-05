@@ -3,16 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1779935955407,
+            "lastSyncTime": 1780491880895,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": 1032,
-                "y": 111,
-                "zoom": 0.61
+                "x": 1657,
+                "y": 180,
+                "zoom": 0.75
             },
             "filename": "刷体力",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_刷体力": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2966,
+                "y": 444
+            }
         }
     },
     "开始讨伐关卡选择": {
@@ -26,12 +34,23 @@
             }
         }
     },
+    "开始选择一般战斗": {
+        "post_delay": 4000,
+        "next": [
+            "选择一般战斗",
+            "进入战斗界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1086,
+                "y": -38
+            }
+        }
+    },
     "检查快速战斗开始": {
         "timeout": 3000,
         "next": [
-            "检查快速战斗次数"
-        ],
-        "on_error": [
+            "检查快速战斗次数",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -62,9 +81,7 @@
         "post_delay": 5000,
         "timeout": 4000,
         "next": [
-            "等待战斗开始"
-        ],
-        "on_error": [
+            "等待战斗开始",
             "检测体力不足"
         ],
         "$__mpe_code": {
@@ -202,12 +219,12 @@
         },
         "post_delay": 5000,
         "next": [
-            "选择一般战斗"
+            "开始选择一般战斗"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1177,
-                "y": 102
+                "x": -1587,
+                "y": 33
             }
         }
     },
@@ -242,13 +259,16 @@
     },
     "选择一般战斗": {
         "recognition": {
-            "type": "DirectHit",
+            "type": "OCR",
             "param": {
                 "roi": [
                     75,
                     93,
                     97,
                     45
+                ],
+                "expected": [
+                    "般"
                 ]
             }
         },
@@ -421,14 +441,6 @@
             "position": {
                 "x": 309,
                 "y": 278
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_刷体力": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2966,
-                "y": 444
             }
         }
     }

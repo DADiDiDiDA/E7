@@ -3,100 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780491486342,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\领取活跃度奖励.json",
             "savedViewport": {
-                "x": -1312,
-                "y": 237,
-                "zoom": 0.87
+                "x": -194,
+                "y": 301,
+                "zoom": 0.57
             },
             "filename": "领取活跃度奖励",
-            "version": "v1.5.3"
-        }
-    },
-    "点击每日任务": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    115,
-                    125,
-                    97,
-                    27
-                ],
-                "expected": [
-                    "日记"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "收取活跃度100奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 572,
-                "y": -109
-            }
-        }
-    },
-    "进入选择菜单": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1217,
-                    8,
-                    49,
-                    50
-                ],
-                "template": [
-                    "主界面特征.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "进入活跃度界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -151,
-                "y": -148
-            }
-        }
-    },
-    "进入活跃度界面": {
-        "recognition": {
-            "type": "FeatureMatch",
-            "param": {
-                "roi": [
-                    919,
-                    110,
-                    67,
-                    56
-                ],
-                "template": [
-                    "日常任务.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "点击每日任务"
-        ],
-        "on_error": [
-            "进入选择菜单前等待"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 219,
-                "y": -55
-            }
+            "version": "v1.6.0"
         }
     },
     "收取活跃度100奖励": {
@@ -151,10 +67,7 @@
             }
         },
         "next": [
-            "领取活跃度奖励"
-        ],
-        "on_error": [
-            "无弹窗关闭界面"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -163,18 +76,18 @@
             }
         }
     },
-    "领取活跃度奖励": {
+    "点击每日任务": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    596,
-                    508,
-                    91,
-                    34
+                    115,
+                    125,
+                    97,
+                    27
                 ],
                 "expected": [
-                    "点击关闭"
+                    "日记"
                 ]
             }
         },
@@ -182,41 +95,70 @@
             "type": "Click"
         },
         "next": [
-            "无弹窗关闭界面"
+            "收取活跃度100奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1701,
-                "y": -171
+                "x": 572,
+                "y": -109
             }
         }
     },
-    "无弹窗关闭界面": {
+    "进入活跃度界面": {
         "recognition": {
-            "type": "OCR",
+            "type": "FeatureMatch",
             "param": {
                 "roi": [
-                    589,
-                    677,
-                    99,
-                    32
+                    919,
+                    110,
+                    67,
+                    56
                 ],
-                "expected": [
-                    "点击关闭"
+                "template": [
+                    "日常任务.png"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_delay": 3000,
+        "post_delay": 5000,
         "next": [
-            "领取活跃度奖励正式结束"
+            "点击每日任务",
+            "进入选择菜单前等待"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2019,
-                "y": 13
+                "x": 219,
+                "y": -55
+            }
+        }
+    },
+    "进入选择菜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1217,
+                    8,
+                    49,
+                    50
+                ],
+                "template": [
+                    "主界面特征.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入活跃度界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -151,
+                "y": -148
             }
         }
     },
@@ -232,11 +174,11 @@
             }
         }
     },
-    "领取活跃度奖励正式结束": {
+    "$__mpe_external_返回主界面开始_领取活跃度奖励": {
         "$__mpe_code": {
             "position": {
-                "x": 2349,
-                "y": -7
+                "x": 1767,
+                "y": 43
             }
         }
     }

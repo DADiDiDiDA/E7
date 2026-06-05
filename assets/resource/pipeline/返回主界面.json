@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780187890240,
+            "lastSyncTime": 1780491769918,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 489,
-                "y": 340,
+                "x": 468,
+                "y": 959,
                 "zoom": 0.75
             },
             "filename": "返回主界面",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "关闭每日首次增益界面": {
@@ -29,8 +29,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 271,
-                "y": 170
+                "x": 476,
+                "y": -353
             }
         }
     },
@@ -39,10 +39,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    546,
-                    515,
-                    199,
-                    201
+                    525,
+                    470,
+                    248,
+                    246
                 ],
                 "expected": [
                     "点击关闭"
@@ -52,22 +52,35 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "可点击关闭的活动"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": -135,
-                "y": 706
+                "x": -4,
+                "y": -1080
             }
         }
     },
-    "可点击关闭的活动": {
-        "post_delay": 3000,
+    "取消购买界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    279,
+                    440,
+                    809,
+                    133
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
         "$__mpe_code": {
             "position": {
-                "x": 281,
-                "y": 844
+                "x": -5,
+                "y": 174
             }
         }
     },
@@ -91,8 +104,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": -174,
-                "y": 1034
+                "x": 37,
+                "y": 653
             }
         }
     },
@@ -114,13 +127,10 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "没有广告弹出，任务结束"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 888,
-                "y": -456
+                "x": 12,
+                "y": -849
             }
         }
     },
@@ -144,8 +154,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -49,
-                "y": 113
+                "x": -6,
+                "y": -370
             }
         }
     },
@@ -169,23 +179,20 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -48,
-                "y": 443
+                "x": -5,
+                "y": -74
             }
         }
     },
     "查看是不是退出过头了": {
         "timeout": 4000,
         "next": [
-            "是不是退出过头了"
-        ],
-        "on_error": [
             "没有广告弹出，任务结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 525,
-                "y": -325
+                "x": 558,
+                "y": -896
             }
         }
     },
@@ -210,8 +217,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 265,
-                "y": -325
+                "x": 21,
+                "y": -605
             }
         }
     },
@@ -219,8 +226,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 1278,
-                "y": 75
+                "x": 1272,
+                "y": -668
             }
         }
     },
@@ -244,8 +251,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 279,
-                "y": 402
+                "x": 386,
+                "y": -25
             }
         }
     },
@@ -253,12 +260,12 @@
         "post_delay": 3000,
         "timeout": 2000,
         "next": [
-            "检测是否在主界面"
-        ],
-        "on_error": [
+            "[JumpBack]关闭登录奖励",
+            "[JumpBack]是不是退出过头了",
+            "检测是否在主界面",
             "[JumpBack]有每日首次增益界面吗",
             "[JumpBack]有签到奖励吗",
-            "[JumpBack]关闭登录奖励",
+            "[JumpBack]取消购买界面",
             "[JumpBack]左上角白色按钮返回",
             "[JumpBack]连续点击Back尝试中途退出"
         ],
@@ -279,10 +286,30 @@
             }
         },
         "post_delay": 2000,
+        "next": [
+            "连续点击Back尝试中途退出第二次"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": -205,
-                "y": 1539
+                "x": 32,
+                "y": 984
+            }
+        }
+    },
+    "连续点击Back尝试中途退出第二次": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    111
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 305,
+                "y": 971
             }
         }
     }

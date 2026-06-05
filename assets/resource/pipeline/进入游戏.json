@@ -3,16 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780487821437,
+            "lastSyncTime": 1780535591496,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\进入游戏.json",
             "savedViewport": {
-                "x": -1209,
-                "y": 258,
+                "x": 613,
+                "y": 334,
                 "zoom": 0.43
             },
             "filename": "进入游戏",
             "version": "v1.6.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_进入游戏": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4518,
+                "y": -2
+            }
         }
     },
     "$__mpe_external_退出游戏_进入游戏": {
@@ -84,6 +92,23 @@
             }
         }
     },
+    "启动游戏": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.zlongame.cn.epicseven"
+            }
+        },
+        "next": [
+            "等待游戏启动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1437,
+                "y": -95
+            }
+        }
+    },
     "好像需要更新了": {
         "recognition": {
             "type": "OCR",
@@ -117,10 +142,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    525,
-                    458,
-                    207,
-                    40
+                    330,
+                    296,
+                    663,
+                    252
                 ],
                 "expected": [
                     "维护"
@@ -137,11 +162,39 @@
             }
         }
     },
+    "是不是有更新包": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    557,
+                    198,
+                    165,
+                    95
+                ],
+                "expected": [
+                    "更新补丁"
+                ]
+            }
+        },
+        "timeout": 4000,
+        "next": [
+            "退出游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -536,
+                "y": 131
+            }
+        }
+    },
     "检测公告栏": {
+        "post_delay": 4000,
         "timeout": -1,
         "next": [
             "是不是在更新",
-            "检测公告栏开始"
+            "检测公告栏开始",
+            "是不是有更新包"
         ],
         "$__mpe_code": {
             "position": {
@@ -267,6 +320,17 @@
             }
         }
     },
+    "等待游戏启动": {
+        "next": [
+            "检测公告栏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1177,
+                "y": -95
+            }
+        }
+    },
     "进入游戏完成": {
         "next": [
             "返回主界面开始"
@@ -328,42 +392,6 @@
             "position": {
                 "x": 2235,
                 "y": -72
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_进入游戏": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4518,
-                "y": -2
-            }
-        }
-    },
-    "启动游戏": {
-        "action": {
-            "type": "StartApp",
-            "param": {
-                "package": "com.zlongame.cn.epicseven"
-            }
-        },
-        "next": [
-            "等待游戏启动"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1437,
-                "y": -95
-            }
-        }
-    },
-    "等待游戏启动": {
-        "next": [
-            "检测公告栏"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1177,
-                "y": -95
             }
         }
     }
