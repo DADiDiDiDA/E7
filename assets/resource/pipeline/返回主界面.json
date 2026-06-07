@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780491769918,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 468,
-                "y": 959,
-                "zoom": 0.75
+                "x": 488,
+                "y": 207,
+                "zoom": 0.57
             },
             "filename": "返回主界面",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "关闭每日首次增益界面": {
@@ -29,8 +26,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 476,
-                "y": -353
+                "x": 565,
+                "y": -499
             }
         }
     },
@@ -175,7 +172,8 @@
             }
         },
         "next": [
-            "签到奖励领取"
+            "签到奖励领取",
+            "签到奖励领取结束"
         ],
         "$__mpe_code": {
             "position": {
@@ -249,10 +247,13 @@
         "action": {
             "type": "Click"
         },
+        "next": [
+            "签到奖励领取结束"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 386,
-                "y": -25
+                "x": 347,
+                "y": -241
             }
         }
     },
@@ -310,6 +311,14 @@
             "position": {
                 "x": 305,
                 "y": 971
+            }
+        }
+    },
+    "签到奖励领取结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 646,
+                "y": -25
             }
         }
     }
