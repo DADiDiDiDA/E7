@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780491949977,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\邮件奖励领取.json",
             "savedViewport": {
-                "x": -5677,
-                "y": -532,
-                "zoom": 0.75
+                "x": -7546,
+                "y": -742,
+                "zoom": 0.87
             },
             "filename": "邮件奖励领取",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_返回主界面开始_邮件奖励领取": {
@@ -65,13 +62,15 @@
         }
     },
     "开始确认领取奖励": {
+        "post_delay": 4000,
         "next": [
-            "确认领取奖励"
+            "确认领取奖励",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9324,
-                "y": 1039
+                "x": 9330,
+                "y": 1065
             }
         }
     },
@@ -138,8 +137,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9633,
-                "y": 965
+                "x": 9665,
+                "y": 856
             }
         }
     }

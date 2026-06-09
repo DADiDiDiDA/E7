@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780570262165,
+            "lastSyncTime": 1780965324930,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\竞技场.json",
             "savedViewport": {
-                "x": 365,
-                "y": -101,
-                "zoom": 0.57
+                "x": -185,
+                "y": 81,
+                "zoom": 1.5
             },
             "filename": "竞技场",
             "version": "v1.6.1"
@@ -32,8 +32,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 820,
-                "y": -13
+                "x": 891,
+                "y": -15
             }
         }
     },
@@ -55,13 +55,10 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "选择NPC对战"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": -116,
-                "y": 591
+                "x": 319,
+                "y": 597
             }
         }
     },
@@ -89,21 +86,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -332,
-                "y": 797
-            }
-        }
-    },
-    "是否有未携带装备弹窗节点": {
-        "timeout": 4000,
-        "next": [
-            "有未携带装备弹窗",
-            "确认对战结果"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2123,
-                "y": 107
+                "x": 167,
+                "y": 811
             }
         }
     },
@@ -167,8 +151,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2368,
-                "y": -159
+                "x": 2346,
+                "y": -524
             }
         }
     },
@@ -207,8 +191,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 829,
-                "y": -415
+                "x": 847,
+                "y": -422
             }
         }
     },
@@ -311,8 +295,8 @@
         "repeat": 2,
         "post_delay": 8000,
         "next": [
-            "确认对战结果",
-            "是否有未携带装备弹窗节点"
+            "有未携带装备弹窗",
+            "确认对战结果"
         ],
         "$__mpe_code": {
             "position": {
@@ -345,8 +329,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 928,
-                "y": 208
+                "x": 525,
+                "y": 10
             }
         }
     },
@@ -374,8 +358,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2920,
-                "y": -137
+                "x": 3028,
+                "y": -229
             }
         }
     },
@@ -397,12 +381,15 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 4000,
         "next": [
-            "选择NPC对战开始"
+            "选择NPC对战",
+            "[JumpBack]处理段位改变弹窗",
+            "[JumpBack]是不是每周奖励待领取"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -405,
+                "x": -459,
                 "y": -18
             }
         }
@@ -413,8 +400,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -763,
-                "y": 157
+                "x": -754,
+                "y": 39
             }
         }
     },
@@ -477,27 +464,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
-            "选择第一位挑战者"
+            "选择第一位挑战者",
+            "[JumpBack]处理段位改变弹窗",
+            "[JumpBack]是不是每周奖励待领取"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 317,
-                "y": 463
-            }
-        }
-    },
-    "选择NPC对战开始": {
-        "timeout": 4000,
-        "next": [
-            "选择NPC对战",
-            "是不是每周奖励待领取",
-            "处理段位改变弹窗"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -13,
-                "y": 120
+                "x": 69,
+                "y": 184
             }
         }
     },
@@ -555,13 +531,10 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "选择NPC对战"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 48,
-                "y": 900
+                "x": 494,
+                "y": 929
             }
         }
     }
