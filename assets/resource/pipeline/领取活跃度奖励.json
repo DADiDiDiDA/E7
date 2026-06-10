@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780491486342,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\领取活跃度奖励.json",
             "savedViewport": {
-                "x": -194,
-                "y": 301,
-                "zoom": 0.57
+                "x": 126,
+                "y": 222,
+                "zoom": 0.69
             },
             "filename": "领取活跃度奖励",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "收取活跃度100奖励": {
@@ -41,8 +38,10 @@
                 ]
             }
         },
+        "post_delay": 3000,
         "next": [
-            "检查是否有活跃度弹窗"
+            "检查是否有活跃度弹窗",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -71,8 +70,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1328,
-                "y": -40
+                "x": 1402,
+                "y": -228
             }
         }
     },
