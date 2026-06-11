@@ -3,23 +3,20 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780491894931,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\免费召唤使用.json",
             "savedViewport": {
-                "x": 591,
-                "y": 190,
-                "zoom": 0.75
+                "x": -1546,
+                "y": -175,
+                "zoom": 0.66
             },
             "filename": "免费召唤使用",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_返回主界面开始_免费召唤使用": {
         "$__mpe_code": {
             "position": {
-                "x": 3843,
-                "y": 1351
+                "x": 3817,
+                "y": 891
             }
         }
     },
@@ -79,8 +76,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3356,
-                "y": 494
+                "x": 3238,
+                "y": 520
             }
         }
     },
@@ -125,9 +122,10 @@
         }
     },
     "开始查看还可不可以免费召唤": {
-        "timeout": 4000,
+        "timeout": 8000,
         "next": [
             "查看还可不可以免费召唤",
+            "是不是新角色在说话",
             "召唤十次奖励确认-返回"
         ],
         "$__mpe_code": {
@@ -146,8 +144,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3353,
-                "y": -316
+                "x": 3532,
+                "y": -490
             }
         }
     },
@@ -203,8 +201,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3606,
-                "y": 131
+                "x": 3591,
+                "y": -37
             }
         }
     },
@@ -309,8 +307,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3877,
-                "y": -321
+                "x": 3994,
+                "y": -379
             }
         }
     },
@@ -349,8 +347,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2955,
-                "y": -260
+                "x": 3122,
+                "y": -445
             }
         }
     },
@@ -389,6 +387,44 @@
             "position": {
                 "x": 1292,
                 "y": 64
+            }
+        }
+    },
+    "是不是新角色在说话": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    23,
+                    170,
+                    239,
+                    58
+                ],
+                "expected": [
+                    "详细信息"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    319,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 4000,
+        "next": [
+            "查看还可不可以免费召唤",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3159,
+                "y": 222
             }
         }
     }

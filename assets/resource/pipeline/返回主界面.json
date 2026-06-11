@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780965021165,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 1287,
-                "y": 218,
-                "zoom": 0.86
+                "x": 763,
+                "y": -4,
+                "zoom": 0.5
             },
             "filename": "返回主界面",
             "version": "v1.6.1"
@@ -268,6 +265,7 @@
             "[JumpBack]有签到奖励吗",
             "[JumpBack]取消购买界面",
             "[JumpBack]左上角白色按钮返回",
+            "[JumpBack]左下角返回按钮",
             "[JumpBack]连续点击Back尝试中途退出"
         ],
         "$__mpe_code": {
@@ -311,6 +309,32 @@
             "position": {
                 "x": 305,
                 "y": 971
+            }
+        }
+    },
+    "左下角返回按钮": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    52,
+                    622,
+                    231,
+                    79
+                ],
+                "expected": [
+                    "返回"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 53,
+                "y": 738
             }
         }
     }
