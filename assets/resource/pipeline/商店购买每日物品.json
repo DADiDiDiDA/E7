@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780965264553,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\商店购买每日物品.json",
             "savedViewport": {
-                "x": 384,
-                "y": 83,
-                "zoom": 0.57
+                "x": 179,
+                "y": 10,
+                "zoom": 0.87
             },
             "filename": "商店购买每日物品",
             "version": "v1.6.1"
@@ -66,7 +63,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 4000,
         "next": [
             "购买_确认_免费商品"
         ],
@@ -101,8 +98,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 762,
-                "y": 58
+                "x": 814,
+                "y": 27
             }
         }
     },

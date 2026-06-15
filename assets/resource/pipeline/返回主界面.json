@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 763,
-                "y": -4,
-                "zoom": 0.5
+                "x": 690,
+                "y": -59,
+                "zoom": 0.66
             },
             "filename": "返回主界面",
             "version": "v1.6.1"
@@ -102,8 +102,8 @@
         "post_delay": 5000,
         "$__mpe_code": {
             "position": {
-                "x": 111,
-                "y": 442
+                "x": 46,
+                "y": 550
             }
         }
     },
@@ -264,6 +264,7 @@
             "[JumpBack]有每日首次增益界面吗",
             "[JumpBack]有签到奖励吗",
             "[JumpBack]取消购买界面",
+            "[JumpBack]取消物品购买",
             "[JumpBack]左上角白色按钮返回",
             "[JumpBack]左下角返回按钮",
             "[JumpBack]连续点击Back尝试中途退出"
@@ -290,8 +291,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 32,
-                "y": 984
+                "x": 26,
+                "y": 1086
             }
         }
     },
@@ -307,8 +308,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 305,
-                "y": 971
+                "x": 313,
+                "y": 1077
             }
         }
     },
@@ -333,8 +334,33 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 53,
-                "y": 738
+                "x": 38,
+                "y": 814
+            }
+        }
+    },
+    "取消物品购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    394,
+                    476,
+                    157,
+                    66
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 61,
+                "y": 375
             }
         }
     }

@@ -3,23 +3,20 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780491971002,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\骑士团签到并请求资源.json",
             "savedViewport": {
-                "x": 788,
-                "y": 243,
-                "zoom": 0.75
+                "x": 219,
+                "y": 294,
+                "zoom": 0.57
             },
             "filename": "骑士团签到并请求资源",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_返回主界面开始_骑士团签到并请求资源": {
         "$__mpe_code": {
             "position": {
-                "x": 2988,
-                "y": 550
+                "x": 3191,
+                "y": 247
             }
         }
     },
@@ -36,22 +33,13 @@
             }
         }
     },
-    "开始进入骑士团活动界面": {
-        "next": [
-            "进入骑士团活动界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 840,
-                "y": 171
-            }
-        }
-    },
     "检查昨日签到奖励节点": {
+        "post_delay": 5000,
         "timeout": 5000,
         "next": [
             "领取昨日签到奖励",
-            "开始进入骑士团活动界面"
+            "进入骑士团活动界面",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -107,7 +95,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 4000,
+        "post_delay": 5000,
         "next": [
             "检查昨日签到奖励节点"
         ],
@@ -223,8 +211,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1150,
-                "y": -23
+                "x": 1143,
+                "y": -228
             }
         }
     },
@@ -281,8 +269,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 682,
-                "y": -399
+                "x": 560,
+                "y": -523
             }
         }
     },
@@ -292,8 +280,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1052,
-                "y": -181
+                "x": 920,
+                "y": -440
             }
         }
     }
