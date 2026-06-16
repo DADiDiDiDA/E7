@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781608480815,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -749,
-                "y": 247,
-                "zoom": 0.76
+                "x": 884,
+                "y": 87,
+                "zoom": 0.75
             },
             "filename": "刷体力",
             "version": "v1.6.1"
@@ -17,6 +20,37 @@
             "position": {
                 "x": 2966,
                 "y": 444
+            }
+        }
+    },
+    "开始快速战斗-刷体力": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1070,
+                    631,
+                    136,
+                    62
+                ],
+                "template": [
+                    "讨伐快速战斗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "timeout": 4000,
+        "next": [
+            "等待战斗开始-刷体力",
+            "检测体力不足-刷体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2015,
+                "y": -335
             }
         }
     },
@@ -39,8 +73,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1086,
-                "y": -38
+                "x": -1133,
+                "y": -78
             }
         }
     },
@@ -193,15 +227,47 @@
             }
         }
     },
+    "调整快速战斗次数为最大-刷体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1220,
+                    537,
+                    47,
+                    58
+                ],
+                "expected": [
+                    "1"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 11,
+        "repeat_delay": 1000,
+        "post_delay": 2000,
+        "timeout": 4000,
+        "next": [
+            "开始快速战斗-刷体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1599,
+                "y": -263
+            }
+        }
+    },
     "进入战斗界面": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    1175,
-                    308,
-                    74,
-                    36
+                    1127,
+                    154,
+                    134,
+                    404
                 ],
                 "expected": [
                     "战斗"
@@ -274,8 +340,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -778,
-                "y": 11
+                "x": -768,
+                "y": -66
             }
         }
     },
@@ -435,69 +501,6 @@
             "position": {
                 "x": 309,
                 "y": 278
-            }
-        }
-    },
-    "调整快速战斗次数为最大-刷体力": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1220,
-                    537,
-                    47,
-                    58
-                ],
-                "expected": [
-                    "1"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "repeat": 11,
-        "repeat_delay": 1000,
-        "post_delay": 2000,
-        "timeout": 4000,
-        "next": [
-            "开始快速战斗-刷体力"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1599,
-                "y": -263
-            }
-        }
-    },
-    "开始快速战斗-刷体力": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1070,
-                    631,
-                    136,
-                    62
-                ],
-                "template": [
-                    "讨伐快速战斗.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 5000,
-        "timeout": 4000,
-        "next": [
-            "等待战斗开始-刷体力",
-            "检测体力不足-刷体力"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2015,
-                "y": -335
             }
         }
     }
