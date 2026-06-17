@@ -3,13 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1781661853111,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\领取活跃度奖励.json",
             "savedViewport": {
-                "x": 126,
-                "y": 222,
-                "zoom": 0.69
+                "x": 177,
+                "y": 459,
+                "zoom": 0.75
             },
             "filename": "领取活跃度奖励",
             "version": "v1.6.1"
+        }
+    },
+    "$__mpe_external_返回主界面开始_领取活跃度奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1767,
+                "y": 43
+            }
         }
     },
     "收取活跃度100奖励": {
@@ -17,10 +28,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    1156,
-                    142,
-                    44,
-                    21
+                    1142,
+                    67,
+                    73,
+                    104
                 ],
                 "expected": [
                     "100"
@@ -32,7 +43,7 @@
             "param": {
                 "target_offset": [
                     0,
-                    -51,
+                    -52,
                     0,
                     0
                 ]
@@ -40,38 +51,12 @@
         },
         "post_delay": 3000,
         "next": [
-            "检查是否有活跃度弹窗",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 979,
-                "y": -154
-            }
-        }
-    },
-    "检查是否有活跃度弹窗": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "expected": [
-                    "获得"
-                ]
-            }
-        },
-        "next": [
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1402,
-                "y": -228
+                "x": 1129,
+                "y": -398
             }
         }
     },
@@ -80,26 +65,28 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    115,
-                    125,
-                    97,
-                    27
+                    63,
+                    111,
+                    196,
+                    69
                 ],
                 "expected": [
                     "日记"
                 ]
             }
         },
+        "pre_wait_freezes": 3000,
         "action": {
             "type": "Click"
         },
+        "repeat": 2,
         "next": [
             "收取活跃度100奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 572,
-                "y": -109
+                "x": 710,
+                "y": -409
             }
         }
     },
@@ -123,13 +110,12 @@
         },
         "post_delay": 5000,
         "next": [
-            "点击每日任务",
-            "进入选择菜单前等待"
+            "点击每日任务"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 219,
-                "y": -55
+                "x": 211,
+                "y": -116
             }
         }
     },
@@ -138,10 +124,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    1217,
-                    8,
-                    49,
-                    50
+                    1193,
+                    6,
+                    82,
+                    86
                 ],
                 "template": [
                     "主界面特征.png"
@@ -151,13 +137,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "进入活跃度界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -151,
-                "y": -148
+                "x": -174,
+                "y": -242
             }
         }
     },
@@ -170,14 +157,6 @@
             "position": {
                 "x": -487,
                 "y": -3
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_领取活跃度奖励": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1767,
-                "y": 43
             }
         }
     }
