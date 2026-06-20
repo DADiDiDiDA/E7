@@ -3,16 +3,40 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1781661853111,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\领取活跃度奖励.json",
             "savedViewport": {
-                "x": 177,
-                "y": 459,
-                "zoom": 0.75
+                "x": 57,
+                "y": 340,
+                "zoom": 0.66
             },
             "filename": "领取活跃度奖励",
             "version": "v1.6.1"
+        }
+    },
+    "点击每日任务第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    63,
+                    111,
+                    196,
+                    69
+                ],
+                "expected": [
+                    "日记"
+                ]
+            }
+        },
+        "pre_wait_freezes": 3000,
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "$__mpe_code": {
+            "position": {
+                "x": 1084,
+                "y": -48
+            }
         }
     },
     "$__mpe_external_返回主界面开始_领取活跃度奖励": {
@@ -60,7 +84,7 @@
             }
         }
     },
-    "点击每日任务": {
+    "点击每日任务第一次": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -81,7 +105,8 @@
         },
         "repeat": 2,
         "next": [
-            "收取活跃度100奖励"
+            "收取活跃度100奖励",
+            "[JumpBack]点击每日任务第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -110,7 +135,7 @@
         },
         "post_delay": 5000,
         "next": [
-            "点击每日任务"
+            "点击每日任务第一次"
         ],
         "$__mpe_code": {
             "position": {
