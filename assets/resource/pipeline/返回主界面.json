@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 690,
-                "y": -59,
-                "zoom": 0.66
+                "x": 803,
+                "y": -129,
+                "zoom": 0.37
             },
             "filename": "返回主界面",
-            "version": "v1.6.1"
+            "version": "v1.6.2"
         }
     },
     "关闭每日首次增益界面": {
@@ -267,6 +267,7 @@
             "[JumpBack]取消物品购买",
             "[JumpBack]左上角白色按钮返回",
             "[JumpBack]左下角返回按钮",
+            "[JumpBack]是不是有新角色界面",
             "[JumpBack]连续点击Back尝试中途退出"
         ],
         "$__mpe_code": {
@@ -291,8 +292,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 26,
-                "y": 1086
+                "x": -11,
+                "y": 1427
             }
         }
     },
@@ -308,8 +309,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 313,
-                "y": 1077
+                "x": 420,
+                "y": 1448
             }
         }
     },
@@ -361,6 +362,31 @@
             "position": {
                 "x": 61,
                 "y": 375
+            }
+        }
+    },
+    "是不是有新角色界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1021,
+                    625,
+                    248,
+                    83
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7,
+                "y": 1164
             }
         }
     }
