@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 57,
-                "y": 340,
-                "zoom": 0.66
+                "x": 121,
+                "y": 259,
+                "zoom": 0.76
             },
             "filename": "领取活跃度奖励",
-            "version": "v1.6.1"
+            "version": "v1.6.2"
         }
     },
     "点击每日任务第二次": {
@@ -135,7 +135,8 @@
         },
         "post_delay": 5000,
         "next": [
-            "点击每日任务第一次"
+            "点击每日任务第一次",
+            "[JumpBack]进入活跃度界面第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -182,6 +183,32 @@
             "position": {
                 "x": -487,
                 "y": -3
+            }
+        }
+    },
+    "进入活跃度界面第二次": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "roi": [
+                    919,
+                    110,
+                    67,
+                    56
+                ],
+                "template": [
+                    "日常任务.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "$__mpe_code": {
+            "position": {
+                "x": 583,
+                "y": 38
             }
         }
     }

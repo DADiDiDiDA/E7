@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780535591496,
+            "lastSyncTime": 1782351067040,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\进入游戏.json",
             "savedViewport": {
-                "x": 613,
-                "y": 334,
-                "zoom": 0.43
+                "x": 699,
+                "y": 271,
+                "zoom": 0.57
             },
             "filename": "进入游戏",
-            "version": "v1.6.0"
+            "version": "v1.6.2"
         }
     },
     "$__mpe_external_返回主界面开始_进入游戏": {
@@ -26,8 +26,8 @@
     "$__mpe_external_退出游戏_进入游戏": {
         "$__mpe_code": {
             "position": {
-                "x": 187,
-                "y": -382
+                "x": 236,
+                "y": 254
             }
         }
     },
@@ -48,8 +48,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 38,
-                "y": -164
+                "x": 189,
+                "y": -182
             }
         }
     },
@@ -100,12 +100,12 @@
             }
         },
         "next": [
-            "等待游戏启动"
+            "检测公告栏"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1437,
-                "y": -95
+                "x": -1484,
+                "y": -78
             }
         }
     },
@@ -137,18 +137,18 @@
             }
         }
     },
-    "是不是在更新": {
+    "是不是在维护": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    330,
-                    296,
-                    663,
-                    252
+                    497,
+                    452,
+                    270,
+                    60
                 ],
                 "expected": [
-                    "维护"
+                    "维护中"
                 ]
             }
         },
@@ -192,9 +192,10 @@
         "post_delay": 4000,
         "timeout": -1,
         "next": [
-            "是不是在更新",
             "检测公告栏开始",
-            "是不是有更新包"
+            "是不是在维护",
+            "是不是有更新包",
+            "启动游戏"
         ],
         "$__mpe_code": {
             "position": {
@@ -223,8 +224,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -461,
-                "y": -149
+                "x": -436,
+                "y": -144
             }
         }
     },
@@ -317,17 +318,6 @@
             "position": {
                 "x": 1818,
                 "y": -49
-            }
-        }
-    },
-    "等待游戏启动": {
-        "next": [
-            "检测公告栏"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1177,
-                "y": -95
             }
         }
     },

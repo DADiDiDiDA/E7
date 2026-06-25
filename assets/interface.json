@@ -1,7 +1,7 @@
 {
     "interface_version": 2,
     "name": "MAA-E7",
-    "description": "《第七史诗》自动化脚本 - 包含启动游戏、关闭公告栏、签到、刷体力、竞技场、商店购买、活跃度奖励等功能",
+    "description": "《第七史诗》自动化脚本 - 只可以完成每日任务",
     "contact": "",
     "license": "MIT",
     "welcome": "欢迎使用第七史诗自动化助手",
@@ -28,22 +28,17 @@
         {
             "name": "🎮 进入游戏",
             "entry": "启动游戏",
-            "description": "进入游戏"
-        },
-        {
-            "name": "📅 签到及辅助奖励",
-            "entry": "返回主界面开始",
-            "description": "可能会比较慢，是正常的"
+            "description": "自动启动游戏并进入游戏（不可以在游戏界面内启动欧）"
         },
         {
             "name": "📧 邮件奖励领取",
             "entry": "开始领取邮件奖励",
-            "description": "领取邮箱内所有奖励"
+            "description": "领取邮箱内所有奖励（只领取可以被一键领取的物品）"
         },
         {
             "name": "🛒 商店购买每日物品",
             "entry": "进入商店界面",
-            "description": "只买每日免费礼包和友情点物品"
+            "description": "只买每日免费礼包"
         },
         {
             "name": "🎲 免费召唤使用",

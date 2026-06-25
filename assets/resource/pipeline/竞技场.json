@@ -3,23 +3,23 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780965324930,
+            "lastSyncTime": 1782268176096,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\竞技场.json",
             "savedViewport": {
-                "x": -185,
-                "y": 81,
-                "zoom": 1.5
+                "x": -221,
+                "y": 41,
+                "zoom": 0.49
             },
             "filename": "竞技场",
-            "version": "v1.6.1"
+            "version": "v1.6.2"
         }
     },
     "$__mpe_external_返回主界面开始_竞技场": {
         "$__mpe_code": {
             "position": {
-                "x": 2348,
-                "y": 644
+                "x": 2685,
+                "y": 717
             }
         }
     },
@@ -187,7 +187,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "返回主界面开始"
+            "开始判断是否有待领取场次奖励"
         ],
         "$__mpe_code": {
             "position": {
@@ -227,12 +227,12 @@
         "timeout": 4000,
         "next": [
             "检查是否快速对战",
-            "返回主界面开始"
+            "左上角返回一次-竞技场结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1253,
-                "y": -509
+                "x": 1137,
+                "y": -619
             }
         }
     },
@@ -535,6 +535,78 @@
             "position": {
                 "x": 494,
                 "y": 929
+            }
+        }
+    },
+    "判断是否有待领取场次奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "红色点.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    19,
+                    19,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2072,
+                "y": 447
+            }
+        }
+    },
+    "开始判断是否有待领取场次奖励": {
+        "post_delay": 2000,
+        "next": [
+            "判断是否有待领取场次奖励",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1675,
+                "y": 774
+            }
+        }
+    },
+    "左上角返回一次-竞技场结束": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    5,
+                    68,
+                    58
+                ],
+                "template": [
+                    "返回箭头.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始判断是否有待领取场次奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1444,
+                "y": -135
             }
         }
     }
