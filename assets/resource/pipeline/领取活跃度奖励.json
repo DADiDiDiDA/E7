@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 121,
-                "y": 259,
-                "zoom": 0.76
+                "x": 553,
+                "y": 334,
+                "zoom": 0.85
             },
             "filename": "领取活跃度奖励",
             "version": "v1.6.2"
@@ -140,12 +140,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 211,
-                "y": -116
+                "x": 156,
+                "y": -241
             }
         }
     },
-    "进入选择菜单": {
+    "进入选择菜单-活跃度奖励": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -165,24 +165,25 @@
         },
         "post_delay": 3000,
         "next": [
-            "进入活跃度界面"
+            "进入活跃度界面",
+            "[JumpBack]进入选择菜单第二次-活跃度奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -174,
-                "y": -242
+                "x": -363,
+                "y": -207
             }
         }
     },
     "进入选择菜单前等待": {
         "post_delay": 5000,
         "next": [
-            "进入选择菜单"
+            "进入选择菜单-活跃度奖励"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -487,
-                "y": -3
+                "x": -652,
+                "y": -27
             }
         }
     },
@@ -209,6 +210,32 @@
             "position": {
                 "x": 583,
                 "y": 38
+            }
+        }
+    },
+    "进入选择菜单第二次-活跃度奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1193,
+                    6,
+                    82,
+                    86
+                ],
+                "template": [
+                    "主界面特征.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 27,
+                "y": 176
             }
         }
     }
