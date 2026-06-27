@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1782381095955,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\邮件奖励领取.json",
             "savedViewport": {
-                "x": -5261,
-                "y": -381,
-                "zoom": 0.57
+                "x": -9727,
+                "y": -661,
+                "zoom": 1
             },
             "filename": "邮件奖励领取",
             "version": "v1.6.2"
@@ -199,7 +196,8 @@
                 ],
                 "expected": [
                     "关闭",
-                    "获得"
+                    "获得",
+                    "收信"
                 ]
             }
         },
