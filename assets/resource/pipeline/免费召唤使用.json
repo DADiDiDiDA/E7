@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1182,
-                "y": 398,
-                "zoom": 0.5
+                "x": -473,
+                "y": 138,
+                "zoom": 0.87
             },
             "filename": "免费召唤使用",
-            "version": "v1.6.2"
+            "version": "v1.7.2"
         }
     },
     "$__mpe_external_返回主界面开始_免费召唤使用": {
@@ -112,7 +112,8 @@
     },
     "开始寻找免费召唤栏目": {
         "next": [
-            "进入免费召唤栏目"
+            "进入免费召唤栏目",
+            "[JumpBack]检查免费召唤_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -426,6 +427,39 @@
             "position": {
                 "x": 3578,
                 "y": 517
+            }
+        }
+    },
+    "检查免费召唤_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1172,
+                    403,
+                    81,
+                    84
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    21,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1198,
+                "y": 254
             }
         }
     }

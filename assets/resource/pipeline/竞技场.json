@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1782381944251,
+            "lastSyncTime": 1782614041275,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\竞技场.json",
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\竞技场.json",
             "savedViewport": {
-                "x": -461,
-                "y": -219,
-                "zoom": 0.65
+                "x": -1229,
+                "y": -242,
+                "zoom": 0.86
             },
             "filename": "竞技场",
             "version": "v1.6.2"
@@ -58,8 +58,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2072,
-                "y": 447
+                "x": 2121,
+                "y": 374
             }
         }
     },
@@ -125,8 +125,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1444,
-                "y": -135
+                "x": 1409,
+                "y": 32
             }
         }
     },
@@ -195,8 +195,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -518,
-                "y": -316
+                "x": -672,
+                "y": -484
             }
         }
     },
@@ -242,12 +242,12 @@
         "timeout": 3000,
         "next": [
             "检测竞技场选择界面",
-            "进入竞技场选择"
+            "进入竞技场选择开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1811,
-                "y": -318
+                "x": -1928,
+                "y": -534
             }
         }
     },
@@ -268,7 +268,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "开始判断是否有待领取场次奖励"
+            "左上角返回一次-竞技场结束"
         ],
         "$__mpe_code": {
             "position": {
@@ -325,8 +325,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1070,
-                "y": -145
+                "x": -1220,
+                "y": -478
             }
         }
     },
@@ -350,8 +350,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1353,
-                "y": -315
+                "x": -1545,
+                "y": -509
             }
         }
     },
@@ -470,8 +470,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -459,
-                "y": -18
+                "x": -617,
+                "y": 41
             }
         }
     },
@@ -481,8 +481,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -754,
-                "y": 39
+                "x": -893,
+                "y": -195
             }
         }
     },
@@ -493,8 +493,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2578,
-                "y": -348
+                "x": -2784,
+                "y": -429
             }
         }
     },
@@ -522,8 +522,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2200,
-                "y": -540
+                "x": -2339,
+                "y": -633
             }
         }
     },
@@ -553,8 +553,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 69,
-                "y": 184
+                "x": -169,
+                "y": 12
             }
         }
     },

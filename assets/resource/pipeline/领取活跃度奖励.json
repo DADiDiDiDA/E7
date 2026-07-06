@@ -3,40 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1783038641853,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\领取活跃度奖励.json",
             "savedViewport": {
-                "x": 553,
-                "y": 334,
-                "zoom": 0.85
+                "x": -364,
+                "y": 355,
+                "zoom": 0.75
             },
             "filename": "领取活跃度奖励",
-            "version": "v1.6.2"
-        }
-    },
-    "点击每日任务第二次": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    63,
-                    111,
-                    196,
-                    69
-                ],
-                "expected": [
-                    "日记"
-                ]
-            }
-        },
-        "pre_wait_freezes": 3000,
-        "action": {
-            "type": "Click"
-        },
-        "repeat": 2,
-        "$__mpe_code": {
-            "position": {
-                "x": 1084,
-                "y": -48
-            }
+            "version": "v1.7.2"
         }
     },
     "$__mpe_external_返回主界面开始_领取活跃度奖励": {
@@ -89,10 +65,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    63,
-                    111,
-                    196,
-                    69
+                    52,
+                    122,
+                    218,
+                    413
                 ],
                 "expected": [
                     "日记"
@@ -112,6 +88,33 @@
             "position": {
                 "x": 710,
                 "y": -409
+            }
+        }
+    },
+    "点击每日任务第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    52,
+                    122,
+                    218,
+                    413
+                ],
+                "expected": [
+                    "日记"
+                ]
+            }
+        },
+        "pre_wait_freezes": 3000,
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "$__mpe_code": {
+            "position": {
+                "x": 1084,
+                "y": -48
             }
         }
     },
@@ -142,6 +145,32 @@
             "position": {
                 "x": 156,
                 "y": -241
+            }
+        }
+    },
+    "进入活跃度界面第二次": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "roi": [
+                    919,
+                    110,
+                    67,
+                    56
+                ],
+                "template": [
+                    "日常任务.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "$__mpe_code": {
+            "position": {
+                "x": 583,
+                "y": 38
             }
         }
     },
@@ -184,32 +213,6 @@
             "position": {
                 "x": -652,
                 "y": -27
-            }
-        }
-    },
-    "进入活跃度界面第二次": {
-        "recognition": {
-            "type": "FeatureMatch",
-            "param": {
-                "roi": [
-                    919,
-                    110,
-                    67,
-                    56
-                ],
-                "template": [
-                    "日常任务.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 5000,
-        "$__mpe_code": {
-            "position": {
-                "x": 583,
-                "y": 38
             }
         }
     },
