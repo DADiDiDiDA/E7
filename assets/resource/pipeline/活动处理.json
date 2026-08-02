@@ -1,0 +1,271 @@
+{
+    "$__mpe_config_活动处理": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -838,
+                "y": 84,
+                "zoom": 0.76
+            },
+            "filename": "活动处理",
+            "version": "v1.7.4"
+        }
+    },
+    "活动处理开始": {
+        "next": [
+            "检测活动区域-活动处理",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 319,
+                "y": 146
+            }
+        }
+    },
+    "检测活动区域-活动处理": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "寻找活动字符",
+                    "对比颜色-领取活动"
+                ]
+            }
+        },
+        "next": [
+            "进入活动界面-活动处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 772,
+                "y": 98
+            }
+        }
+    },
+    "有待领取奖励-活动处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    21,
+                    492,
+                    74,
+                    25
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "有没有待领取的日记奖励-活动处理",
+            "未找到符合的活动-活动处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1493,
+                "y": 42
+            }
+        }
+    },
+    "有没有待领取的日记奖励-活动处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    2,
+                    102,
+                    243,
+                    612
+                ],
+                "expected": [
+                    "日记"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有没有可领取奖励-活动处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1812,
+                "y": -17
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_活动处理": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2671,
+                "y": 630
+            }
+        }
+    },
+    "寻找活动字符": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    170,
+                    100,
+                    443
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 860,
+                "y": -145
+            }
+        }
+    },
+    "对比颜色-领取活动": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": "寻找活动字符",
+                "roi_offset": [
+                    -20,
+                    0,
+                    60,
+                    60
+                ],
+                "lower": [
+                    [
+                        219,
+                        85,
+                        11
+                    ]
+                ],
+                "upper": [
+                    [
+                        219,
+                        85,
+                        11
+                    ]
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1146,
+                "y": -204
+            }
+        }
+    },
+    "有没有可领取奖励-活动处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    285,
+                    528,
+                    958,
+                    152
+                ],
+                "expected": [
+                    "领取"
+                ],
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2502,
+                "y": -7
+            }
+        }
+    },
+    "进入活动界面-活动处理": {
+        "next": [
+            "有待领取奖励-活动处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1101,
+                "y": 113
+            }
+        }
+    },
+    "未找到符合的活动-活动处理": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    128,
+                    604,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        117,
+                        335,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_delay": 1500,
+        "next": [
+            "有没有待领取的日记奖励第二次-活动处理",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1816,
+                "y": 249
+            }
+        }
+    },
+    "有没有待领取的日记奖励第二次-活动处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    2,
+                    102,
+                    243,
+                    612
+                ],
+                "expected": [
+                    "日记"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "next": [
+            "有没有可领取奖励-活动处理",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2198,
+                "y": 160
+            }
+        }
+    }
+}

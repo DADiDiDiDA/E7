@@ -28,48 +28,63 @@
         {
             "name": "🎮 进入游戏",
             "entry": "启动游戏",
+            "default_check": true,
             "description": "自动启动游戏并进入游戏（不可以在游戏界面内启动欧）",
             "option": ["启动模式"]
         },
         {
             "name": "📧 邮件奖励领取",
             "entry": "开始领取邮件奖励",
+            "default_check": true,
             "description": "领取邮箱内所有奖励"
         },
         {
             "name": "🛒 商店购买每日物品",
             "entry": "进入商店界面",
+            "default_check": true,
             "description": "只买每日免费礼包"
         },
         {
             "name": "🎲 免费召唤使用",
             "entry": "免费召唤开始",
+            "default_check": true,
             "description": "使用免费召唤（单抽或十连）"
         },
         {
             "name": "⚔️ 刷体力",
             "entry": "进入战斗界面",
+            "default_check": true,
             "description": "可自定义选择要刷取的讨伐副本；只刷地狱级难度！！！！",
             "option": ["讨伐关卡选择"]
         },
         {
             "name": "🏟️ 竞技场10次",
             "entry": "进入竞技场选择",
+            "default_check": true,
             "description": "只刷人机竞技场，快速战斗次数和挑战次数任一不足时会退出"
         },
         {
             "name": "⚔️ 骑士团签到并请求资源",
             "entry": "点击主界面菜单选择",
+            "default_check": true,
             "description": "只会请求经验精灵"
         },
         {
             "name": "🎁 领取活跃度奖励",
             "entry": "进入选择菜单前等待",
+            "default_check": true,
             "description": "只会领取活跃度100时的奖励，未到100不会领取"
+        },
+        {
+            "name": "🎪 活动奖励处理",
+            "entry": "活动处理开始",
+            "default_check": true,
+            "description": "自动检测并领取活动界面中的可领取奖励（日记奖励等）"
         },
         {
             "name": "⏹️ 退出游戏",
             "entry": "退出游戏",
+            "default_check": true,
             "description": "其实没必要，直接使用设置里的\"任务完成后退出\"即可"
         }
     ],
