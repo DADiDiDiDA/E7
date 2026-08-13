@@ -3,103 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1785716428147,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\活动处理.json",
             "savedViewport": {
-                "x": -838,
-                "y": 84,
-                "zoom": 0.76
+                "x": -834,
+                "y": 44,
+                "zoom": 0.65
             },
             "filename": "活动处理",
             "version": "v1.7.4"
-        }
-    },
-    "活动处理开始": {
-        "next": [
-            "检测活动区域-活动处理",
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 319,
-                "y": 146
-            }
-        }
-    },
-    "检测活动区域-活动处理": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "寻找活动字符",
-                    "对比颜色-领取活动"
-                ]
-            }
-        },
-        "next": [
-            "进入活动界面-活动处理"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 772,
-                "y": 98
-            }
-        }
-    },
-    "有待领取奖励-活动处理": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    21,
-                    492,
-                    74,
-                    25
-                ],
-                "expected": [
-                    "活动"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000,
-        "next": [
-            "有没有待领取的日记奖励-活动处理",
-            "未找到符合的活动-活动处理"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1493,
-                "y": 42
-            }
-        }
-    },
-    "有没有待领取的日记奖励-活动处理": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    2,
-                    102,
-                    243,
-                    612
-                ],
-                "expected": [
-                    "日记"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "有没有可领取奖励-活动处理"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1812,
-                "y": -17
-            }
         }
     },
     "$__mpe_external_返回主界面开始_活动处理": {
@@ -107,28 +20,6 @@
             "position": {
                 "x": 2671,
                 "y": 630
-            }
-        }
-    },
-    "寻找活动字符": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    10,
-                    170,
-                    100,
-                    443
-                ],
-                "expected": [
-                    "活动"
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 860,
-                "y": -145
             }
         }
     },
@@ -166,6 +57,58 @@
             }
         }
     },
+    "寻找活动字符": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    170,
+                    100,
+                    443
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 860,
+                "y": -145
+            }
+        }
+    },
+    "有待领取奖励-活动处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    21,
+                    492,
+                    74,
+                    25
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "有没有待领取的日记奖励-活动处理",
+            "未找到符合的活动-活动处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1493,
+                "y": 42
+            }
+        }
+    },
     "有没有可领取奖励-活动处理": {
         "recognition": {
             "type": "OCR",
@@ -195,14 +138,62 @@
             }
         }
     },
-    "进入活动界面-活动处理": {
+    "有没有待领取的日记奖励-活动处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    2,
+                    102,
+                    243,
+                    612
+                ],
+                "expected": [
+                    "日记"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
         "next": [
-            "有待领取奖励-活动处理"
+            "有没有可领取奖励-活动处理",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1101,
-                "y": 113
+                "x": 1812,
+                "y": -17
+            }
+        }
+    },
+    "有没有待领取的日记奖励第二次-活动处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    2,
+                    102,
+                    243,
+                    612
+                ],
+                "expected": [
+                    "日记"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "next": [
+            "有没有可领取奖励-活动处理",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2198,
+                "y": 160
             }
         }
     },
@@ -238,33 +229,46 @@
             }
         }
     },
-    "有没有待领取的日记奖励第二次-活动处理": {
+    "检测活动区域-活动处理": {
         "recognition": {
-            "type": "OCR",
+            "type": "And",
             "param": {
-                "roi": [
-                    2,
-                    102,
-                    243,
-                    612
-                ],
-                "expected": [
-                    "日记"
+                "all_of": [
+                    "寻找活动字符",
+                    "对比颜色-领取活动"
                 ]
             }
         },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 1500,
         "next": [
-            "有没有可领取奖励-活动处理",
+            "进入活动界面-活动处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 772,
+                "y": 98
+            }
+        }
+    },
+    "活动处理开始": {
+        "next": [
+            "检测活动区域-活动处理",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2198,
-                "y": 160
+                "x": 319,
+                "y": 146
+            }
+        }
+    },
+    "进入活动界面-活动处理": {
+        "next": [
+            "有待领取奖励-活动处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1101,
+                "y": 113
             }
         }
     }
