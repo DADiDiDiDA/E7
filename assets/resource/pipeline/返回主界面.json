@@ -3,13 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1788829622544,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 803,
-                "y": -129,
-                "zoom": 0.37
+                "x": 541,
+                "y": 1183,
+                "zoom": 0.66
             },
             "filename": "返回主界面",
-            "version": "v1.6.2"
+            "version": "v1.9.3"
         }
     },
     "关闭每日首次增益界面": {
@@ -53,6 +57,31 @@
             "position": {
                 "x": -4,
                 "y": -1080
+            }
+        }
+    },
+    "取消物品购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    394,
+                    476,
+                    157,
+                    66
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 61,
+                "y": 375
             }
         }
     },
@@ -107,6 +136,57 @@
             }
         }
     },
+    "左下角返回按钮": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    52,
+                    622,
+                    231,
+                    79
+                ],
+                "expected": [
+                    "返回"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 38,
+                "y": 814
+            }
+        }
+    },
+    "是不是有新角色界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1021,
+                    625,
+                    248,
+                    83
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7,
+                "y": 1164
+            }
+        }
+    },
     "是不是退出过头了": {
         "recognition": {
             "type": "OCR",
@@ -154,6 +234,34 @@
             "position": {
                 "x": -6,
                 "y": -370
+            }
+        }
+    },
+    "有没有公告": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    348,
+                    82,
+                    92,
+                    113
+                ],
+                "template": [
+                    "公告小助手图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认关闭游戏内公告"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -33,
+                "y": -1395
             }
         }
     },
@@ -258,6 +366,7 @@
         "post_delay": 3000,
         "timeout": 2000,
         "next": [
+            "[JumpBack]有没有公告",
             "[JumpBack]关闭登录奖励",
             "[JumpBack]是不是退出过头了",
             "检测是否在主界面",
@@ -314,66 +423,15 @@
             }
         }
     },
-    "左下角返回按钮": {
+    "确认关闭游戏内公告": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    52,
-                    622,
-                    231,
-                    79
-                ],
-                "expected": [
-                    "返回"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000,
-        "$__mpe_code": {
-            "position": {
-                "x": 38,
-                "y": 814
-            }
-        }
-    },
-    "取消物品购买": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    394,
-                    476,
-                    157,
-                    66
-                ],
-                "expected": [
-                    "取消"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 61,
-                "y": 375
-            }
-        }
-    },
-    "是不是有新角色界面": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1021,
-                    625,
-                    248,
-                    83
+                    719,
+                    428,
+                    60,
+                    68
                 ],
                 "expected": [
                     "确认"
@@ -385,8 +443,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 7,
-                "y": 1164
+                "x": 407,
+                "y": -1336
             }
         }
     }
