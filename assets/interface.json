@@ -77,9 +77,10 @@
         },
         {
             "name": "🎪 活动奖励处理",
-            "entry": "活动处理开始",
+            "entry": "活动奖励开始",
             "default_check": true,
-            "description": "自动检测并领取活动界面中的可领取奖励（日记奖励等）"
+            "description": "自动检测并领取活动界面中的可领取奖励（日记奖励等）",
+            "option": ["活动1-周年每日20抽", "活动2-xx日记"]
         },
         {
             "name": "⏹️ 退出游戏",
@@ -163,6 +164,62 @@
                     "name": "仅检测公告栏",
                     "label": "📋跳过启动游戏",
                     "description": "不启动游戏，直接开始任务（适用于模拟器启动游戏）"
+                }
+            ]
+        },
+        "活动1-周年每日20抽": {
+            "type": "select",
+            "label": "周年领取每日20抽",
+            "description": "选择是否执行活动1：周年领取每日20抽。",
+            "default_case": "开启",
+            "cases": [
+                {
+                    "name": "开启",
+                    "label": "开启",
+                    "description": "执行活动",
+                    "pipeline_override": {
+                        "是否开启活动1：周年领取每日20抽": {
+                            "next": ["开始活动1-活动1"]
+                        }
+                    }
+                },
+                {
+                    "name": "关闭",
+                    "label": "关闭",
+                    "description": "跳过活动",
+                    "pipeline_override": {
+                        "是否开启活动1：周年领取每日20抽": {
+                            "next": ["不开始活动1-活动1"]
+                        }
+                    }
+                }
+            ]
+        },
+        "活动2-xx日记": {
+            "type": "select",
+            "label": "活动：xx日记",
+            "description": "选择是否执行活动2：xx日记。",
+            "default_case": "开启",
+            "cases": [
+                {
+                    "name": "开启",
+                    "label": "开启",
+                    "description": "执行活动：xx日记",
+                    "pipeline_override": {
+                        "是否开启活动2：xx日记": {
+                            "next": ["开始活动2-活动2"]
+                        }
+                    }
+                },
+                {
+                    "name": "关闭",
+                    "label": "关闭",
+                    "description": "跳过活动：xx日记",
+                    "pipeline_override": {
+                        "是否开启活动2：xx日记": {
+                            "next": ["不开始活动2-活动2"]
+                        }
+                    }
                 }
             ]
         }

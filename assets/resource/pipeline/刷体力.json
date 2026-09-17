@@ -3,16 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1781608480815,
+            "lastSyncTime": 1789646894330,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\E7\\assets\\resource\\pipeline\\刷体力.json",
+            "isDeleted": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": 884,
-                "y": 87,
-                "zoom": 0.75
+                "x": 349,
+                "y": 78,
+                "zoom": 0.57
             },
             "filename": "刷体力",
-            "version": "v1.6.1"
+            "version": "v1.10.1"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -293,10 +294,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    691,
-                    186,
-                    57,
-                    29
+                    31,
+                    159,
+                    1218,
+                    87
                 ],
                 "expected": [
                     "讨伐"
