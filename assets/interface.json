@@ -6,7 +6,7 @@
     "license": "MIT",
     "welcome": "欢迎使用第七史诗自动化助手",
     "version": "1.4.3",
-    
+
     "controller": [
         {
             "name": "安卓端",
@@ -14,7 +14,7 @@
             "display_short_side": 720
         }
     ],
-    
+
     "resource": [
         {
             "name": "官服",
@@ -23,7 +23,7 @@
             ]
         }
     ],
-    
+
     "task": [
         {
             "name": "🎮 进入游戏",
@@ -43,12 +43,6 @@
             "entry": "进入商店界面",
             "default_check": true,
             "description": "只买每日免费礼包"
-        },
-        {
-            "name": "🎲 免费召唤使用",
-            "entry": "免费召唤开始",
-            "default_check": true,
-            "description": "使用免费召唤（单抽或十连）"
         },
         {
             "name": "⚔️ 刷体力",
@@ -79,8 +73,12 @@
             "name": "🎪 活动奖励处理",
             "entry": "活动奖励开始",
             "default_check": true,
-            "description": "自动检测并领取活动界面中的可领取奖励（日记奖励等）",
-            "option": ["活动1-周年每日20抽", "活动2-xx日记"]
+            "description": "自动检测并领取活动界面中的可领取奖励（周年每日20抽、xx日记、免费召唤使用等）",
+            "option": [
+                "活动1-周年每日20抽",
+                "活动2-xx日记",
+                "活动3-免费召唤使用"
+            ]
         },
         {
             "name": "⏹️ 退出游戏",
@@ -89,7 +87,7 @@
             "description": "其实没必要，直接使用设置里的\"任务完成后退出\"即可"
         }
     ],
-    
+
     "option": {
         "讨伐关卡选择": {
             "type": "select",
@@ -218,6 +216,34 @@
                     "pipeline_override": {
                         "是否开启活动2：xx日记": {
                             "next": ["不开始活动2-活动2"]
+                        }
+                    }
+                }
+            ]
+        },
+        "活动3-免费召唤使用": {
+            "type": "select",
+            "label": "免费召唤使用",
+            "description": "选择是否执行活动3：免费召唤使用。",
+            "default_case": "开启",
+            "cases": [
+                {
+                    "name": "开启",
+                    "label": "开启",
+                    "description": "执行免费召唤使用",
+                    "pipeline_override": {
+                        "是否开启活动3：免费召唤使用": {
+                            "next": ["开始活动3-使用免费召唤"]
+                        }
+                    }
+                },
+                {
+                    "name": "关闭",
+                    "label": "关闭",
+                    "description": "跳过免费召唤使用",
+                    "pipeline_override": {
+                        "是否开启活动3：免费召唤使用": {
+                            "next": ["不开始活动3-活动3"]
                         }
                     }
                 }
