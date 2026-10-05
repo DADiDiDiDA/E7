@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 1397,
-                "y": 171,
-                "zoom": 0.66
+                "x": 973,
+                "y": 620,
+                "zoom": 0.62
             },
             "filename": "进入游戏",
-            "version": "v1.7.3"
+            "version": "v2.0.6"
         }
     },
     "$__mpe_external_返回主界面开始_进入游戏": {
@@ -40,6 +40,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
                 "x": -136,
