@@ -3,13 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1791259549920,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\活动奖励.json",
             "savedViewport": {
-                "x": -5815,
-                "y": -293,
-                "zoom": 0.66
+                "x": -908,
+                "y": -356,
+                "zoom": 0.57
             },
             "filename": "活动奖励",
-            "version": "v1.10.1"
+            "version": "v2.0.7"
         }
     },
     "$__mpe_external_返回主界面开始_活动奖励": {
@@ -237,11 +241,13 @@
                 ]
             }
         },
+        "action": {
+            "type": "Click"
+        },
         "post_delay": 2000,
         "next": [
-            "有没有待领取活动1奖励-活动1",
-            "有没有待领取活动1奖励-活动1_第二次",
-            "活动1奖励已领取-活动1"
+            "点击誓约召唤图标-活动1",
+            "誓约召唤已领取图标-活动1"
         ],
         "$__mpe_code": {
             "position": {
@@ -405,6 +411,31 @@
             }
         }
     },
+    "是否返回到召唤界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    67,
+                    11,
+                    53,
+                    42
+                ],
+                "expected": [
+                    "召唤"
+                ]
+            }
+        },
+        "next": [
+            "活动3执行完成-活动3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9897,
+                "y": 1245
+            }
+        }
+    },
     "有待领取奖励-活动处理-活动2": {
         "recognition": {
             "type": "OCR",
@@ -461,149 +492,6 @@
             "position": {
                 "x": 6278,
                 "y": 1016
-            }
-        }
-    },
-    "有没有待领取活动1奖励-活动1": {
-        "recognition": {
-            "type": "ColorMatch",
-            "param": {
-                "roi": "寻找活动：INFINITY-活动1",
-                "roi_offset": [
-                    -22,
-                    -29,
-                    -53,
-                    8
-                ],
-                "lower": [
-                    [
-                        219,
-                        85,
-                        11
-                    ]
-                ],
-                "upper": [
-                    [
-                        233,
-                        91,
-                        11
-                    ]
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    58,
-                    16,
-                    0,
-                    0
-                ]
-            }
-        },
-        "next": [
-            "点击誓约召唤图标-活动1",
-            "[JumpBack]有没有待领取活动1奖励_第二次-活动1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1925,
-                "y": 608
-            }
-        }
-    },
-    "有没有待领取活动1奖励-活动1_第二次": {
-        "recognition": {
-            "type": "ColorMatch",
-            "param": {
-                "roi": "寻找活动：INFINITY",
-                "roi_offset": [
-                    -22,
-                    -29,
-                    -53,
-                    8
-                ],
-                "lower": [
-                    [
-                        219,
-                        85,
-                        11
-                    ]
-                ],
-                "upper": [
-                    [
-                        233,
-                        91,
-                        11
-                    ]
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    58,
-                    16,
-                    0,
-                    0
-                ]
-            }
-        },
-        "next": [
-            "点击誓约召唤图标-活动1",
-            "[JumpBack]有没有待领取活动1奖励_第二次-活动1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1925,
-                "y": 999
-            }
-        }
-    },
-    "有没有待领取活动1奖励_第二次-活动1": {
-        "recognition": {
-            "type": "ColorMatch",
-            "param": {
-                "roi": "寻找活动：INFINITY",
-                "roi_offset": [
-                    -22,
-                    -29,
-                    -53,
-                    8
-                ],
-                "lower": [
-                    [
-                        219,
-                        85,
-                        11
-                    ]
-                ],
-                "upper": [
-                    [
-                        233,
-                        91,
-                        11
-                    ]
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    58,
-                    16,
-                    0,
-                    0
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 2337,
-                "y": 316
             }
         }
     },
@@ -824,17 +712,6 @@
             "position": {
                 "x": 4544,
                 "y": 1247
-            }
-        }
-    },
-    "活动1奖励已领取-活动1": {
-        "next": [
-            "活动1执行完成-活动1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1920,
-                "y": 1390
             }
         }
     },
@@ -1103,6 +980,32 @@
             }
         }
     },
+    "确认新五星召唤结果": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1063,
+                    630,
+                    118,
+                    63
+                ],
+                "expected": [
+                    "下一页"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "$__mpe_code": {
+            "position": {
+                "x": 10023,
+                "y": 739
+            }
+        }
+    },
     "进入免费召唤栏目": {
         "recognition": {
             "type": "OCR",
@@ -1241,54 +1144,28 @@
             }
         }
     },
-    "是否返回到召唤界面": {
+    "誓约召唤已领取图标-活动1": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    67,
-                    11,
-                    53,
-                    42
+                    1017,
+                    441,
+                    149,
+                    123
                 ],
-                "expected": [
-                    "召唤"
+                "template": [
+                    "誓约召唤已领取图标.png"
                 ]
             }
         },
         "next": [
-            "活动3执行完成-活动3"
+            "活动1执行完成-活动1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9897,
-                "y": 1245
-            }
-        }
-    },
-    "确认新五星召唤结果": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1063,
-                    630,
-                    118,
-                    63
-                ],
-                "expected": [
-                    "下一页"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 1500,
-        "$__mpe_code": {
-            "position": {
-                "x": 10023,
-                "y": 739
+                "x": 2424,
+                "y": 1117
             }
         }
     }
