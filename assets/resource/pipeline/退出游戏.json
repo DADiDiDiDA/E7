@@ -30,6 +30,7 @@
                 "package": "com.zlongame.cn.epicseven"
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1852,

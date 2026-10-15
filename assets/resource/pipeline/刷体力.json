@@ -108,7 +108,7 @@
                 ]
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "timeout": 4000,
         "next": [
             "调整快速战斗次数为最大-刷体力"
@@ -164,6 +164,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "选择讨伐关卡难度为地狱级别"
         ],
@@ -192,6 +193,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "选择讨伐关卡难度为地狱级别"
         ],
@@ -336,6 +338,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "进入讨伐界面"
         ],
@@ -375,6 +378,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "选择讨伐关卡难度为地狱级别"
         ],
@@ -435,6 +439,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 3,
         "next": [
             "点击讨伐卡戴斯"
@@ -466,6 +471,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 3,
         "next": [
             "点击讨伐阿吉玛纳克"
@@ -495,6 +501,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "选择讨伐关卡难度为地狱级别"
         ],

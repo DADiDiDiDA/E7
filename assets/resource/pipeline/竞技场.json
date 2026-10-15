@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1782614041275,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\竞技场.json",
             "savedViewport": {
-                "x": -1229,
-                "y": -242,
-                "zoom": 0.86
+                "x": 33,
+                "y": 409,
+                "zoom": 0.57
             },
             "filename": "竞技场",
-            "version": "v1.6.2"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_竞技场": {
@@ -53,6 +50,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "返回主界面开始"
         ],
@@ -95,6 +93,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 319,
@@ -120,6 +119,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始判断是否有待领取场次奖励"
         ],
@@ -190,6 +190,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "选择第一位挑战者"
         ],
@@ -466,7 +467,8 @@
         "next": [
             "选择NPC对战",
             "[JumpBack]处理段位改变弹窗",
-            "[JumpBack]是不是每周奖励待领取"
+            "[JumpBack]是不是每周奖励待领取",
+            "[JumpBack]进入新手竞技场_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -549,7 +551,8 @@
         "next": [
             "选择第一位挑战者",
             "[JumpBack]处理段位改变弹窗",
-            "[JumpBack]是不是每周奖励待领取"
+            "[JumpBack]是不是每周奖励待领取",
+            "[JumpBack]选择NPC对战_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -584,6 +587,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "点击挑战"
         ],
@@ -612,10 +616,63 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 494,
                 "y": 929
+            }
+        }
+    },
+    "选择NPC对战_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1055,
+                    177,
+                    116,
+                    71
+                ],
+                "expected": [
+                    "NPC对战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 108,
+                "y": 1112
+            }
+        }
+    },
+    "进入新手竞技场_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    259,
+                    70,
+                    312,
+                    642
+                ],
+                "expected": [
+                    "竞技场"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "$__mpe_code": {
+            "position": {
+                "x": -358,
+                "y": 536
             }
         }
     }

@@ -59,6 +59,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1211,
@@ -87,6 +88,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1548,
@@ -128,7 +130,7 @@
         }
     },
     "准备使用免费召唤次数": {
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]开始判断免费召唤是否有次数",
             "[JumpBack]点击跳过键",
@@ -485,6 +487,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "活动2执行结束-活动2"
         ],
@@ -513,6 +516,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "有没有可领取奖励-活动处理-活动2",
             "活动2执行结束-活动2"
@@ -542,7 +546,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "有没有可领取奖励-活动处理-活动2",
             "活动2执行结束-活动2"
@@ -600,7 +604,7 @@
                 ]
             }
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "有没有待领取的日记奖励第二次-活动处理-活动2",
             "活动2执行结束-活动2"
@@ -638,6 +642,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "开始寻找免费召唤栏目"
         ],
@@ -674,6 +679,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8717,
@@ -893,6 +899,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8712,
@@ -918,6 +925,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "有没有领取到活动1奖励呢-活动1",
             "[JumpBack]点击誓约召唤图标_第二次-活动1"
@@ -947,6 +955,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 2801,
@@ -998,7 +1007,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 10023,
@@ -1032,7 +1041,7 @@
                 ]
             }
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]进入免费召唤栏目_第二次",
             "开始准备使用免费召唤次数"
@@ -1071,6 +1080,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 9071,
@@ -1096,6 +1106,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1252,
@@ -1121,6 +1132,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "活动界面是否在最顶端-活动1",
             "[JumpBack]进入活动界面-活动1-第二次-活动1",

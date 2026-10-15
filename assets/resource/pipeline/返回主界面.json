@@ -3,17 +3,80 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1789644268803,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 496,
-                "y": 380,
-                "zoom": 0.49
+                "x": 791,
+                "y": 85,
+                "zoom": 0.57
             },
             "filename": "返回主界面",
-            "version": "v1.10.1"
+            "version": "v2.1.0"
+        }
+    },
+    "主界面判定1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    922,
+                    595,
+                    353,
+                    115
+                ],
+                "expected": [
+                    "英雄"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 163,
+                "y": -1699
+            }
+        }
+    },
+    "主界面判定2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1123,
+                    143,
+                    139,
+                    424
+                ],
+                "expected": [
+                    "战斗"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 606,
+                "y": -1702
+            }
+        }
+    },
+    "主界面判定3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    641,
+                    5,
+                    331,
+                    55
+                ],
+                "template": [
+                    "水晶图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 977,
+                "y": -1729
+            }
         }
     },
     "关闭每日首次增益界面": {
@@ -28,6 +91,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 565,
@@ -53,6 +117,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": -4,
@@ -78,6 +143,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 23,
@@ -103,6 +169,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": -5,
@@ -180,6 +247,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 7,
@@ -205,6 +273,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 12,
@@ -255,6 +324,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "确认关闭游戏内公告"
         ],
@@ -293,18 +363,36 @@
     },
     "检测是否在主界面": {
         "recognition": {
-            "type": "OCR",
+            "type": "And",
             "param": {
-                "roi": [
-                    922,
-                    595,
-                    353,
-                    115
-                ],
-                "expected": [
-                    "英雄"
-                ],
-                "threshold": 0.85
+                "all_of": [
+                    "主界面判定1",
+                    "主界面判定2",
+                    "主界面判定3"
+                ]
+            }
+        },
+        "post_delay": 5000,
+        "next": [
+            "检测是否在主界面_第二次",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -4,
+                "y": -649
+            }
+        }
+    },
+    "检测是否在主界面_第二次": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "主界面判定1",
+                    "主界面判定2",
+                    "主界面判定3"
+                ]
             }
         },
         "next": [
@@ -312,8 +400,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -4,
-                "y": -667
+                "x": 318,
+                "y": -710
             }
         }
     },
@@ -321,8 +409,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 582,
-                "y": -820
+                "x": 786,
+                "y": -814
             }
         }
     },
@@ -344,6 +432,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 407,
@@ -369,6 +458,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "签到奖励领取结束"
         ],
@@ -389,7 +479,7 @@
     },
     "返回主界面开始": {
         "post_delay": 3000,
-        "timeout": 2000,
+        "timeout": 180000,
         "next": [
             "[JumpBack]有没有公告",
             "[JumpBack]关闭登录奖励",
@@ -401,50 +491,12 @@
             "[JumpBack]取消物品购买",
             "[JumpBack]左上角白色按钮返回",
             "[JumpBack]左下角返回按钮",
-            "[JumpBack]是不是有新角色界面",
-            "[JumpBack]连续点击Back尝试中途退出"
+            "[JumpBack]是不是有新角色界面"
         ],
         "$__mpe_code": {
             "position": {
                 "x": -605,
                 "y": -57
-            }
-        }
-    },
-    "连续点击Back尝试中途退出": {
-        "action": {
-            "type": "ClickKey",
-            "param": {
-                "key": [
-                    4
-                ]
-            }
-        },
-        "post_delay": 2000,
-        "next": [
-            "连续点击Back尝试中途退出第二次"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -11,
-                "y": 1427
-            }
-        }
-    },
-    "连续点击Back尝试中途退出第二次": {
-        "action": {
-            "type": "ClickKey",
-            "param": {
-                "key": [
-                    111
-                ]
-            }
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 420,
-                "y": 1448
             }
         }
     }
