@@ -29,7 +29,7 @@
             "name": "🎮 进入游戏",
             "entry": "启动游戏",
             "default_check": true,
-            "description": "自动启动游戏并进入游戏（不可以在游戏界面内启动欧）",
+            "description": "启动并进入游戏",
             "option": ["启动模式"]
         },
         {
@@ -55,13 +55,13 @@
             "name": "🏟️ 竞技场10次",
             "entry": "进入竞技场选择",
             "default_check": true,
-            "description": "只刷人机竞技场，快速战斗次数和挑战次数任一不足时会退出"
+            "description": "只刷人机竞技场，快速战斗次数和挑战次数不足时会退出"
         },
         {
             "name": "⚔️ 骑士团签到并请求资源",
             "entry": "点击主界面菜单选择",
             "default_check": true,
-            "description": "只会请求经验精灵"
+            "description": "只会请求经验精灵，不会赠送资源欧"
         },
         {
             "name": "🎁 领取活跃度奖励",
@@ -155,12 +155,12 @@
             "cases": [
                 {
                     "name": "开始启动游戏",
-                    "label": "🚀正常启动游戏",
+                    "label": "🚀正常启动",
                     "description": "正常启动游戏客户端"
                 },
                 {
                     "name": "仅检测公告栏",
-                    "label": "📋跳过启动游戏",
+                    "label": "📋跳过启动",
                     "description": "不启动游戏，直接开始任务（适用于模拟器启动游戏）"
                 }
             ]
@@ -174,7 +174,7 @@
                 {
                     "name": "开启",
                     "label": "开启",
-                    "description": "执行活动",
+                    "description": "执行活动1：周年领取每日20抽",
                     "pipeline_override": {
                         "是否开启活动1：周年领取每日20抽": {
                             "next": ["开始活动1-活动1"]
@@ -196,7 +196,7 @@
         "活动2-xx日记": {
             "type": "select",
             "label": "活动：xx日记",
-            "description": "选择是否执行活动2：xx日记。",
+            "description": "是否执行活动2：xx日记",
             "default_case": "开启",
             "cases": [
                 {
@@ -224,7 +224,7 @@
         "活动3-免费召唤使用": {
             "type": "select",
             "label": "免费召唤使用",
-            "description": "选择是否执行活动3：免费召唤使用。",
+            "description": "是否执行：免费召唤使用",
             "default_case": "开启",
             "cases": [
                 {

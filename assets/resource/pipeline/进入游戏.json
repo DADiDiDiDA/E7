@@ -159,7 +159,7 @@
     },
     "检测公告栏": {
         "post_delay": 4000,
-        "timeout": -1,
+        "timeout": 240000,
         "next": [
             "[JumpBack]检测公告栏开始",
             "是不是在维护",
