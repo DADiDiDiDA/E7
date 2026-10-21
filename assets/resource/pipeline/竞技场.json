@@ -162,7 +162,8 @@
         },
         "post_delay": 7000,
         "next": [
-            "领取每周奖励"
+            "领取每周奖励",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -191,7 +192,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "选择第一位挑战者"
+            "选择第一位挑战者",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -228,7 +230,8 @@
         },
         "post_delay": 6000,
         "next": [
-            "确认对战结果"
+            "确认对战结果",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -374,7 +377,8 @@
         "post_delay": 8000,
         "next": [
             "有未携带装备弹窗",
-            "确认对战结果"
+            "确认对战结果",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -432,7 +436,8 @@
         },
         "post_delay": 6000,
         "next": [
-            "选择第一位挑战者"
+            "选择第一位挑战者",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -464,7 +469,7 @@
             "选择NPC对战",
             "[JumpBack]处理段位改变弹窗",
             "[JumpBack]是不是每周奖励待领取",
-            "[JumpBack]进入新手竞技场_第二次"
+            "[JumpBack]进入新手竞技场-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -548,7 +553,7 @@
             "选择第一位挑战者",
             "[JumpBack]处理段位改变弹窗",
             "[JumpBack]是不是每周奖励待领取",
-            "[JumpBack]选择NPC对战_第二次"
+            "[JumpBack]选择NPC对战-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -585,7 +590,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "点击挑战"
+            "点击挑战",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -620,7 +626,7 @@
             }
         }
     },
-    "选择NPC对战_第二次": {
+    "选择NPC对战-第二次": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -646,7 +652,7 @@
             }
         }
     },
-    "进入新手竞技场_第二次": {
+    "进入新手竞技场-第二次": {
         "recognition": {
             "type": "OCR",
             "param": {

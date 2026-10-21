@@ -233,7 +233,8 @@
         },
         "post_delay": 4000,
         "next": [
-            "确认请求资源"
+            "确认请求资源",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {

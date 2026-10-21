@@ -151,17 +151,19 @@
             "type": "select",
             "label": "启动模式",
             "description": "选择进入游戏的方式",
-            "default_case": "启动游戏",
+            "default_case": "不启动游戏",
             "cases": [
                 {
                     "name": "开始启动游戏",
                     "label": "🚀正常启动",
-                    "description": "正常启动游戏客户端"
+                    "description": "正常启动游戏客户端",
+                    "pipeline_override": { "启动游戏": { "next": ["开始启动游戏"] } }
                 },
                 {
-                    "name": "仅检测公告栏",
+                    "name": "不启动游戏",
                     "label": "📋跳过启动",
-                    "description": "不启动游戏，直接开始任务（适用于模拟器启动游戏）"
+                    "description": "不启动游戏，直接开始任务（适用于模拟器启动游戏）",
+                    "pipeline_override": { "启动游戏": { "next": ["不需要启动游戏"] } }
                 }
             ]
         },
@@ -176,7 +178,7 @@
                     "label": "开启",
                     "description": "执行活动1：周年领取每日20抽",
                     "pipeline_override": {
-                        "是否开启活动1：周年领取每日20抽": {
+                        "是否开启活动1-周年领取每日20抽": {
                             "next": ["开始活动1-活动1"]
                         }
                     }
@@ -186,7 +188,7 @@
                     "label": "关闭",
                     "description": "跳过活动",
                     "pipeline_override": {
-                        "是否开启活动1：周年领取每日20抽": {
+                        "是否开启活动1-周年领取每日20抽": {
                             "next": ["不开始活动1-活动1"]
                         }
                     }
@@ -204,7 +206,7 @@
                     "label": "开启",
                     "description": "执行活动：xx日记",
                     "pipeline_override": {
-                        "是否开启活动2：xx日记": {
+                        "是否开启活动2-xx日记": {
                             "next": ["开始活动2-活动2"]
                         }
                     }
@@ -214,7 +216,7 @@
                     "label": "关闭",
                     "description": "跳过活动：xx日记",
                     "pipeline_override": {
-                        "是否开启活动2：xx日记": {
+                        "是否开启活动2-xx日记": {
                             "next": ["不开始活动2-活动2"]
                         }
                     }
@@ -232,7 +234,7 @@
                     "label": "开启",
                     "description": "执行免费召唤使用",
                     "pipeline_override": {
-                        "是否开启活动3：免费召唤使用": {
+                        "是否开启活动3-免费召唤使用": {
                             "next": ["开始活动3-使用免费召唤"]
                         }
                     }
@@ -242,7 +244,7 @@
                     "label": "关闭",
                     "description": "跳过免费召唤使用",
                     "pipeline_override": {
-                        "是否开启活动3：免费召唤使用": {
+                        "是否开启活动3-免费召唤使用": {
                             "next": ["不开始活动3-活动3"]
                         }
                     }

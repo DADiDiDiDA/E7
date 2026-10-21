@@ -46,7 +46,7 @@
         "post_delay": 2000,
         "next": [
             "确认领取奖励-邮箱",
-            "[JumpBack]全部领取-邮箱奖励_第二次",
+            "[JumpBack]全部领取-邮箱奖励-第二次",
             "全部领取奖励结束-邮箱"
         ],
         "$__mpe_code": {
@@ -56,7 +56,7 @@
             }
         }
     },
-    "全部领取-邮箱奖励_第二次": {
+    "全部领取-邮箱奖励-第二次": {
         "max_hit": 1,
         "recognition": {
             "type": "OCR",
@@ -185,7 +185,7 @@
         "post_delay": 2000,
         "next": [
             "是否位于邮箱检测",
-            "[JumpBack]点击邮箱_第二次"
+            "[JumpBack]点击邮箱-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -194,7 +194,7 @@
             }
         }
     },
-    "点击邮箱_第二次": {
+    "点击邮箱-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
