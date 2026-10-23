@@ -65,8 +65,7 @@
         },
         "post_delay": 4000,
         "next": [
-            "购买-确认-免费商品",
-            "[JumpBack]返回主界面开始"
+            "购买-确认-免费商品"
         ],
         "$__mpe_code": {
             "position": {
