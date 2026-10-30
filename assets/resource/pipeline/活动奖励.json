@@ -3,17 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1791259549920,
+            "lastSyncTime": 1793356525053,
             "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\活动奖励.json",
+            "filePath": "D:\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\活动奖励.json",
             "savedViewport": {
-                "x": -908,
-                "y": -356,
-                "zoom": 0.57
+                "x": -4802,
+                "y": -556,
+                "zoom": 0.46
             },
             "filename": "活动奖励",
-            "version": "v2.0.7"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_活动奖励": {
@@ -24,6 +24,10 @@
             },
             "extra_positions": [
                 {
+                    "x": 15774,
+                    "y": 1789
+                },
+                {
                     "x": 7003,
                     "y": 1518
                 },
@@ -32,8 +36,8 @@
                     "y": 1712
                 },
                 {
-                    "x": 11483,
-                    "y": 2062
+                    "x": 16197,
+                    "y": 2693
                 }
             ]
         }
@@ -62,8 +66,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 1211,
-                "y": 1924
+                "x": 1208,
+                "y": 1973
             }
         }
     },
@@ -206,28 +210,6 @@
             }
         }
     },
-    "寻找活动字符": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    10,
-                    170,
-                    100,
-                    443
-                ],
-                "expected": [
-                    "活动"
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 12,
-                "y": 12
-            }
-        }
-    },
     "寻找活动-INFINITY-活动1": {
         "recognition": {
             "type": "OCR",
@@ -255,6 +237,28 @@
             "position": {
                 "x": 1536,
                 "y": 1113
+            }
+        }
+    },
+    "寻找活动字符": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    170,
+                    100,
+                    443
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 12
             }
         }
     },
@@ -804,7 +808,7 @@
     "活动3执行结束-活动3": {
         "next": [
             "[JumpBack]活动3执行结束返回主界面",
-            "活动奖励领取任务结束"
+            "是否开启活动4-xx之路日常领取"
         ],
         "$__mpe_code": {
             "position": {
@@ -842,8 +846,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 11045,
-                "y": 2022
+                "x": 15561,
+                "y": 2560
             }
         }
     },
@@ -931,8 +935,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2417,
-                "y": 762
+                "x": 2389,
+                "y": 725
             }
         }
     },
@@ -1011,6 +1015,31 @@
             "position": {
                 "x": 10023,
                 "y": 739
+            }
+        }
+    },
+    "誓约召唤已领取图标-活动1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1017,
+                    441,
+                    149,
+                    123
+                ],
+                "template": [
+                    "誓约召唤已领取图标.png"
+                ]
+            }
+        },
+        "next": [
+            "活动1执行完成-活动1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2424,
+                "y": 1117
             }
         }
     },
@@ -1155,28 +1184,409 @@
             }
         }
     },
-    "誓约召唤已领取图标-活动1": {
+    "是否开启活动4-xx之路日常领取": {
+        "next": [
+            "开始活动4-xx之路日常领取",
+            "不开始活动4-xx之路日常领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11011,
+                "y": 2031
+            }
+        }
+    },
+    "活动4执行结束返回主界面": {
+        "max_hit": 1,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 15258,
+                "y": 1750
+            }
+        }
+    },
+    "活动4执行结束-活动4": {
+        "next": [
+            "[JumpBack]活动4执行结束返回主界面",
+            "活动奖励领取任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 14809,
+                "y": 1893
+            }
+        }
+    },
+    "不开始活动4-xx之路日常领取": {
+        "next": [
+            "活动4执行结束-活动4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11406,
+                "y": 2232
+            }
+        }
+    },
+    "开始活动4-xx之路日常领取": {
+        "next": [
+            "进入活动界面-活动4-活动4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11421,
+                "y": 1921
+            }
+        }
+    },
+    "上滑活动列表-活动4": {
+        "max_hit": 4,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    102,
+                    137,
+                    2,
+                    0
+                ],
+                "end": [
+                    [
+                        110,
+                        541,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 12163,
+                "y": 2030
+            }
+        }
+    },
+    "下滑活动列表-活动4": {
+        "max_hit": 5,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    104,
+                    331,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        102,
+                        169,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 12596,
+                "y": 1554
+            }
+        }
+    },
+    "寻找活动-xx之路-活动4": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    1017,
-                    441,
-                    149,
-                    123
+                    7,
+                    80,
+                    194,
+                    594
                 ],
-                "template": [
-                    "誓约召唤已领取图标.png"
+                "expected": [
+                    "之路"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "进入活动奖励界面-xx之路-活动4",
+            "[JumpBack]寻找活动-xx之路-活动4_第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12597,
+                "y": 1041
+            }
+        }
+    },
+    "活动界面是否在最顶端-活动4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    5,
+                    64,
+                    202,
+                    610
+                ],
+                "expected": [
+                    "网页活动入口"
                 ]
             }
         },
         "next": [
-            "活动1执行完成-活动1"
+            "寻找活动-xx之路-活动4",
+            "[JumpBack]下滑活动列表-活动4",
+            "活动4执行结束-活动4"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2424,
-                "y": 1117
+                "x": 12173,
+                "y": 1471
+            }
+        }
+    },
+    "进入活动界面-活动4-第二次-活动4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    25,
+                    493,
+                    70,
+                    134
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 12207,
+                "y": 1748
+            }
+        }
+    },
+    "进入活动界面-活动4-活动4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    25,
+                    493,
+                    70,
+                    134
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "活动界面是否在最顶端-活动4",
+            "[JumpBack]进入活动界面-活动4-第二次-活动4",
+            "[JumpBack]上滑活动列表-活动4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11836,
+                "y": 1820
+            }
+        }
+    },
+    "进入活动奖励界面-xx之路-活动4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    379,
+                    631,
+                    81,
+                    58
+                ],
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "是不是位于任务界面了-xx之路-活动4",
+            "[JumpBack]进入活动奖励界面-xx之路-活动4_第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 13138,
+                "y": 815
+            }
+        }
+    },
+    "寻找活动-xx之路-活动4_第二次": {
+        "max_hit": 4,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    7,
+                    80,
+                    194,
+                    594
+                ],
+                "expected": [
+                    "之路"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 13062,
+                "y": 1122
+            }
+        }
+    },
+    "是不是位于任务界面了-xx之路-活动4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    261,
+                    107,
+                    104,
+                    49
+                ],
+                "expected": [
+                    "每日任务"
+                ]
+            }
+        },
+        "next": [
+            "确认领取每日奖励-xx之路-活动4",
+            "未发现可领取任务奖励-xx之路-活动4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 13644,
+                "y": 802
+            }
+        }
+    },
+    "进入活动奖励界面-xx之路-活动4_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    379,
+                    631,
+                    81,
+                    58
+                ],
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 13440,
+                "y": 1079
+            }
+        }
+    },
+    "确认领取每日奖励-xx之路-活动4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    936,
+                    198,
+                    108,
+                    466
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "[JumpBack]确认领取每日奖励-xx之路-活动4_第二次",
+            "活动4执行结束-活动4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 14048,
+                "y": 765
+            }
+        }
+    },
+    "未发现可领取任务奖励-xx之路-活动4": {
+        "next": [
+            "活动4执行结束-活动4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 14049,
+                "y": 1100
+            }
+        }
+    },
+    "确认领取每日奖励-xx之路-活动4_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    936,
+                    198,
+                    108,
+                    466
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 14438,
+                "y": 676
             }
         }
     }
