@@ -34,6 +34,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
         "next": [
@@ -75,6 +76,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 341,
@@ -92,6 +94,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
         "next": [
@@ -114,6 +117,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
         "next": [
@@ -136,6 +140,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
         "next": [
@@ -158,6 +163,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
         "next": [
@@ -180,6 +186,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "repeat": 1,
         "repeat_delay": 2000,
         "next": [
@@ -202,6 +209,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "等待返回加载-圣域"
         ],
@@ -272,7 +280,7 @@
                     720
                 ],
                 "template": [
-                    "sanctuary_main/san_entrance.png"
+                    "san_entrance.png"
                 ],
                 "threshold": 0.82
             }
@@ -280,6 +288,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "等待页面渲染-圣域",
             "[JumpBack]圣域弹窗清理-圣域",
@@ -303,7 +312,7 @@
                     720
                 ],
                 "template": [
-                    "sanctuary_main/san_entrance.png"
+                    "san_entrance.png"
                 ],
                 "threshold": 0.82
             }
@@ -311,6 +320,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 163,
