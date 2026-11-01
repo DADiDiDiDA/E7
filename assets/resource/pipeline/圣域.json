@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793356736894,
+            "lastSyncTime": 1793494793118,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\圣域.json",
             "savedViewport": {
-                "x": -188,
-                "y": 220,
-                "zoom": 0.65
+                "x": -157,
+                "y": 176,
+                "zoom": 0.66
             },
             "filename": "圣域",
             "version": "v2.1.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_圣域": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4549,
+                "y": -452
+            }
         }
     },
     "再次点击植物区域-圣域": {
@@ -38,34 +46,14 @@
             }
         }
     },
-    "进入圣域界面-圣域": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    0,
-                    0,
-                    1280,
-                    720
-                ],
-                "template": [
-                    "sanctuary_main/san_entrance.png"
-                ],
-                "threshold": 0.82
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
+    "圣域入口检测-圣域": {
         "next": [
-            "等待页面渲染-圣域",
-            "[JumpBack]圣域弹窗清理-圣域",
-            "[JumpBack]进入圣域界面_第二次-圣域"
+            "进入圣域界面-圣域"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -174,
-                "y": 37
+                "x": -684,
+                "y": 77
             }
         }
     },
@@ -264,7 +252,6 @@
         },
         "timeout": 3000,
         "next": [
-            "[JumpBack]识别精灵之森_第二次-圣域",
             "点击精灵之森-圣域"
         ],
         "$__mpe_code": {
@@ -274,14 +261,34 @@
             }
         }
     },
-    "圣域入口检测-圣域": {
+    "进入圣域界面-圣域": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    1280,
+                    720
+                ],
+                "template": [
+                    "sanctuary_main/san_entrance.png"
+                ],
+                "threshold": 0.82
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
         "next": [
-            "进入圣域界面-圣域"
+            "等待页面渲染-圣域",
+            "[JumpBack]圣域弹窗清理-圣域",
+            "[JumpBack]进入圣域界面_第二次-圣域"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -684,
-                "y": 77
+                "x": -174,
+                "y": 37
             }
         }
     },
@@ -308,37 +315,6 @@
             "position": {
                 "x": 163,
                 "y": 561
-            }
-        }
-    },
-    "识别精灵之森_第二次-圣域": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1100,
-                    150,
-                    150,
-                    60
-                ],
-                "expected": [
-                    "精灵之森"
-                ]
-            }
-        },
-        "timeout": 3000,
-        "$__mpe_code": {
-            "position": {
-                "x": 1213,
-                "y": 232
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_圣域": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4549,
-                "y": -452
             }
         }
     }
