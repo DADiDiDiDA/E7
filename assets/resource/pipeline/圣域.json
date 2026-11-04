@@ -3,14 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793494793118,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\圣域.json",
             "savedViewport": {
-                "x": -157,
-                "y": 176,
-                "zoom": 0.66
+                "x": 353,
+                "y": 66,
+                "zoom": 0.53
             },
             "filename": "圣域",
             "version": "v2.1.0"
@@ -34,9 +30,9 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "点击返回-圣域"
         ],
@@ -79,8 +75,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 341,
-                "y": 273
+                "x": 677,
+                "y": 245
             }
         }
     },
@@ -94,9 +90,9 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "点击泉水-圣域"
         ],
@@ -117,9 +113,9 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "点击照料-圣域"
         ],
@@ -140,9 +136,9 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "点击植物-圣域"
         ],
@@ -163,9 +159,9 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "repeat": 3,
         "repeat_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "再次点击植物区域-圣域"
         ],
@@ -186,9 +182,9 @@
                 ]
             }
         },
-        "post_delay": 2000,
         "repeat": 1,
         "repeat_delay": 2000,
+        "post_delay": 2000,
         "next": [
             "点击企鹅-圣域"
         ],
@@ -234,7 +230,9 @@
     },
     "等待页面渲染-圣域": {
         "next": [
-            "识别精灵之森-圣域"
+            "识别精灵之森-圣域",
+            "[JumpBack]圣域弹窗清理-圣域",
+            "[JumpBack]进入圣域界面_第二次-圣域"
         ],
         "$__mpe_code": {
             "position": {
@@ -290,9 +288,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "等待页面渲染-圣域",
-            "[JumpBack]圣域弹窗清理-圣域",
-            "[JumpBack]进入圣域界面_第二次-圣域"
+            "等待页面渲染-圣域"
         ],
         "$__mpe_code": {
             "position": {
@@ -323,8 +319,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 163,
-                "y": 561
+                "x": 610,
+                "y": 538
             }
         }
     }
