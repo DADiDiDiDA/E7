@@ -3,13 +3,42 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1793926070869,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "D:\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\进入游戏.json",
             "savedViewport": {
-                "x": 1748,
-                "y": 272,
-                "zoom": 0.78
+                "x": 432,
+                "y": 376,
+                "zoom": 0.37
             },
             "filename": "进入游戏",
-            "version": "v2.1.0"
+            "version": "v2.1.1"
+        }
+    },
+    "确认下载更新补丁": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    697,
+                    508,
+                    136,
+                    68
+                ],
+                "expected": [
+                    "进行"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -210,
+                "y": -417
+            }
         }
     },
     "$__mpe_external_返回主界面开始_进入游戏": {
@@ -23,8 +52,19 @@
     "$__mpe_external_退出游戏_进入游戏": {
         "$__mpe_code": {
             "position": {
-                "x": 102,
-                "y": -460
+                "x": 215,
+                "y": -553
+            }
+        }
+    },
+    "不需要启动游戏": {
+        "next": [
+            "检测公告栏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1373,
+                "y": 169
             }
         }
     },
@@ -55,26 +95,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1629,
+                "x": -1805,
                 "y": -26
-            }
-        }
-    },
-    "开始启动游戏": {
-        "action": {
-            "type": "StartApp",
-            "param": {
-                "package": "com.zlongame.cn.epicseven"
-            }
-        },
-        "post_delay": 2000,
-        "next": [
-            "检测公告栏"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1293,
-                "y": -200
             }
         }
     },
@@ -104,6 +126,24 @@
             "position": {
                 "x": -494,
                 "y": 85
+            }
+        }
+    },
+    "开始启动游戏": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.zlongame.cn.epicseven"
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "检测公告栏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1355,
+                "y": -193
             }
         }
     },
@@ -137,10 +177,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    557,
-                    198,
-                    165,
-                    95
+                    529,
+                    110,
+                    227,
+                    208
                 ],
                 "expected": [
                     "更新补丁"
@@ -148,12 +188,12 @@
             }
         },
         "next": [
-            "退出游戏"
+            "确认下载更新补丁"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -495,
-                "y": -392
+                "x": -470,
+                "y": -417
             }
         }
     },
@@ -163,15 +203,15 @@
         "next": [
             "[JumpBack]检测公告栏开始",
             "是不是在维护",
-            "是不是有更新包",
+            "[JumpBack]是不是有更新包",
             "好像需要更新了",
             "登陆游戏",
             "[JumpBack]要不要登录"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -947,
-                "y": -4
+                "x": -998,
+                "y": -11
             }
         }
     },
@@ -224,8 +264,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -504,
-                "y": 314
+                "x": -496,
+                "y": 367
             }
         }
     },
@@ -270,6 +310,32 @@
             }
         }
     },
+    "要不要登录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    551,
+                    382,
+                    160,
+                    68
+                ],
+                "expected": [
+                    "登录"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -495,
+                "y": -159
+            }
+        }
+    },
     "进入登陆界面已更新": {
         "recognition": {
             "type": "TemplateMatch",
@@ -293,43 +359,6 @@
             "position": {
                 "x": 281,
                 "y": -262
-            }
-        }
-    },
-    "要不要登录": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    551,
-                    382,
-                    160,
-                    68
-                ],
-                "expected": [
-                    "登录"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": -466,
-                "y": -114
-            }
-        }
-    },
-    "不需要启动游戏": {
-        "next": [
-            "检测公告栏"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1320,
-                "y": 167
             }
         }
     }
