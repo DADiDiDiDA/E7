@@ -337,7 +337,9 @@
                 "package": "com.zlongame.cn.epicseven"
             }
         },
-        "anchor": "启动游戏一次",
+        "anchor": {
+            "启动游戏一次": "开始启动游戏单引用"
+        },
         "post_delay": 2000,
         "next": [
             "检测公告栏"
@@ -346,6 +348,48 @@
             "position": {
                 "x": -1776,
                 "y": -393
+            }
+        }
+    },
+    "开始启动游戏单引用": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.zlongame.cn.epicseven"
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "开始启动游戏单引用-限流",
+            "开始启动游戏单引用-清锚点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1526,
+                "y": -159
+            }
+        }
+    },
+    "开始启动游戏单引用-限流": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "max_hit": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": -1276,
+                "y": 75
+            }
+        }
+    },
+    "开始启动游戏单引用-清锚点": {
+        "anchor": {
+            "启动游戏一次": ""
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -1026,
+                "y": 309
             }
         }
     },
