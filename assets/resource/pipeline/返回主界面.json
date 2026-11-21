@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1794107810545,
+            "lastSyncTime": 1795133578947,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\E7\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 593,
-                "y": 262,
-                "zoom": 0.2
+                "x": 1089,
+                "y": 471,
+                "zoom": 0.65
             },
             "filename": "返回主界面",
             "version": "v2.1.1"
@@ -365,20 +365,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1526,
-                "y": -159
-            }
-        }
-    },
-    "开始启动游戏单引用-限流": {
-        "recognition": {
-            "type": "DirectHit"
-        },
-        "max_hit": 3,
-        "$__mpe_code": {
-            "position": {
-                "x": -1276,
-                "y": 75
+                "x": -1937,
+                "y": 281
             }
         }
     },
@@ -388,8 +376,17 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": -1026,
-                "y": 309
+                "x": -1458,
+                "y": 469
+            }
+        }
+    },
+    "开始启动游戏单引用-限流": {
+        "max_hit": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": -1554,
+                "y": 206
             }
         }
     },
@@ -460,7 +457,8 @@
             }
         },
         "next": [
-            "确认下载更新补丁"
+            "确认下载更新补丁",
+            "[JumpBack]是不是有更新包-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -695,8 +693,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -948,
-                "y": 294
+                "x": -837,
+                "y": 168
             }
         }
     },
@@ -730,7 +728,6 @@
         }
     },
     "确认下载更新补丁": {
-        "post_delay": 2000,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -748,10 +745,11 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": -527,
-                "y": -357
+                "x": -379,
+                "y": -511
             }
         }
     },
@@ -903,6 +901,28 @@
             "position": {
                 "x": -282,
                 "y": -207
+            }
+        }
+    },
+    "是不是有更新包-第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    529,
+                    110,
+                    227,
+                    208
+                ],
+                "expected": [
+                    "更新补丁"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -637,
+                "y": -320
             }
         }
     }
