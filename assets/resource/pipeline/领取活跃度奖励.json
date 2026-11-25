@@ -93,6 +93,7 @@
         }
     },
     "点击每日任务第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -151,6 +152,7 @@
         }
     },
     "进入活跃度界面第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -219,6 +221,7 @@
         }
     },
     "进入选择菜单第二次-活跃度奖励": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

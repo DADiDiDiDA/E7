@@ -621,6 +621,7 @@
         }
     },
     "选择NPC对战-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -647,6 +648,7 @@
         }
     },
     "进入新手竞技场-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

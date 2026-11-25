@@ -716,6 +716,7 @@
         }
     },
     "有没有待领取的日记奖励第二次-活动处理-活动2": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -852,6 +853,7 @@
         }
     },
     "检查免费召唤-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1186,6 +1188,7 @@
         }
     },
     "点击誓约召唤图标-第二次-活动1": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -1294,6 +1297,7 @@
         }
     },
     "确认领取每日奖励-xx之路-活动4_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1448,6 +1452,7 @@
         }
     },
     "进入活动奖励界面-xx之路-活动4_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1474,6 +1479,7 @@
         }
     },
     "进入活动界面-活动1-第二次-活动1": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1547,6 +1553,7 @@
         }
     },
     "进入活动界面-活动4-第二次-活动4": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

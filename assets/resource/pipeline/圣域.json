@@ -298,6 +298,7 @@
         }
     },
     "进入圣域界面_第二次-圣域": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
